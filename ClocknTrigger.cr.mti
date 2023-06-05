@@ -1,0 +1,11 @@
+C:/ClocknTrigger/ClocknTrigger.v {1 {vlog -work work -stats=none C:/ClocknTrigger/ClocknTrigger.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ClocknTrigger
+-- Compiling module ClocknTriggerDC
+-- Compiling module mySync
+
+Top level modules:
+	ClocknTrigger
+	ClocknTriggerDC
+
+} {} {}}
