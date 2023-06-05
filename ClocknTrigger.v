@@ -1,10 +1,27 @@
+/*
+* Top Level Module ClocknTrigger
+* Instantiates both clock combiner modules to compare the outputs
+*/
+module ClocknTrigger(input fastclk,
+                     input reset,
+                     input trigger,
+                     output clk_out_DC,
+                     output clk_out
+                    );
+
+    //instantiate the modules
+    ClocknTriggerDC CnTDC(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC));
+    ClocknTriggerDrLinn CnT(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out));
+
+endmodule
+                    
 
 /*
 *  This module takes in a fast clock and a trigger signal and outputs a clock that is modulated by the trigger signal.
 *  The output clock is twice as slow as the input clock. If trigger is 1, the output clock is 0. If trigger is 0, the output clock is a clock.
 *  The reset is asynchronous and active high.
 */
-module ClocknTrigger(input wire fastclk,
+module ClocknTriggerDrLinn(input wire fastclk,
                     input  wire trigger,
                     output wire clk_out,
                     input reset

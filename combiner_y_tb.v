@@ -22,17 +22,18 @@ reg reset;
 
 
 //instantiate the DUT
-ClocknTriggerDC DUT_DC(
-    .fastclk(fastclk),
-    .trigger(trigger),
-    .clk_out(clk_out_DC),
-    .reset(reset)
-    );
+// ClocknTriggerDC DUT_DC(
+//     .fastclk(fastclk),
+//     .trigger(trigger),
+//     .clk_out(clk_out_DC),
+//     .reset(reset)
+//     );
 
 ClocknTrigger DUT(
     .fastclk(fastclk),
     .trigger(trigger),
     .clk_out(clk_out),
+    .clk_out_DC(clk_out_DC),
     .reset(reset)
     );
 
@@ -64,7 +65,7 @@ initial begin
     //wait for sometime
     #100;
     //and the simulation
-    $finish;
+    $stop;
 
 end
 

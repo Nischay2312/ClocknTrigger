@@ -1,31 +1,31 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider TestBench
+add wave -noupdate /ClocknTrigger_tb/reset
 add wave -noupdate /ClocknTrigger_tb/fastclk
 add wave -noupdate /ClocknTrigger_tb/trigger
-add wave -noupdate /ClocknTrigger_tb/clk_out_DC
 add wave -noupdate /ClocknTrigger_tb/clk_out
-add wave -noupdate /ClocknTrigger_tb/reset
+add wave -noupdate /ClocknTrigger_tb/clk_out_DC
 add wave -noupdate -divider DutyCycle
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/fastclk
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/reset
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/trigger
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/clk_out
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/TriggerSync
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/clk_25DC
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/clk_75DC
-add wave -noupdate /ClocknTrigger_tb/DUT_DC/counter
-add wave -noupdate -divider {Dr. Linn Method}
-add wave -noupdate /ClocknTrigger_tb/DUT/fastclk
-add wave -noupdate /ClocknTrigger_tb/DUT/trigger
-add wave -noupdate /ClocknTrigger_tb/DUT/clk_out
-add wave -noupdate /ClocknTrigger_tb/DUT/reset
-add wave -noupdate /ClocknTrigger_tb/DUT/slowclk
-add wave -noupdate /ClocknTrigger_tb/DUT/trig_sync
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/reset
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/fastclk
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/trigger
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/TriggerSync
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/clk_25DC
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/clk_75DC
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/clk_out
+add wave -noupdate /ClocknTrigger_tb/DUT/CnTDC/counter
+add wave -noupdate -divider {Dr. Linn}
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/reset
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/fastclk
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/trigger
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/trig_sync
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/slowclk
+add wave -noupdate /ClocknTrigger_tb/DUT/CnT/clk_out
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 0
-configure wave -namecolwidth 214
+configure wave -namecolwidth 231
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -39,4 +39,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1790 ps}
+WaveRestoreZoom {0 ps} {221550 ps}
