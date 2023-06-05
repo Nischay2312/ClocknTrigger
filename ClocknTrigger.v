@@ -5,14 +5,27 @@
 module ClocknTrigger(input fastclk,
                      input reset,
                      input trigger,
+					 input [1:0] Switches,
+					 output Trig_sel,
+					 output Clock_sel,
+					 output Trig_en,
                      output clk_out_DC,
                      output clk_out
                     );
+		
+	 assign Trig_en = 1'b1;
+     wire [1:0]Switch_sync;
+
+     //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
+    mySync SwitchSync0(.clk(!fastclk), .reset(reset), .data_in(Switches[0]), .data_out(Switch_sync[0]));
+    mySync SwitchSync1(.clk(!fastclk), .reset(reset), .data_in(Switches[1]), .data_out(Switch_sync[1])); 
 
     //instantiate the modules
     ClocknTriggerDC CnTDC(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC));
     ClocknTriggerDrLinn CnT(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out));
-
+	 
+	 assign Trig_sel = Switch_sync[0]? 1'b1: 1'b0;
+	 assign Clock_sel = Switch_sync[1]? 1'b1: 1'b0;
 endmodule
                     
 

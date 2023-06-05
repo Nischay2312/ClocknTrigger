@@ -1,6 +1,5 @@
 /*
 ClocknTrigger.v testbench
-
 */
 
 //set timescale 
@@ -11,6 +10,7 @@ ClocknTrigger.v testbench
 *   ClocknTrigger_tb
 *   Testbench for ClocknTrigger.v
 */
+
 module ClocknTrigger_tb();
 
 //Declare the signals
@@ -19,25 +19,30 @@ reg trigger;
 wire clk_out_DC;
 wire clk_out;
 reg reset;
+reg [1:0] Switches;
+wire Trig_sel;
+wire Clock_sel;
+wire Trig_en;
 
 
 //instantiate the DUT
-// ClocknTriggerDC DUT_DC(
-//     .fastclk(fastclk),
-//     .trigger(trigger),
-//     .clk_out(clk_out_DC),
-//     .reset(reset)
-//     );
 
 ClocknTrigger DUT(
     .fastclk(fastclk),
     .trigger(trigger),
     .clk_out(clk_out),
     .clk_out_DC(clk_out_DC),
-    .reset(reset)
+    .reset(reset),
+    .Switches(Switches),
+    .Trig_sel(Trig_sel),
+    .Clock_sel(Clock_sel),
+    .Trig_en(Trig_en)
     );
 
+
+
 //clock generator
+
 always begin
     fastclk = 1'b0;
     #2;
@@ -45,17 +50,28 @@ always begin
     #2;
 end
 
+
+
 //Testbench Begin
 initial begin
     //assert reset
     reset = 1'b0;
     trigger = 1'b0;
+    Switches = 2'b00;
     #1;
     reset = 1'b1;
     #3;
     reset = 1'b0;
     //wait for sometime
-    #59;
+    #54;
+    Switches = 2'b01;
+    //wait for sometime
+    #24;
+    Switches = 2'b10;
+    #24;
+    Switches = 2'b11;
+    #24;
+    Switches = 2'b00;
     //assert trigger
     trigger = 1'b1;
     //wait for sometime
@@ -70,4 +86,3 @@ initial begin
 end
 
 endmodule
-
