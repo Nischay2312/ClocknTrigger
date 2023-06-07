@@ -10,22 +10,27 @@ module ClocknTrigger(input fastclk,
 					 output Clock_sel,
 					 output Trig_en,
                      output clk_out_DC,
-                     output clk_out
+                     output clk_out,
+							output SMA_CLK_PORT,
+							output SMA_TRIG_PORT
                     );
 		
 	 assign Trig_en = 1'b1;
      wire [1:0]Switch_sync;
+	  wire trigSync;
 
-     //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
+     //Generate the synchronized switch signal, synchronized at negetive edge of the fast clock
     mySync SwitchSync0(.clk(!fastclk), .reset(reset), .data_in(Switches[0]), .data_out(Switch_sync[0]));
     mySync SwitchSync1(.clk(!fastclk), .reset(reset), .data_in(Switches[1]), .data_out(Switch_sync[1])); 
 
     //instantiate the modules
-    ClocknTriggerDC CnTDC(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC));
+    ClocknTriggerDC CnTDC(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC), .trig_s(trigSync));
     ClocknTriggerDrLinn CnT(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out));
 	 
 	 assign Trig_sel = Switch_sync[0]? 1'b1: 1'b0;
 	 assign Clock_sel = Switch_sync[1]? 1'b1: 1'b0;
+	 assign SMA_TRIG_PORT = Trig_sel? clk_out_DC: clk_out;
+	 assign SMA_CLK_PORT = trigSync;
 endmodule
                     
 
@@ -41,13 +46,23 @@ module ClocknTriggerDrLinn(input wire fastclk,
                     );
     //Internal signals
     reg slowclk;
-    wire trig_sync;
+    reg slowclk_90deg;
+	 wire trig_sync;
+	 
     //Generate the slow clock
     always @(posedge fastclk or posedge reset) begin
         if(reset)
             slowclk <= 1'b0;
         else
             slowclk <= ~slowclk;
+    end
+	 
+    //Generate the slow clock off phase
+    always @(negedge fastclk or posedge reset) begin
+        if(reset)
+            slowclk <= 1'b0;
+        else
+            slowclk_90deg <= ~slowclk_90deg;
     end
     //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
     mySync TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .data_out(trig_sync));
@@ -64,7 +79,8 @@ endmodule
 module ClocknTriggerDC(input wire fastclk,
                         input wire reset,
                         input wire trigger,
-                        output clk_out
+                        output clk_out,
+								output trig_s
                         );
 wire TriggerSync;
 wire clk_25DC;
@@ -90,6 +106,7 @@ end
 assign clk_25DC = (counter > 2'b10)? 1'b1: 1'b0;
 assign clk_75DC = (counter > 2'b00)? 1'b1: 1'b0;
 assign clk_out = TriggerSync? clk_25DC : clk_75DC;
+assign trig_s = TriggerSync;
 endmodule
 
 

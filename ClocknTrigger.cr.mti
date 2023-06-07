@@ -1,1 +1,8 @@
+C:/ClocknTrigger/combiner_y_tb.v {1 {vlog -work work -stats=none C:/ClocknTrigger/combiner_y_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ClocknTrigger_tb
 
+Top level modules:
+	ClocknTrigger_tb
+
+} {} {}}
