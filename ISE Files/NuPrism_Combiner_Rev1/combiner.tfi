@@ -1,0 +1,23 @@
+
+
+
+// Instantiate the module
+combiner instance_name (
+    .osc_clk0(osc_clk0), 
+    .osc_clk1(osc_clk1), 
+    .osc_sel(osc_sel), 
+    .sma_clk(sma_clk), 
+    .trig_sel(trig_sel), 
+    .trig1(trig1), 
+    .trig2(trig2), 
+    .trig_en(trig_en), 
+    .sma_trig(sma_trig), 
+    .sma_trig_monitor(sma_trig_monitor), 
+    .sma_clk_monitor(sma_clk_monitor), 
+    .poe_led(poe_led), 
+    .poe_aux_det(poe_aux_det), 
+    .poe_vc_det(poe_vc_det), 
+    .switch(switch)
+    );
+
+

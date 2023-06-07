@@ -1,0 +1,28 @@
+Command line:
+   ClocknTrigger_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57442
+
+Mon Jun  5 16:09:05 2023
+
+
+ Elaboration Time: 0.03 sec
+
+ Current Memory Usage: 198.586 Meg
+
+ Total Signals          : 52
+ Total Nets             : 33
+ Total Signal Drivers   : 24
+ Total Blocks           : 9
+ Total Primitive Blocks : 5
+ Total Processes        : 33
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 129
+
+ Total Simulation Time: 0.03 sec
+
+ Current Memory Usage: 276.185 Meg
+
+Mon Jun  5 16:09:45 2023
+

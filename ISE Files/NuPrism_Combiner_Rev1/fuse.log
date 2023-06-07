@@ -1,0 +1,24 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib uni9000_ver -lib aim_ver -lib cpld_ver -lib xilinxcorelib_ver -o /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger_tb_isim_beh.exe -prj /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger_tb_beh.prj work.ClocknTrigger_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.v" into library work
+Analyzing Verilog file "/home/ise/NuPrism_Combiner_Rev1/combiner_y_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94940 KB
+Fuse CPU Usage: 780 ms
+Compiling module mySync
+Compiling module ClocknTriggerDC
+Compiling module ClocknTriggerDrLinn
+Compiling module ClocknTrigger
+Compiling module ClocknTrigger_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 6 Verilog Units
+Built simulation executable /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger_tb_isim_beh.exe
+Fuse Memory Usage: 98056 KB
+Fuse CPU Usage: 790 ms
+GCC CPU Usage: 210 ms

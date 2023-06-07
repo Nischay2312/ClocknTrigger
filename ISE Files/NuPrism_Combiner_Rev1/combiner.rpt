@@ -1,0 +1,483 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: combiner                            Date:  7-19-2022,  4:12PM
+Device Used: XC9572XL-5-VQ64
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+27 /72  ( 37%) 32  /360  (  9%) 25 /216 ( 12%)   11 /72  ( 15%) 34 /52  ( 65%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1           7/18        7/54        7/90       7/13
+FB2          10/18        8/54       14/90      11/13
+FB3           3/18        7/54        5/90       6/14
+FB4           7/18        3/54        6/90      10/12
+             -----       -----       -----      -----    
+             27/72       25/216      32/360     34/52 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'osc_clk0' mapped onto global clock net GCK2.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   12          12    |  I/O              :    31      46
+Output        :   21          21    |  GCK/IO           :     1       3
+Bidirectional :    0           0    |  GTS/IO           :     2       2
+GCK           :    1           1    |  GSR/IO           :     0       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     34          34
+
+** Power Data **
+
+There are 27 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'combiner.ise'.
+WARNING:Cpld:1007 - Removing unused input(s) 'osc_clk1'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'sma_clk'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'switch<4>'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'switch<5>'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'switch<6>'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'switch<7>'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'switch<8>'.  The input(s) are
+   unused after optimization. Please verify functionality via simulation.
+WARNING:Cpld:828 - Signal 'dffe_trig_out_clk0.SETF' has been minimized to 'GND'.
+     The signal is removed.
+*************************  Summary of Mapped Logic  ************************
+
+** 21 Outputs **
+
+Signal               Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                 Pts   Inps          No.  Type    Use     Mode Rate State
+poe_led<4>           1     1     FB1_2   8    I/O     O       STD  FAST 
+poe_led<8>           1     1     FB1_3   12   I/O     O       STD  FAST 
+poe_led<7>           1     1     FB1_4   13   I/O     O       STD  FAST 
+poe_led<3>           1     1     FB1_5   9    I/O     O       STD  FAST 
+poe_led<6>           1     1     FB1_6   10   I/O     O       STD  FAST 
+poe_led<5>           1     1     FB1_8   11   I/O     O       STD  FAST 
+sma_clk_monitor<4>   2     3     FB2_2   60   I/O     O       STD  FAST 
+sma_clk_monitor<3>   2     3     FB2_5   61   I/O     O       STD  FAST 
+sma_clk_monitor<2>   2     3     FB2_6   62   I/O     O       STD  FAST 
+sma_clk_monitor<1>   2     3     FB2_8   63   I/O     O       STD  FAST 
+osc_sel              1     1     FB2_14  5    GTS/I/O O       STD  FAST 
+poe_led<2>           1     1     FB2_15  6    I/O     O       STD  FAST 
+poe_led<1>           1     1     FB2_17  7    I/O     O       STD  FAST 
+trig1                2     3     FB3_12  40   I/O     O       STD  FAST RESET
+trig_sel             1     1     FB3_16  42   I/O     O       STD  FAST 
+trig2                1     2     FB4_2   43   I/O     O       STD  FAST 
+trig_en              0     0     FB4_5   44   I/O     O       STD  FAST 
+sma_trig_monitor<4>  1     1     FB4_6   49   I/O     O       STD  FAST RESET
+sma_trig_monitor<2>  1     1     FB4_10  51   I/O     O       STD  FAST RESET
+sma_trig_monitor<1>  1     1     FB4_12  52   I/O     O       STD  FAST RESET
+sma_trig_monitor<3>  1     1     FB4_14  50   I/O     O       STD  FAST RESET
+
+** 6 Buried Nodes **
+
+Signal               Total Total Loc     Pwr  Reg Init
+Name                 Pts   Inps          Mode State
+d0_shreg_clk0        1     1     FB1_18  STD  RESET
+d1_shreg_clk0        1     1     FB2_13  STD  RESET
+d0_75duty_clk0       1     2     FB2_16  STD  RESET
+d0_25duty_clk0       1     2     FB2_18  STD  RESET
+dffe_trig_out_clk0   2     3     FB3_18  STD  SET
+d1_75duty_clk0       1     1     FB4_18  STD  RESET
+
+** 13 Inputs **
+
+Signal               Loc     Pin  Pin     Pin     
+Name                         No.  Type    Use     
+osc_clk0             FB1_11  16   GCK/I/O GCK/I
+poe_vc_det<3>        FB2_3   58   I/O     I
+poe_aux_det<3>       FB2_10  1    I/O     I
+poe_aux_det<4>       FB2_11  2    GTS/I/O I
+poe_vc_det<4>        FB2_12  4    I/O     I
+switch<2>            FB3_3   31   I/O     I
+switch<1>            FB3_4   32   I/O     I
+sma_trig             FB3_9   27   I/O     I
+switch<3>            FB3_11  33   I/O     I
+poe_vc_det<1>        FB4_3   46   I/O     I
+poe_aux_det<2>       FB4_4   47   I/O     I
+poe_aux_det<1>       FB4_8   45   I/O     I
+poe_vc_det<2>        FB4_17  57   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               7/47
+Number of signals used by logic mapping into function block:  7
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB1_1         (b)     
+poe_led<4>            1       0     0   4     FB1_2   8     I/O     O
+poe_led<8>            1       0     0   4     FB1_3   12    I/O     O
+poe_led<7>            1       0     0   4     FB1_4   13    I/O     O
+poe_led<3>            1       0     0   4     FB1_5   9     I/O     O
+poe_led<6>            1       0     0   4     FB1_6   10    I/O     O
+(unused)              0       0     0   5     FB1_7         (b)     
+poe_led<5>            1       0     0   4     FB1_8   11    I/O     O
+(unused)              0       0     0   5     FB1_9   15    GCK/I/O 
+(unused)              0       0     0   5     FB1_10  18    I/O     
+(unused)              0       0     0   5     FB1_11  16    GCK/I/O GCK/I
+(unused)              0       0     0   5     FB1_12  23    I/O     
+(unused)              0       0     0   5     FB1_13        (b)     
+(unused)              0       0     0   5     FB1_14  17    GCK/I/O 
+(unused)              0       0     0   5     FB1_15  19    I/O     
+(unused)              0       0     0   5     FB1_16        (b)     
+(unused)              0       0     0   5     FB1_17  20    I/O     
+d0_shreg_clk0         1       0     0   4     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: d1_shreg_clk0      4: poe_aux_det<4>     6: poe_vc_det<3> 
+  2: poe_aux_det<2>     5: poe_vc_det<2>      7: poe_vc_det<4> 
+  3: poe_aux_det<3>   
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+poe_led<4>           ....X................................... 1
+poe_led<8>           ......X................................. 1
+poe_led<7>           ...X.................................... 1
+poe_led<3>           .X...................................... 1
+poe_led<6>           .....X.................................. 1
+poe_led<5>           ..X..................................... 1
+d0_shreg_clk0        X....................................... 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               8/46
+Number of signals used by logic mapping into function block:  8
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB2_1         (b)     
+sma_clk_monitor<4>    2       0     0   3     FB2_2   60    I/O     O
+(unused)              0       0     0   5     FB2_3   58    I/O     I
+(unused)              0       0     0   5     FB2_4   59    I/O     
+sma_clk_monitor<3>    2       0     0   3     FB2_5   61    I/O     O
+sma_clk_monitor<2>    2       0     0   3     FB2_6   62    I/O     O
+(unused)              0       0     0   5     FB2_7         (b)     
+sma_clk_monitor<1>    2       0     0   3     FB2_8   63    I/O     O
+(unused)              0       0     0   5     FB2_9   64    GSR/I/O 
+(unused)              0       0     0   5     FB2_10  1     I/O     I
+(unused)              0       0     0   5     FB2_11  2     GTS/I/O I
+(unused)              0       0     0   5     FB2_12  4     I/O     I
+d1_shreg_clk0         1       0     0   4     FB2_13        (b)     (b)
+osc_sel               1       0     0   4     FB2_14  5     GTS/I/O O
+poe_led<2>            1       0     0   4     FB2_15  6     I/O     O
+d0_75duty_clk0        1       0     0   4     FB2_16        (b)     (b)
+poe_led<1>            1       0     0   4     FB2_17  7     I/O     O
+d0_25duty_clk0        1       0     0   4     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: d0_shreg_clk0      4: switch<1>          7: switch<3> 
+  2: d1_shreg_clk0      5: poe_aux_det<1>     8: trig1 
+  3: osc_clk0           6: poe_vc_det<1>    
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+sma_clk_monitor<4>   ..X...XX................................ 3
+sma_clk_monitor<3>   ..X...XX................................ 3
+sma_clk_monitor<2>   ..X...XX................................ 3
+sma_clk_monitor<1>   ..X...XX................................ 3
+d1_shreg_clk0        X....................................... 1
+osc_sel              ...X.................................... 1
+poe_led<2>           .....X.................................. 1
+d0_75duty_clk0       XX...................................... 2
+poe_led<1>           ....X................................... 1
+d0_25duty_clk0       XX...................................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               7/47
+Number of signals used by logic mapping into function block:  7
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB3_1         (b)     
+(unused)              0       0     0   5     FB3_2   22    I/O     
+(unused)              0       0     0   5     FB3_3   31    I/O     I
+(unused)              0       0     0   5     FB3_4   32    I/O     I
+(unused)              0       0     0   5     FB3_5   24    I/O     
+(unused)              0       0     0   5     FB3_6   34    I/O     
+(unused)              0       0     0   5     FB3_7         (b)     
+(unused)              0       0     0   5     FB3_8   25    I/O     
+(unused)              0       0     0   5     FB3_9   27    I/O     I
+(unused)              0       0     0   5     FB3_10  39    I/O     
+(unused)              0       0     0   5     FB3_11  33    I/O     I
+trig1                 2       0     0   3     FB3_12  40    I/O     O
+(unused)              0       0     0   5     FB3_13        (b)     
+(unused)              0       0     0   5     FB3_14  35    I/O     
+(unused)              0       0     0   5     FB3_15  36    I/O     
+trig_sel              1       0     0   4     FB3_16  42    I/O     O
+(unused)              0       0     0   5     FB3_17  38    I/O     
+dffe_trig_out_clk0    2       0     0   3     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: d0_25duty_clk0     4: d1_shreg_clk0        6: sma_trig 
+  2: d0_shreg_clk0      5: dffe_trig_out_clk0   7: switch<2> 
+  3: d1_75duty_clk0   
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+trig1                X.X.X................................... 3
+trig_sel             ......X................................. 1
+dffe_trig_out_clk0   .X.X.X.................................. 3
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               3/51
+Number of signals used by logic mapping into function block:  3
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1         (b)     
+trig2                 1       0     0   4     FB4_2   43    I/O     O
+(unused)              0       0     0   5     FB4_3   46    I/O     I
+(unused)              0       0     0   5     FB4_4   47    I/O     I
+trig_en               0       0     0   5     FB4_5   44    I/O     O
+sma_trig_monitor<4>   1       0     0   4     FB4_6   49    I/O     O
+(unused)              0       0     0   5     FB4_7         (b)     
+(unused)              0       0     0   5     FB4_8   45    I/O     I
+(unused)              0       0     0   5     FB4_9         (b)     
+sma_trig_monitor<2>   1       0     0   4     FB4_10  51    I/O     O
+(unused)              0       0     0   5     FB4_11  48    I/O     
+sma_trig_monitor<1>   1       0     0   4     FB4_12  52    I/O     O
+(unused)              0       0     0   5     FB4_13        (b)     
+sma_trig_monitor<3>   1       0     0   4     FB4_14  50    I/O     O
+(unused)              0       0     0   5     FB4_15  56    I/O     
+(unused)              0       0     0   5     FB4_16        (b)     
+(unused)              0       0     0   5     FB4_17  57    I/O     I
+d1_75duty_clk0        1       0     0   4     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: d0_75duty_clk0     2: dffe_trig_out_clk0   3: osc_clk0 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+trig2                .XX..................................... 2
+trig_en              ........................................ 0
+sma_trig_monitor<4>  .X...................................... 1
+sma_trig_monitor<2>  .X...................................... 1
+sma_trig_monitor<1>  .X...................................... 1
+sma_trig_monitor<3>  .X...................................... 1
+d1_75duty_clk0       X....................................... 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+FDCPE_d0_25duty_clk0: FDCPE port map (d0_25duty_clk0,d0_25duty_clk0_D,osc_clk0,'0','0');
+d0_25duty_clk0_D <= (d0_shreg_clk0 AND NOT d1_shreg_clk0);
+
+FDCPE_d0_75duty_clk0: FDCPE port map (d0_75duty_clk0,d0_75duty_clk0_D,osc_clk0,'0','0');
+d0_75duty_clk0_D <= (NOT d0_shreg_clk0 AND d1_shreg_clk0);
+
+FDCPE_d0_shreg_clk0: FDCPE port map (d0_shreg_clk0,NOT d1_shreg_clk0,osc_clk0,'0','0');
+
+FDCPE_d1_75duty_clk0: FDCPE port map (d1_75duty_clk0,d0_75duty_clk0,osc_clk0,'0','0');
+
+FDCPE_d1_shreg_clk0: FDCPE port map (d1_shreg_clk0,d0_shreg_clk0,osc_clk0,'0','0');
+
+FDCPE_dffe_trig_out_clk0: FDCPE port map (dffe_trig_out_clk0,sma_trig,osc_clk0,'0','0',dffe_trig_out_clk0_CE);
+dffe_trig_out_clk0_CE <= (d0_shreg_clk0 AND NOT d1_shreg_clk0);
+
+
+osc_sel <= switch(1);
+
+
+poe_led(1) <= NOT poe_aux_det(1);
+
+
+poe_led(2) <= NOT poe_vc_det(1);
+
+
+poe_led(3) <= NOT poe_aux_det(2);
+
+
+poe_led(4) <= NOT poe_vc_det(2);
+
+
+poe_led(5) <= NOT poe_aux_det(3);
+
+
+poe_led(6) <= NOT poe_vc_det(3);
+
+
+poe_led(7) <= NOT poe_aux_det(4);
+
+
+poe_led(8) <= NOT poe_vc_det(4);
+
+
+sma_clk_monitor(1) <= ((osc_clk0 AND NOT switch(3))
+	OR (trig1 AND switch(3)));
+
+
+sma_clk_monitor(2) <= ((osc_clk0 AND NOT switch(3))
+	OR (trig1 AND switch(3)));
+
+
+sma_clk_monitor(3) <= ((osc_clk0 AND NOT switch(3))
+	OR (trig1 AND switch(3)));
+
+
+sma_clk_monitor(4) <= ((osc_clk0 AND NOT switch(3))
+	OR (trig1 AND switch(3)));
+
+FDCPE_sma_trig_monitor1: FDCPE port map (sma_trig_monitor(1),dffe_trig_out_clk0,osc_clk0,'0','0');
+
+FDCPE_sma_trig_monitor2: FDCPE port map (sma_trig_monitor(2),dffe_trig_out_clk0,osc_clk0,'0','0');
+
+FDCPE_sma_trig_monitor3: FDCPE port map (sma_trig_monitor(3),dffe_trig_out_clk0,osc_clk0,'0','0');
+
+FDCPE_sma_trig_monitor4: FDCPE port map (sma_trig_monitor(4),dffe_trig_out_clk0,osc_clk0,'0','0');
+
+FDCPE_trig1: FDCPE port map (trig1,trig1_D,osc_clk0,'0','0');
+trig1_D <= ((dffe_trig_out_clk0 AND d1_75duty_clk0)
+	OR (NOT dffe_trig_out_clk0 AND d0_25duty_clk0));
+
+
+trig2 <= (osc_clk0 AND NOT dffe_trig_out_clk0);
+
+
+trig_en <= '1';
+
+
+trig_sel <= switch(2);
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-5-VQ64
+
+
+   -----------------------------------------------  
+  /48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 \
+ | 49                                           32 | 
+ | 50                                           31 | 
+ | 51                                           30 | 
+ | 52                                           29 | 
+ | 53                                           28 | 
+ | 54                                           27 | 
+ | 55                                           26 | 
+ | 56               XC9572XL-5-VQ64             25 | 
+ | 57                                           24 | 
+ | 58                                           23 | 
+ | 59                                           22 | 
+ | 60                                           21 | 
+ | 61                                           20 | 
+ | 62                                           19 | 
+ | 63                                           18 | 
+ | 64                                           17 | 
+ \ 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 /
+   -----------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 poe_aux_det<3>                   33 switch<3>                     
+  2 poe_aux_det<4>                   34 KPR                           
+  3 VCC                              35 KPR                           
+  4 poe_vc_det<4>                    36 KPR                           
+  5 osc_sel                          37 VCC                           
+  6 poe_led<2>                       38 KPR                           
+  7 poe_led<1>                       39 KPR                           
+  8 poe_led<4>                       40 trig1                         
+  9 poe_led<3>                       41 GND                           
+ 10 poe_led<6>                       42 trig_sel                      
+ 11 poe_led<5>                       43 trig2                         
+ 12 poe_led<8>                       44 trig_en                       
+ 13 poe_led<7>                       45 poe_aux_det<1>                
+ 14 GND                              46 poe_vc_det<1>                 
+ 15 KPR                              47 poe_aux_det<2>                
+ 16 osc_clk0                         48 KPR                           
+ 17 KPR                              49 sma_trig_monitor<4>           
+ 18 KPR                              50 sma_trig_monitor<3>           
+ 19 KPR                              51 sma_trig_monitor<2>           
+ 20 KPR                              52 sma_trig_monitor<1>           
+ 21 GND                              53 TDO                           
+ 22 KPR                              54 GND                           
+ 23 KPR                              55 VCC                           
+ 24 KPR                              56 KPR                           
+ 25 KPR                              57 poe_vc_det<2>                 
+ 26 VCC                              58 poe_vc_det<3>                 
+ 27 sma_trig                         59 KPR                           
+ 28 TDI                              60 sma_clk_monitor<4>            
+ 29 TMS                              61 sma_clk_monitor<3>            
+ 30 TCK                              62 sma_clk_monitor<2>            
+ 31 switch<2>                        63 sma_clk_monitor<1>            
+ 32 switch<1>                        64 KPR                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-VQ64
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

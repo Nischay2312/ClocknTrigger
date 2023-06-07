@@ -1,0 +1,329 @@
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+vhdtdtfi -lang verilog -prj NuPrism_Combiner_Rev1 -o /home/ise/NuPrism_Combiner_Rev1/combiner.tfi -lib work /home/ise/NuPrism_Combiner_Rev1//combiner.v -module combiner -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+netgen -intstyle ise -sdf_anno true -sdf_path "netgen/fit" -insert_glbl true -w -dir netgen/fit -ofmt verilog -sim combiner.nga combiner_timesim.v 
+taengine -intstyle ise -f combiner -w --format html1 -l combiner_html/tim/timing_report.htm 
+-cwd "/home/ise/NuPrism_Combiner_Rev1" timingan_cpld -intstyle ise "/home/ise/NuPrism_Combiner_Rev1/combiner.vm6" 
+vhdtdtfi -lang verilog -prj NuPrism_Combiner_Rev1 -o /home/ise/NuPrism_Combiner_Rev1/combiner.tfi -lib work /home/ise/NuPrism_Combiner_Rev1//combiner.v -module combiner -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+taengine -intstyle ise -f combiner -w --format html1 -l combiner_html/tim/timing_report.htm 
+-cwd "/home/ise/NuPrism_Combiner_Rev1" timingan_cpld -intstyle ise "/home/ise/NuPrism_Combiner_Rev1/combiner.vm6" 
+netgen -intstyle ise -sdf_anno true -sdf_path "netgen/fit" -insert_glbl true -w -dir netgen/fit -ofmt verilog -sim combiner.nga combiner_timesim.v 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-PC44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ44-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+ngdbuild -intstyle ise -dd _ngo -i -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+taengine -intstyle ise -f combiner -w --format html1 -l combiner_html/tim/timing_report.htm 
+pin2ucf combiner.gyd -o /home/ise/NuPrism_Combiner_Rev1/combiner.ucf -r combiner.lck 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+taengine -intstyle ise -f combiner -w --format html1 -l combiner_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc combiner.ucf -p xc9572xl-VQ64-5 combiner.ngc combiner.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper combiner.ngd 
+XSLTProcess combiner_build.xml 
+tsim -intstyle ise combiner combiner.nga 
+hprep6 -s IEEE1149 -n combiner -i combiner 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/combiner.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/combiner.syr" 

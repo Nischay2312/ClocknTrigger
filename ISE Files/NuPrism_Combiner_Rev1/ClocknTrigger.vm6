@@ -1,0 +1,749 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xc9500xl | 9572XL64 | XC9572XL-5-VQ64
+
+DEVICE | 9572XL | 9572XL64 | 
+
+NETWORK | ClocknTrigger | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | reset_IBUF | ClocknTrigger_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | reset | 776 | PI | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | fastclk_IBUF | ClocknTrigger_COPY_0_COPY_0 | 16 | 1 | 2
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | fastclk | 777 | PI | 138 | 0 | ClocknTrigger_COPY_0_COPY_0 | fastclk;fastclk;fastclk;INT_CLK_fastclk;INT_CLK_fastclk;INT_CLK_fastclk;INT_CLK_fastclk | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 7 | 5 | II_FCLKINV
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | trigSync_DC | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/TriggSync/signalSync1 | 753 | ? | 140 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/TriggSync/signalSync1.Q | CnTDC/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | trigSync_DC.SI | trigSync_DC | 0 | 4 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/TriggSync/signalSync1 | 753 | ? | 140 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/TriggSync/signalSync1.Q | CnTDC/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | trigSync_DC.D1 | 782 | ? | 140 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | trigSync_DC.D2 | 783 | ? | 140 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | CnTDC/TriggSync/signalSync1
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | trigSync_DC.RSTF | 784 | ? | 142 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | trigSync_DC.CE | 785 | ? | 143 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 2 | IV_FALSE | CnTDC/counter<0> | IV_FALSE | CnTDC/counter<1>
+
+SRFF_INSTANCE | trigSync_DC.REG | trigSync_DC | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | trigSync_DC.D | 781 | ? | 140 | 0 | trigSync_DC | NULL | NULL | trigSync_DC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | trigSync_DC.RSTF | 784 | ? | 142 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | trigSync_DC.CE | 785 | ? | 143 | 4096 | trigSync_DC | NULL | NULL | trigSync_DC.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 2 | IV_FALSE | CnTDC/counter<0> | IV_FALSE | CnTDC/counter<1>
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | trigSync_DC.Q | 786 | ? | 169 | 0 | trigSync_DC | NULL | NULL | trigSync_DC.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | trigSync_MisClk | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/TriggSync/signalSync1 | 752 | ? | 144 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/TriggSync/signalSync1.Q | CnT/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | trigSync_MisClk.SI | trigSync_MisClk | 0 | 3 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/TriggSync/signalSync1 | 752 | ? | 144 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/TriggSync/signalSync1.Q | CnT/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | trigSync_MisClk.D1 | 788 | ? | 144 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | trigSync_MisClk.D2 | 789 | ? | 144 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | CnT/TriggSync/signalSync1
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | trigSync_MisClk.RSTF | 790 | ? | 145 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | trigSync_MisClk.CE | 791 | ? | 146 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | CnT/slowclk
+
+SRFF_INSTANCE | trigSync_MisClk.REG | trigSync_MisClk | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | trigSync_MisClk.D | 787 | ? | 144 | 0 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | trigSync_MisClk.RSTF | 790 | ? | 145 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | trigSync_MisClk.CE | 791 | ? | 146 | 4096 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | CnT/slowclk
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | trigSync_MisClk.Q | 792 | ? | 168 | 0 | trigSync_MisClk | NULL | NULL | trigSync_MisClk.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+INPUT_INSTANCE | 0 | 0 | NULL | trigger_IBUF | ClocknTrigger_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | trigger | 778 | PI | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | trigger_IBUF | 751 | ? | 150 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | trigger_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | CnT/TriggSync/signalSync1 | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigger_IBUF | 751 | ? | 150 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | trigger_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | CnT/TriggSync/signalSync1 | 752 | ? | 144 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/TriggSync/signalSync1.Q | CnT/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | CnT/TriggSync/signalSync1.SI | CnT/TriggSync/signalSync1 | 0 | 3 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigger_IBUF | 751 | ? | 150 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | trigger_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | CnT/TriggSync/signalSync1.D1 | 794 | ? | 147 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | CnT/TriggSync/signalSync1.D2 | 795 | ? | 147 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | trigger_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | CnT/TriggSync/signalSync1.RSTF | 796 | ? | 148 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | CnT/TriggSync/signalSync1.CE | 797 | ? | 149 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | CnT/slowclk
+
+SRFF_INSTANCE | CnT/TriggSync/signalSync1.REG | CnT/TriggSync/signalSync1 | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | CnT/TriggSync/signalSync1.D | 793 | ? | 147 | 0 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | CnT/TriggSync/signalSync1.RSTF | 796 | ? | 148 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | CnT/TriggSync/signalSync1.CE | 797 | ? | 149 | 4096 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 1 | IV_FALSE | CnT/slowclk
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | CnT/TriggSync/signalSync1.Q | 798 | ? | 144 | 0 | CnT/TriggSync/signalSync1 | NULL | NULL | CnT/TriggSync/signalSync1.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | CnTDC/TriggSync/signalSync1 | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigger_IBUF | 751 | ? | 150 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | trigger_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | CnTDC/TriggSync/signalSync1 | 753 | ? | 140 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/TriggSync/signalSync1.Q | CnTDC/TriggSync/signalSync1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | CnTDC/TriggSync/signalSync1.SI | CnTDC/TriggSync/signalSync1 | 0 | 4 | 4
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigger_IBUF | 751 | ? | 150 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | trigger_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.D1 | 800 | ? | 150 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.D2 | 801 | ? | 150 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | trigger_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.RSTF | 802 | ? | 151 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 10 | 9 | MC_SI_CE
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.CE | 803 | ? | 152 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 2 | IV_FALSE | CnTDC/counter<0> | IV_FALSE | CnTDC/counter<1>
+
+SRFF_INSTANCE | CnTDC/TriggSync/signalSync1.REG | CnTDC/TriggSync/signalSync1 | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | CnTDC/TriggSync/signalSync1.D | 799 | ? | 150 | 0 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.RSTF | 802 | ? | 151 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+INPUT_NODE_TYPE | 4 | 8 | SRFF_CE
+SIGNAL | NODE | CnTDC/TriggSync/signalSync1.CE | 803 | ? | 152 | 4096 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.SI | 10 | 9 | MC_SI_CE
+SPPTERM | 2 | IV_FALSE | CnTDC/counter<0> | IV_FALSE | CnTDC/counter<1>
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | CnTDC/TriggSync/signalSync1.Q | 804 | ? | 140 | 0 | CnTDC/TriggSync/signalSync1 | NULL | NULL | CnTDC/TriggSync/signalSync1.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | Trig_sel_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SwitchSync0/signalSync1 | 760 | ? | 153 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync0/signalSync1.Q | SwitchSync0/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Trig_sel_OBUF$Q | 754 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Trig_sel_OBUF | 755 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Trig_sel_OBUF.SI | Trig_sel_OBUF | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SwitchSync0/signalSync1 | 760 | ? | 153 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync0/signalSync1.Q | SwitchSync0/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Trig_sel_OBUF.D1 | 806 | ? | 153 | 4096 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Trig_sel_OBUF.D2 | 807 | ? | 153 | 4096 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | SwitchSync0/signalSync1
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | Trig_sel_OBUF.RSTF | 808 | ? | 154 | 4096 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | Trig_sel_OBUF.REG | Trig_sel_OBUF | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Trig_sel_OBUF.D | 805 | ? | 153 | 0 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | Trig_sel_OBUF.RSTF | 808 | ? | 154 | 4096 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Trig_sel_OBUF.Q | 809 | ? | 0 | 0 | Trig_sel_OBUF | NULL | NULL | Trig_sel_OBUF.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | CnTDC/counter<0> | ClocknTrigger_COPY_0_COPY_0 | 2155877376 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | CnTDC/counter<0>.SI | CnTDC/counter<0> | 0 | 1 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | CnTDC/counter<0>.D1 | 811 | ? | 155 | 4096 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | CnTDC/counter<0>.D2 | 812 | ? | 155 | 4096 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | CnTDC/counter<0>.RSTF | 813 | ? | 157 | 4096 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | CnTDC/counter<0>.REG | CnTDC/counter<0> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | CnTDC/counter<0>.D | 810 | ? | 155 | 0 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | CnTDC/counter<0>.RSTF | 813 | ? | 157 | 4096 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | CnTDC/counter<0>.Q | 814 | ? | 169 | 0 | CnTDC/counter<0> | NULL | NULL | CnTDC/counter<0>.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | CnTDC/counter<1> | ClocknTrigger_COPY_0_COPY_0 | 2155877376 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | CnTDC/counter<1>.SI | CnTDC/counter<1> | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | CnTDC/counter<1>.D1 | 816 | ? | 158 | 0 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | CnTDC/counter<1>.D2 | 817 | ? | 158 | 4096 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | CnTDC/counter<0>
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | CnTDC/counter<1>.RSTF | 818 | ? | 159 | 4096 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | CnTDC/counter<1>.REG | CnTDC/counter<1> | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | CnTDC/counter<1>.D | 815 | ? | 158 | 0 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | CnTDC/counter<1>.RSTF | 818 | ? | 159 | 4096 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | CnTDC/counter<1>.Q | 819 | ? | 169 | 0 | CnTDC/counter<1> | NULL | NULL | CnTDC/counter<1>.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+Tff+OptxMapped | CnT/slowclk | ClocknTrigger_COPY_0_COPY_0 | 2155877376 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | CnT/slowclk.SI | CnT/slowclk | 0 | 1 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | CnT/slowclk.D1 | 821 | ? | 160 | 4096 | CnT/slowclk | NULL | NULL | CnT/slowclk.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | CnT/slowclk.D2 | 822 | ? | 160 | 4096 | CnT/slowclk | NULL | NULL | CnT/slowclk.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | CnT/slowclk.RSTF | 823 | ? | 161 | 4096 | CnT/slowclk | NULL | NULL | CnT/slowclk.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | CnT/slowclk.REG | CnT/slowclk | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | CnT/slowclk.D | 820 | ? | 160 | 0 | CnT/slowclk | NULL | NULL | CnT/slowclk.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLKIO_1 | 747 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 3 | 5 | II_FCLK
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | CnT/slowclk.RSTF | 823 | ? | 161 | 4096 | CnT/slowclk | NULL | NULL | CnT/slowclk.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | CnT/slowclk.Q | 824 | ? | 168 | 0 | CnT/slowclk | NULL | NULL | CnT/slowclk.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+INPUT_INSTANCE | 0 | 0 | NULL | Switches_0_IBUF | ClocknTrigger_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Switches<0> | 779 | PI | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Switches_0_IBUF | 759 | ? | 162 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_0_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | SwitchSync0/signalSync1 | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Switches_0_IBUF | 759 | ? | 162 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | SwitchSync0/signalSync1 | 760 | ? | 153 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync0/signalSync1.Q | SwitchSync0/signalSync1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | SwitchSync0/signalSync1.SI | SwitchSync0/signalSync1 | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Switches_0_IBUF | 759 | ? | 162 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | SwitchSync0/signalSync1.D1 | 826 | ? | 162 | 4096 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | SwitchSync0/signalSync1.D2 | 827 | ? | 162 | 4096 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Switches_0_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | SwitchSync0/signalSync1.RSTF | 828 | ? | 163 | 4096 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | SwitchSync0/signalSync1.REG | SwitchSync0/signalSync1 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SwitchSync0/signalSync1.D | 825 | ? | 162 | 0 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | SwitchSync0/signalSync1.RSTF | 828 | ? | 163 | 4096 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SwitchSync0/signalSync1.Q | 829 | ? | 153 | 0 | SwitchSync0/signalSync1 | NULL | NULL | SwitchSync0/signalSync1.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+INPUT_INSTANCE | 0 | 0 | NULL | Switches_1_IBUF | ClocknTrigger_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Switches<1> | 780 | PI | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Switches_1_IBUF | 761 | ? | 164 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_1_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | SwitchSync1/signalSync1 | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Switches_1_IBUF | 761 | ? | 164 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | SwitchSync1/signalSync1 | 762 | ? | 166 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync1/signalSync1.Q | SwitchSync1/signalSync1 | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | SwitchSync1/signalSync1.SI | SwitchSync1/signalSync1 | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Switches_1_IBUF | 761 | ? | 164 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Switches_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | SwitchSync1/signalSync1.D1 | 831 | ? | 164 | 4096 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | SwitchSync1/signalSync1.D2 | 832 | ? | 164 | 4096 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | Switches_1_IBUF
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | SwitchSync1/signalSync1.RSTF | 833 | ? | 165 | 4096 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | SwitchSync1/signalSync1.REG | SwitchSync1/signalSync1 | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SwitchSync1/signalSync1.D | 830 | ? | 164 | 0 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | SwitchSync1/signalSync1.RSTF | 833 | ? | 165 | 4096 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SwitchSync1/signalSync1.Q | 834 | ? | 166 | 0 | SwitchSync1/signalSync1 | NULL | NULL | SwitchSync1/signalSync1.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped+Ce | Clock_sel_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2424308736 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SwitchSync1/signalSync1 | 762 | ? | 166 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync1/signalSync1.Q | SwitchSync1/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Clock_sel_OBUF | 763 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Clock_sel_OBUF.Q | Clock_sel_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Clock_sel_OBUF.SI | Clock_sel_OBUF | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | SwitchSync1/signalSync1 | 762 | ? | 166 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SwitchSync1/signalSync1.Q | SwitchSync1/signalSync1 | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | reset_IBUF | 746 | ? | 167 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | reset_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Clock_sel_OBUF.D1 | 836 | ? | 166 | 4096 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Clock_sel_OBUF.D2 | 837 | ? | 166 | 4096 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | SwitchSync1/signalSync1
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | Clock_sel_OBUF.RSTF | 838 | ? | 167 | 4096 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+
+SRFF_INSTANCE | Clock_sel_OBUF.REG | Clock_sel_OBUF | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Clock_sel_OBUF.D | 835 | ? | 166 | 0 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | FCLK-IO_0 | 748 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | fastclk_IBUF | 7 | 5 | II_FCLKINV
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | Clock_sel_OBUF.RSTF | 838 | ? | 167 | 4096 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | reset_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Clock_sel_OBUF.Q | 839 | ? | 0 | 0 | Clock_sel_OBUF | NULL | NULL | Clock_sel_OBUF.REG | 0 | 8 | SRFF_Q
+TNAME | fastclk | INT_CLK_fastclk
+
+MACROCELL_INSTANCE | OptxMapped | clk_out_DC_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2155872256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | clk_out_DC_OBUF$Q | 764 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | clk_out_DC_OBUF.Q | clk_out_DC_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | clk_out_DC_OBUF.SI | clk_out_DC_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | clk_out_DC_OBUF.D1 | 841 | ? | 169 | 4096 | clk_out_DC_OBUF | NULL | NULL | clk_out_DC_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | clk_out_DC_OBUF.D2 | 842 | ? | 169 | 4096 | clk_out_DC_OBUF | NULL | NULL | clk_out_DC_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | trigSync_DC | IV_TRUE | CnTDC/counter<0>
+SPPTERM | 2 | IV_FALSE | trigSync_DC | IV_TRUE | CnTDC/counter<1>
+SPPTERM | 2 | IV_TRUE | CnTDC/counter<0> | IV_TRUE | CnTDC/counter<1>
+
+SRFF_INSTANCE | clk_out_DC_OBUF.REG | clk_out_DC_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | clk_out_DC_OBUF.D | 840 | ? | 169 | 0 | clk_out_DC_OBUF | NULL | NULL | clk_out_DC_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | clk_out_DC_OBUF.Q | 843 | ? | 169 | 0 | clk_out_DC_OBUF | NULL | NULL | clk_out_DC_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | clk_out_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2155872256 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | clk_out_OBUF$Q | 765 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | clk_out_OBUF.Q | clk_out_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | clk_out_OBUF.SI | clk_out_OBUF | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | clk_out_OBUF.D1 | 845 | ? | 168 | 4096 | clk_out_OBUF | NULL | NULL | clk_out_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | clk_out_OBUF.D2 | 846 | ? | 168 | 4096 | clk_out_OBUF | NULL | NULL | clk_out_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | trigSync_MisClk | IV_TRUE | CnT/slowclk
+
+SRFF_INSTANCE | clk_out_OBUF.REG | clk_out_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | clk_out_OBUF.D | 844 | ? | 168 | 0 | clk_out_OBUF | NULL | NULL | clk_out_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | clk_out_OBUF.Q | 847 | ? | 168 | 0 | clk_out_OBUF | NULL | NULL | clk_out_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | SMA_CLK_PORT_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2155872256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Trig_sel_OBUF | 755 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | SMA_CLK_PORT_OBUF | 766 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SMA_CLK_PORT_OBUF.Q | SMA_CLK_PORT_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | SMA_CLK_PORT_OBUF.SI | SMA_CLK_PORT_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Trig_sel_OBUF | 755 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | SMA_CLK_PORT_OBUF.D1 | 849 | ? | 0 | 4096 | SMA_CLK_PORT_OBUF | NULL | NULL | SMA_CLK_PORT_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | SMA_CLK_PORT_OBUF.D2 | 850 | ? | 0 | 4096 | SMA_CLK_PORT_OBUF | NULL | NULL | SMA_CLK_PORT_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | trigSync_DC | IV_TRUE | Trig_sel_OBUF
+SPPTERM | 2 | IV_TRUE | trigSync_MisClk | IV_FALSE | Trig_sel_OBUF
+
+SRFF_INSTANCE | SMA_CLK_PORT_OBUF.REG | SMA_CLK_PORT_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SMA_CLK_PORT_OBUF.D | 848 | ? | 0 | 0 | SMA_CLK_PORT_OBUF | NULL | NULL | SMA_CLK_PORT_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SMA_CLK_PORT_OBUF.Q | 851 | ? | 0 | 0 | SMA_CLK_PORT_OBUF | NULL | NULL | SMA_CLK_PORT_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | SMA_TRIG_PORT_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2155872256 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Trig_sel_OBUF | 755 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | SMA_TRIG_PORT_OBUF | 767 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SMA_TRIG_PORT_OBUF.Q | SMA_TRIG_PORT_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | SMA_TRIG_PORT_OBUF.SI | SMA_TRIG_PORT_OBUF | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_DC | 749 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_DC.Q | trigSync_DC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Trig_sel_OBUF | 755 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<1> | 757 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<1>.Q | CnTDC/counter<1> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnTDC/counter<0> | 756 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnTDC/counter<0>.Q | CnTDC/counter<0> | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | trigSync_MisClk | 750 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | trigSync_MisClk.Q | trigSync_MisClk | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | CnT/slowclk | 758 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | CnT/slowclk.Q | CnT/slowclk | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | SMA_TRIG_PORT_OBUF.D1 | 853 | ? | 0 | 4096 | SMA_TRIG_PORT_OBUF | NULL | NULL | SMA_TRIG_PORT_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | SMA_TRIG_PORT_OBUF.D2 | 854 | ? | 0 | 4096 | SMA_TRIG_PORT_OBUF | NULL | NULL | SMA_TRIG_PORT_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | trigSync_DC | IV_TRUE | Trig_sel_OBUF | IV_TRUE | CnTDC/counter<0>
+SPPTERM | 3 | IV_FALSE | trigSync_DC | IV_TRUE | Trig_sel_OBUF | IV_TRUE | CnTDC/counter<1>
+SPPTERM | 3 | IV_FALSE | trigSync_MisClk | IV_FALSE | Trig_sel_OBUF | IV_TRUE | CnT/slowclk
+SPPTERM | 3 | IV_TRUE | Trig_sel_OBUF | IV_TRUE | CnTDC/counter<0> | IV_TRUE | CnTDC/counter<1>
+
+SRFF_INSTANCE | SMA_TRIG_PORT_OBUF.REG | SMA_TRIG_PORT_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | SMA_TRIG_PORT_OBUF.D | 852 | ? | 0 | 0 | SMA_TRIG_PORT_OBUF | NULL | NULL | SMA_TRIG_PORT_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | SMA_TRIG_PORT_OBUF.Q | 855 | ? | 0 | 0 | SMA_TRIG_PORT_OBUF | NULL | NULL | SMA_TRIG_PORT_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | FbkInv+Merge+OptxMapped | Trig_en_OBUF | ClocknTrigger_COPY_0_COPY_0 | 2155907072 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Trig_en_OBUF | 768 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_en_OBUF.Q | Trig_en_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Trig_en_OBUF.SI | Trig_en_OBUF | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Trig_en_OBUF.D1 | 857 | ? | 0 | 4096 | Trig_en_OBUF | NULL | NULL | Trig_en_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Trig_en_OBUF.D2 | 858 | ? | 0 | 4096 | Trig_en_OBUF | NULL | NULL | Trig_en_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_DC
+
+SRFF_INSTANCE | Trig_en_OBUF.REG | Trig_en_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Trig_en_OBUF.D | 856 | ? | 0 | 0 | Trig_en_OBUF | NULL | NULL | Trig_en_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Trig_en_OBUF.Q | 859 | ? | 0 | 0 | Trig_en_OBUF | NULL | NULL | Trig_en_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Trig_sel | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Trig_sel_OBUF$Q | 754 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_sel_OBUF.Q | Trig_sel_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Trig_sel | 769 | PO | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Trig_sel | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Clock_sel | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Clock_sel_OBUF | 763 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Clock_sel_OBUF.Q | Clock_sel_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Clock_sel | 770 | PO | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Clock_sel | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | clk_out_DC | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | clk_out_DC_OBUF$Q | 764 | ? | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | clk_out_DC_OBUF.Q | clk_out_DC_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | clk_out_DC | 771 | PO | 169 | 0 | ClocknTrigger_COPY_0_COPY_0 | INT_TNM_clk_out_DC;INT_TNM_clk_out_DC | NULL | clk_out_DC | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | clk_out | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | clk_out_OBUF$Q | 765 | ? | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | clk_out_OBUF.Q | clk_out_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | clk_out | 772 | PO | 168 | 0 | ClocknTrigger_COPY_0_COPY_0 | INT_TNM_clk_out;INT_TNM_clk_out | NULL | clk_out | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | SMA_CLK_PORT | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | SMA_CLK_PORT_OBUF | 766 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SMA_CLK_PORT_OBUF.Q | SMA_CLK_PORT_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | SMA_CLK_PORT | 773 | PO | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | SMA_CLK_PORT | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | SMA_TRIG_PORT | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | SMA_TRIG_PORT_OBUF | 767 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | SMA_TRIG_PORT_OBUF.Q | SMA_TRIG_PORT_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | SMA_TRIG_PORT | 774 | PO | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | SMA_TRIG_PORT | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Trig_en | ClocknTrigger_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Trig_en_OBUF | 768 | ? | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | Trig_en_OBUF.Q | Trig_en_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Trig_en | 775 | PO | 0 | 0 | ClocknTrigger_COPY_0_COPY_0 | NULL | NULL | Trig_en | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | ClocknTrigger_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 11 | NULL | 0 | fastclk_IBUF | 0 | NULL | 0 | 16 | 57344
+
+FB_INSTANCE | FOOBAR2_ | ClocknTrigger_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | SMA_CLK_PORT_OBUF | 1 | NULL | 0 | SMA_CLK_PORT | 1 | 60 | 49152
+FBPIN | 14 | Clock_sel_OBUF | 1 | NULL | 0 | Clock_sel | 1 | 5 | 53248
+FBPIN | 17 | SwitchSync1/signalSync1 | 1 | NULL | 0 | NULL | 0 | 7 | 49152
+FBPIN | 18 | trigSync_MisClk | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | ClocknTrigger_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 6 | NULL | 0 | Switches_1_IBUF | 1 | NULL | 0 | 34 | 49152
+FBPIN | 9 | NULL | 0 | trigger_IBUF | 1 | NULL | 0 | 27 | 49152
+FBPIN | 10 | NULL | 0 | reset_IBUF | 1 | NULL | 0 | 39 | 49152
+FBPIN | 11 | NULL | 0 | Switches_0_IBUF | 1 | NULL | 0 | 33 | 49152
+FBPIN | 12 | clk_out_OBUF | 1 | NULL | 0 | clk_out | 1 | 40 | 49152
+FBPIN | 16 | Trig_sel_OBUF | 1 | NULL | 0 | Trig_sel | 1 | 42 | 49152
+FBPIN | 17 | SwitchSync0/signalSync1 | 1 | NULL | 0 | NULL | 0 | 38 | 49152
+FBPIN | 18 | trigSync_DC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR4_ | ClocknTrigger_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | clk_out_DC_OBUF | 1 | NULL | 0 | clk_out_DC | 1 | 43 | 49152
+FBPIN | 5 | Trig_en_OBUF | 1 | NULL | 0 | Trig_en | 1 | 44 | 49152
+FBPIN | 6 | SMA_TRIG_PORT_OBUF | 1 | NULL | 0 | SMA_TRIG_PORT | 1 | 49 | 49152
+FBPIN | 14 | CnTDC/counter<0> | 1 | NULL | 0 | NULL | 0 | 50 | 49152
+FBPIN | 15 | CnT/slowclk | 1 | NULL | 0 | NULL | 0 | 56 | 49152
+FBPIN | 16 | CnTDC/counter<1> | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | CnTDC/TriggSync/signalSync1 | 1 | NULL | 0 | NULL | 0 | 57 | 49152
+FBPIN | 18 | CnT/TriggSync/signalSync1 | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | ClocknTrigger_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | SWITCHES<1:0> | 2 | 0 | 0 | Switches<0> | 1 | Switches<1> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 3 | Switches<1> | 34 | 9 | reset | 39 | 14 | CnT/slowclk | NULL | 15 | Trig_sel_OBUF | NULL | 17 | trigSync_DC | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 38 | SwitchSync1/signalSync1 | NULL | 49 | trigSync_MisClk | NULL | 53 | CnT/TriggSync/signalSync1 | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | 129 | -1 | -1 | -1 | -1 | -1 | 117 | -1 | -1 | -1 | -1 | 68 | 51 | -1 | 53 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 34 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | -1 | 71
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 5 | Switches<0> | 33 | 9 | reset | 39 | 13 | CnTDC/counter<0> | NULL | 14 | CnT/slowclk | NULL | 15 | CnTDC/counter<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 44 | SwitchSync0/signalSync1 | NULL | 45 | CnTDC/TriggSync/signalSync1 | NULL | 49 | trigSync_MisClk | NULL
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | -1 | -1 | -1 | 131 | -1 | -1 | -1 | 117 | -1 | -1 | -1 | 67 | 68 | 69 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 52 | 70 | -1 | -1 | -1 | 35 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 9 | reset | 39 | 11 | trigger | 27 | 13 | CnTDC/counter<0> | NULL | 14 | CnT/slowclk | NULL | 15 | CnTDC/counter<1> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 17 | trigSync_DC | NULL | 36 | Trig_sel_OBUF | NULL | 49 | trigSync_MisClk | NULL
+
+FB_IMUX_INDEX | FOOBAR4_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 117 | -1 | 137 | -1 | 67 | 68 | 69 | -1 | 53 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 51 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | fastclk | 1 | 1
+
+TIME_TSPEC | TS_fastclk | PERIOD:fastclk:8.000nS:HIGH:4.000nS | fastclk | 10003 | 80 | 40 | NULL
+
+TIME_TSPEC | AUTO_TS_2001 | FROM:INT_CLK_fastclk:TO:INT_TNM_clk_out:8.0 | NULL | 10000 | 80 | 0 | OFFSET OUT:8.000nS:AFTER:fastclk
+
+TIME_TSPEC | AUTO_TS_2002 | FROM:INT_CLK_fastclk:TO:INT_TNM_clk_out_DC:8.0 | NULL | 10000 | 80 | 0 | OFFSET OUT:8.000nS:AFTER:fastclk
+
+TIME_GRP | AUTO_TS_2001_from | INT_CLK_fastclk | 0
+
+TIME_GRP | AUTO_TS_2001_to | INT_TNM_clk_out | 0
+
+TIME_GRP | AUTO_TS_2002_from | INT_CLK_fastclk | 0
+
+TIME_GRP | AUTO_TS_2002_to | INT_TNM_clk_out_DC | 0

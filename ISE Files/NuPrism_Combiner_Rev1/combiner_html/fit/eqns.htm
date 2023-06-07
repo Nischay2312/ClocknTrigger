@@ -1,0 +1,329 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "combiner";
+      var device = "XC9572XL";
+      signals = new Array("d0_25duty_clk0","d0_75duty_clk0","d0_shreg_clk0","d1_75duty_clk0","d1_shreg_clk0","dffe_trig_out_clk0","osc_sel","poe_led1_SPECSIG","poe_led2_SPECSIG","poe_led3_SPECSIG","poe_led4_SPECSIG","poe_led5_SPECSIG","poe_led6_SPECSIG","poe_led7_SPECSIG","poe_led8_SPECSIG","sma_clk_monitor1_SPECSIG","sma_clk_monitor2_SPECSIG","sma_clk_monitor3_SPECSIG","sma_clk_monitor4_SPECSIG","sma_trig_monitor1_SPECSIG","sma_trig_monitor2_SPECSIG","sma_trig_monitor3_SPECSIG","sma_trig_monitor4_SPECSIG","trig1","trig2","trig_en","trig_sel");
+      sigNegs = new Array("OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("D","D","D","D","D","D","","","","","","","","","","","","","","D","D","D","D","D","","","");
+
+      
+        specSig["switch3_SPECSIG"]=new Array("switch<3>");
+      
+        specSig["switch1_SPECSIG"]=new Array("switch<1>");
+      
+        specSig["poe_aux_det1_SPECSIG"]=new Array("poe_aux_det<1>");
+      
+        specSig["poe_vc_det1_SPECSIG"]=new Array("poe_vc_det<1>");
+      
+        specSig["poe_aux_det2_SPECSIG"]=new Array("poe_aux_det<2>");
+      
+        specSig["poe_vc_det2_SPECSIG"]=new Array("poe_vc_det<2>");
+      
+        specSig["poe_aux_det3_SPECSIG"]=new Array("poe_aux_det<3>");
+      
+        specSig["poe_vc_det3_SPECSIG"]=new Array("poe_vc_det<3>");
+      
+        specSig["poe_aux_det4_SPECSIG"]=new Array("poe_aux_det<4>");
+      
+        specSig["poe_vc_det4_SPECSIG"]=new Array("poe_vc_det<4>");
+      
+        specSig["switch2_SPECSIG"]=new Array("switch<2>");
+      
+        specSig["poe_led4_SPECSIG"]=new Array("poe_led<4>");
+      
+        specSig["poe_led8_SPECSIG"]=new Array("poe_led<8>");
+      
+        specSig["poe_led7_SPECSIG"]=new Array("poe_led<7>");
+      
+        specSig["poe_led3_SPECSIG"]=new Array("poe_led<3>");
+      
+        specSig["poe_led6_SPECSIG"]=new Array("poe_led<6>");
+      
+        specSig["poe_led5_SPECSIG"]=new Array("poe_led<5>");
+      
+        specSig["GCKI_SPECSIG"]=new Array("GCK/I");
+      
+        specSig["sma_clk_monitor4_SPECSIG"]=new Array("sma_clk_monitor<4>");
+      
+        specSig["sma_clk_monitor3_SPECSIG"]=new Array("sma_clk_monitor<3>");
+      
+        specSig["sma_clk_monitor2_SPECSIG"]=new Array("sma_clk_monitor<2>");
+      
+        specSig["sma_clk_monitor1_SPECSIG"]=new Array("sma_clk_monitor<1>");
+      
+        specSig["poe_led2_SPECSIG"]=new Array("poe_led<2>");
+      
+        specSig["poe_led1_SPECSIG"]=new Array("poe_led<1>");
+      
+        specSig["sma_trig_monitor4_SPECSIG"]=new Array("sma_trig_monitor<4>");
+      
+        specSig["sma_trig_monitor2_SPECSIG"]=new Array("sma_trig_monitor<2>");
+      
+        specSig["sma_trig_monitor1_SPECSIG"]=new Array("sma_trig_monitor<1>");
+      
+        specSig["sma_trig_monitor3_SPECSIG"]=new Array("sma_trig_monitor<3>");
+      
+            pterms["FB1_2_1"]=new Array("/poe_vc_det2_SPECSIG");
+          
+            pterms["FB1_3_1"]=new Array("/poe_vc_det4_SPECSIG");
+          
+            pterms["FB1_4_1"]=new Array("/poe_aux_det4_SPECSIG");
+          
+            pterms["FB1_5_1"]=new Array("/poe_aux_det2_SPECSIG");
+          
+            pterms["FB1_6_1"]=new Array("/poe_vc_det3_SPECSIG");
+          
+            pterms["FB1_8_1"]=new Array("/poe_aux_det3_SPECSIG");
+          
+            pterms["FB1_18_1"]=new Array("/d1_shreg_clk0");
+          
+            pterms["FB2_2_1"]=new Array("osc_clk0","/switch3_SPECSIG");
+          
+            pterms["FB2_2_2"]=new Array("trig1","switch3_SPECSIG");
+          
+            pterms["FB2_5_1"]=new Array("osc_clk0","/switch3_SPECSIG");
+          
+            pterms["FB2_5_2"]=new Array("trig1","switch3_SPECSIG");
+          
+            pterms["FB2_6_1"]=new Array("osc_clk0","/switch3_SPECSIG");
+          
+            pterms["FB2_6_2"]=new Array("trig1","switch3_SPECSIG");
+          
+            pterms["FB2_8_1"]=new Array("osc_clk0","/switch3_SPECSIG");
+          
+            pterms["FB2_8_2"]=new Array("trig1","switch3_SPECSIG");
+          
+            pterms["FB2_13_1"]=new Array("d0_shreg_clk0");
+          
+            pterms["FB2_14_1"]=new Array("switch1_SPECSIG");
+          
+            pterms["FB2_15_1"]=new Array("/poe_vc_det1_SPECSIG");
+          
+            pterms["FB2_16_1"]=new Array("/d0_shreg_clk0","d1_shreg_clk0");
+          
+            pterms["FB2_17_1"]=new Array("/poe_aux_det1_SPECSIG");
+          
+            pterms["FB2_18_1"]=new Array("d0_shreg_clk0","/d1_shreg_clk0");
+          
+            pterms["FB3_12_1"]=new Array("dffe_trig_out_clk0","d1_75duty_clk0");
+          
+            pterms["FB3_12_2"]=new Array("/dffe_trig_out_clk0","d0_25duty_clk0");
+          
+            pterms["FB3_16_1"]=new Array("switch2_SPECSIG");
+          
+            pterms["FB3_18_1"]=new Array("sma_trig");
+          
+            pterms["FB3_18_2"]=new Array("d0_shreg_clk0","/d1_shreg_clk0");
+          
+            pterms["FB4_2_1"]=new Array("osc_clk0","/dffe_trig_out_clk0");
+          
+            pterms["FB4_6_1"]=new Array("dffe_trig_out_clk0");
+          
+            pterms["FB4_10_1"]=new Array("dffe_trig_out_clk0");
+          
+            pterms["FB4_12_1"]=new Array("dffe_trig_out_clk0");
+          
+            pterms["FB4_14_1"]=new Array("dffe_trig_out_clk0");
+          
+            pterms["FB4_18_1"]=new Array("d0_75duty_clk0");
+          
+          d2["poe_led4_SPECSIG"]=new Array("FB1_2_1");
+          
+            d2imp["poe_led4_SPECSIG"]=new Array("1");
+          
+          d2["poe_led8_SPECSIG"]=new Array("FB1_3_1");
+          
+            d2imp["poe_led8_SPECSIG"]=new Array("1");
+          
+          d2["poe_led7_SPECSIG"]=new Array("FB1_4_1");
+          
+            d2imp["poe_led7_SPECSIG"]=new Array("1");
+          
+          d2["poe_led3_SPECSIG"]=new Array("FB1_5_1");
+          
+            d2imp["poe_led3_SPECSIG"]=new Array("1");
+          
+          d2["poe_led6_SPECSIG"]=new Array("FB1_6_1");
+          
+            d2imp["poe_led6_SPECSIG"]=new Array("1");
+          
+          d2["poe_led5_SPECSIG"]=new Array("FB1_8_1");
+          
+            d2imp["poe_led5_SPECSIG"]=new Array("1");
+          
+          d2["d0_shreg_clk0"]=new Array("FB1_18_1");
+          
+            d2imp["d0_shreg_clk0"]=new Array("1");
+          
+              gblclk["d0_shreg_clk0"]=new Array("osc_clk0");
+            prld["d0_shreg_clk0"]="GND";
+          d2["sma_clk_monitor4_SPECSIG"]=new Array("FB2_2_1","FB2_2_2");
+          
+            d2imp["sma_clk_monitor4_SPECSIG"]=new Array("1","1");
+          
+          d2["sma_clk_monitor3_SPECSIG"]=new Array("FB2_5_1","FB2_5_2");
+          
+            d2imp["sma_clk_monitor3_SPECSIG"]=new Array("1","1");
+          
+          d2["sma_clk_monitor2_SPECSIG"]=new Array("FB2_6_1","FB2_6_2");
+          
+            d2imp["sma_clk_monitor2_SPECSIG"]=new Array("1","1");
+          
+          d2["sma_clk_monitor1_SPECSIG"]=new Array("FB2_8_1","FB2_8_2");
+          
+            d2imp["sma_clk_monitor1_SPECSIG"]=new Array("1","1");
+          
+          d2["d1_shreg_clk0"]=new Array("FB2_13_1");
+          
+            d2imp["d1_shreg_clk0"]=new Array("1");
+          
+              gblclk["d1_shreg_clk0"]=new Array("osc_clk0");
+            prld["d1_shreg_clk0"]="GND";
+          d2["osc_sel"]=new Array("FB2_14_1");
+          
+            d2imp["osc_sel"]=new Array("1");
+          
+          d2["poe_led2_SPECSIG"]=new Array("FB2_15_1");
+          
+            d2imp["poe_led2_SPECSIG"]=new Array("1");
+          
+          d2["d0_75duty_clk0"]=new Array("FB2_16_1");
+          
+            d2imp["d0_75duty_clk0"]=new Array("1");
+          
+              gblclk["d0_75duty_clk0"]=new Array("osc_clk0");
+            prld["d0_75duty_clk0"]="GND";
+          d2["poe_led1_SPECSIG"]=new Array("FB2_17_1");
+          
+            d2imp["poe_led1_SPECSIG"]=new Array("1");
+          
+          d2["d0_25duty_clk0"]=new Array("FB2_18_1");
+          
+            d2imp["d0_25duty_clk0"]=new Array("1");
+          
+              gblclk["d0_25duty_clk0"]=new Array("osc_clk0");
+            prld["d0_25duty_clk0"]="GND";
+          d2["trig1"]=new Array("FB3_12_1","FB3_12_2");
+          
+            d2imp["trig1"]=new Array("1","1");
+          
+              gblclk["trig1"]=new Array("osc_clk0");
+            prld["trig1"]="GND";
+          d2["trig_sel"]=new Array("FB3_16_1");
+          
+            d2imp["trig_sel"]=new Array("1");
+          
+          d2["dffe_trig_out_clk0"]=new Array("FB3_18_1");
+          
+            d2imp["dffe_trig_out_clk0"]=new Array("1");
+          
+              gblclk["dffe_trig_out_clk0"]=new Array("osc_clk0");
+            
+          ce["dffe_trig_out_clk0"]=new Array("FB3_18_2");
+          
+            ceimp["dffe_trig_out_clk0"]=new Array("1");
+          prld["dffe_trig_out_clk0"]="VCC";
+          d2["trig2"]=new Array("FB4_2_1");
+          
+            d2imp["trig2"]=new Array("1");
+          
+          d2["trig_en"]=new Array("VCC");
+          
+            d2imp["trig_en"]=new Array("1");
+          
+          d2["sma_trig_monitor4_SPECSIG"]=new Array("FB4_6_1");
+          
+            d2imp["sma_trig_monitor4_SPECSIG"]=new Array("1");
+          
+              gblclk["sma_trig_monitor4_SPECSIG"]=new Array("osc_clk0");
+            prld["sma_trig_monitor4_SPECSIG"]="GND";
+          d2["sma_trig_monitor2_SPECSIG"]=new Array("FB4_10_1");
+          
+            d2imp["sma_trig_monitor2_SPECSIG"]=new Array("1");
+          
+              gblclk["sma_trig_monitor2_SPECSIG"]=new Array("osc_clk0");
+            prld["sma_trig_monitor2_SPECSIG"]="GND";
+          d2["sma_trig_monitor1_SPECSIG"]=new Array("FB4_12_1");
+          
+            d2imp["sma_trig_monitor1_SPECSIG"]=new Array("1");
+          
+              gblclk["sma_trig_monitor1_SPECSIG"]=new Array("osc_clk0");
+            prld["sma_trig_monitor1_SPECSIG"]="GND";
+          d2["sma_trig_monitor3_SPECSIG"]=new Array("FB4_14_1");
+          
+            d2imp["sma_trig_monitor3_SPECSIG"]=new Array("1");
+          
+              gblclk["sma_trig_monitor3_SPECSIG"]=new Array("osc_clk0");
+            prld["sma_trig_monitor3_SPECSIG"]="GND";
+          d2["d1_75duty_clk0"]=new Array("FB4_18_1");
+          
+            d2imp["d1_75duty_clk0"]=new Array("1");
+          
+              gblclk["d1_75duty_clk0"]=new Array("osc_clk0");
+            prld["d1_75duty_clk0"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

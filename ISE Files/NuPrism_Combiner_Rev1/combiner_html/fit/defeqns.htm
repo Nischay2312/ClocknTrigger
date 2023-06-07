@@ -1,0 +1,98 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_d0_25duty_clk0: FDCPE port map (d0_25duty_clk0,d0_25duty_clk0_D,osc_clk0,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d0_25duty_clk0_D <= (d0_shreg_clk0 AND NOT d1_shreg_clk0);
+</td></tr><tr><td>
+FDCPE_d0_75duty_clk0: FDCPE port map (d0_75duty_clk0,d0_75duty_clk0_D,osc_clk0,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d0_75duty_clk0_D <= (NOT d0_shreg_clk0 AND d1_shreg_clk0);
+</td></tr><tr><td>
+FDCPE_d0_shreg_clk0: FDCPE port map (d0_shreg_clk0,NOT d1_shreg_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_d1_75duty_clk0: FDCPE port map (d1_75duty_clk0,d0_75duty_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_d1_shreg_clk0: FDCPE port map (d1_shreg_clk0,d0_shreg_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_dffe_trig_out_clk0: FDCPE port map (dffe_trig_out_clk0,sma_trig,osc_clk0,'0','0',dffe_trig_out_clk0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dffe_trig_out_clk0_CE <= (d0_shreg_clk0 AND NOT d1_shreg_clk0);
+</td></tr><tr><td>
+</td></tr><tr><td>
+osc_sel <= switch(1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(1) <= NOT poe_aux_det(1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(2) <= NOT poe_vc_det(1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(3) <= NOT poe_aux_det(2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(4) <= NOT poe_vc_det(2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(5) <= NOT poe_aux_det(3);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(6) <= NOT poe_vc_det(3);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(7) <= NOT poe_aux_det(4);
+</td></tr><tr><td>
+</td></tr><tr><td>
+poe_led(8) <= NOT poe_vc_det(4);
+</td></tr><tr><td>
+</td></tr><tr><td>
+sma_clk_monitor(1) <= ((osc_clk0 AND NOT switch(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig1 AND switch(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+sma_clk_monitor(2) <= ((osc_clk0 AND NOT switch(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig1 AND switch(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+sma_clk_monitor(3) <= ((osc_clk0 AND NOT switch(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig1 AND switch(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+sma_clk_monitor(4) <= ((osc_clk0 AND NOT switch(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trig1 AND switch(3)));
+</td></tr><tr><td>
+FDCPE_sma_trig_monitor1: FDCPE port map (sma_trig_monitor(1),dffe_trig_out_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_sma_trig_monitor2: FDCPE port map (sma_trig_monitor(2),dffe_trig_out_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_sma_trig_monitor3: FDCPE port map (sma_trig_monitor(3),dffe_trig_out_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_sma_trig_monitor4: FDCPE port map (sma_trig_monitor(4),dffe_trig_out_clk0,osc_clk0,'0','0');
+</td></tr><tr><td>
+FDCPE_trig1: FDCPE port map (trig1,trig1_D,osc_clk0,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trig1_D <= ((dffe_trig_out_clk0 AND d1_75duty_clk0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dffe_trig_out_clk0 AND d0_25duty_clk0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+trig2 <= (osc_clk0 AND NOT dffe_trig_out_clk0);
+</td></tr><tr><td>
+</td></tr><tr><td>
+trig_en <= '1';
+</td></tr><tr><td>
+</td></tr><tr><td>
+trig_sel <= switch(2);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

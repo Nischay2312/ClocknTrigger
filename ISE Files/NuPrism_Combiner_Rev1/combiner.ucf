@@ -1,0 +1,56 @@
+
+#PINLOCK_BEGIN
+
+#Tue Jun 14 19:53:41 2022
+
+NET "osc_clk0"       LOC =  "S:PIN16";
+NET "osc_clk1"       LOC =  "S:PIN15";
+NET "sma_clk"       LOC =  "S:PIN17";
+NET "osc_sel"        LOC =  "S:PIN5";
+
+NET "sma_trig"       LOC =  "S:PIN27"; //sma trigger input
+NET "trig_sel"       LOC =  "S:PIN42";
+NET "trig1"          LOC =  "S:PIN40";
+NET "trig2"          LOC =  "S:PIN43";
+NET "trig_en"        LOC =  "S:PIN44";
+
+NET "sma_trig_monitor<4>"  LOC =  "S:PIN49";	//50 Ohm output trigger monitor 
+NET "sma_trig_monitor<3>"  LOC =  "S:PIN50";
+NET "sma_trig_monitor<2>"  LOC =  "S:PIN51";
+NET "sma_trig_monitor<1>"  LOC =  "S:PIN52";
+
+NET "sma_clk_monitor<4>"  LOC =  "S:PIN60";	//50 Ohm output clock monitor
+NET "sma_clk_monitor<3>"  LOC =  "S:PIN61";
+NET "sma_clk_monitor<2>"  LOC =  "S:PIN62";
+NET "sma_clk_monitor<1>"  LOC =  "S:PIN63";
+
+NET "poe_aux_det<1>"  LOC =  "S:PIN45";		//detect 4 channels of 48 volt AUX POE power
+NET "poe_aux_det<2>"  LOC =  "S:PIN47";
+NET "poe_aux_det<3>"  LOC =  "S:PIN1";
+NET "poe_aux_det<4>"  LOC =  "S:PIN2";
+
+NET "poe_vc_det<1>"  LOC =  "S:PIN46";			//detect 4 channels of 48 volt VC POE power
+NET "poe_vc_det<2>"  LOC =  "S:PIN57";
+NET "poe_vc_det<3>"  LOC =  "S:PIN58";
+NET "poe_vc_det<4>"  LOC =  "S:PIN4";
+
+
+NET "poe_led<1>"	LOC = "S:PIN7";
+NET "poe_led<2>"	LOC = "S:PIN6";
+NET "poe_led<3>"	LOC = "S:PIN9";
+NET "poe_led<4>"	LOC = "S:PIN8";
+NET "poe_led<5>"	LOC = "S:PIN11";
+NET "poe_led<6>"	LOC = "S:PIN10";
+NET "poe_led<7>"	LOC = "S:PIN13";
+NET "poe_led<8>"	LOC = "S:PIN12";
+
+
+NET "switch<1>"      LOC =  "S:PIN32";			//pcb option select switches
+NET "switch<2>"      LOC =  "S:PIN31";
+NET "switch<3>"      LOC =  "S:PIN33";
+NET "switch<4>"      LOC =  "S:PIN34";
+NET "switch<5>"      LOC =  "S:PIN35";
+NET "switch<6>"      LOC =  "S:PIN36";
+NET "switch<7>"      LOC =  "S:PIN38";
+NET "switch<8>"      LOC =  "S:PIN39";
+#PINLOCK_END	

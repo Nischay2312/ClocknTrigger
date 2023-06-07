@@ -1,0 +1,11 @@
+[Inputs]
+in
+ena
+clk
+rst
+[Outputs]
+out
+[BiDir]
+[ATTRIBUTES]
+VeriModel dffe
+

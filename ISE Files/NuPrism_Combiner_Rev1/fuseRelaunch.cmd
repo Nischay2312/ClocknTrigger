@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger_tb_isim_beh.exe" -prj "/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger_tb_beh.prj" "work.ClocknTrigger_tb" "work.glbl" 

@@ -1,0 +1,14 @@
+TS_fastclk:FROM:CnTDC/TriggSync/signalSync1.Q:TO:trigSync_DC.D:80
+TS_fastclk:FROM:CnTDC/counter<0>.Q:TO:trigSync_DC.CE:40
+TS_fastclk:FROM:CnTDC/counter<1>.Q:TO:trigSync_DC.CE:40
+TS_fastclk:FROM:CnT/TriggSync/signalSync1.Q:TO:trigSync_MisClk.D:80
+TS_fastclk:FROM:CnT/slowclk.Q:TO:trigSync_MisClk.CE:40
+TS_fastclk:FROM:CnT/slowclk.Q:TO:CnT/TriggSync/signalSync1.CE:40
+TS_fastclk:FROM:CnTDC/counter<0>.Q:TO:CnTDC/TriggSync/signalSync1.CE:40
+TS_fastclk:FROM:CnTDC/counter<1>.Q:TO:CnTDC/TriggSync/signalSync1.CE:40
+TS_fastclk:FROM:SwitchSync0/signalSync1.Q:TO:Trig_sel_OBUF.D:80
+TS_fastclk:FROM:CnTDC/counter<0>.Q:TO:CnTDC/counter<0>.D:80
+TS_fastclk:FROM:CnTDC/counter<0>.Q:TO:CnTDC/counter<1>.D:80
+TS_fastclk:FROM:CnTDC/counter<1>.Q:TO:CnTDC/counter<1>.D:80
+TS_fastclk:FROM:CnT/slowclk.Q:TO:CnT/slowclk.D:80
+TS_fastclk:FROM:SwitchSync1/signalSync1.Q:TO:Clock_sel_OBUF.D:80

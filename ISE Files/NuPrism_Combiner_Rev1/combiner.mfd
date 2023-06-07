@@ -1,0 +1,265 @@
+MDF Database:  version 1.0
+MDF_INFO | combiner | XC9572XL-5-VQ64
+MACROCELL | 2 | 17 | dffe_trig_out_clk0
+ATTRIBUTES | 8553284 | 0
+OUTPUTMC | 6 | 3 | 5 | 2 | 11 | 3 | 1 | 3 | 13 | 3 | 9 | 3 | 11
+INPUTS | 3 | sma_trig  | d0_shreg_clk0  | d1_shreg_clk0
+INPUTMC | 2 | 0 | 17 | 1 | 12
+INPUTP | 1 | 38
+EQ | 3 | 
+   dffe_trig_out_clk0.D = sma_trig;
+   dffe_trig_out_clk0.CLK = osc_clk0;	// GCK
+   dffe_trig_out_clk0.CE = d0_shreg_clk0 & !d1_shreg_clk0;
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 3 | 5 | d0_pipe_clk0
+ATTRIBUTES | 8684290 | 0
+INPUTS | 1 | dffe_trig_out_clk0
+INPUTMC | 1 | 2 | 17
+EQ | 2 | 
+   sma_trig_monitor<4>.D = dffe_trig_out_clk0;
+   sma_trig_monitor<4>.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 1 | 1 | sma_clk_monitor_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 3 | osc_clk0  | switch<3>  | trig1
+INPUTMC | 1 | 2 | 11
+INPUTP | 2 | 21 | 46
+EQ | 2 | 
+   sma_clk_monitor<4> = osc_clk0 & !switch<3>
+	# trig1 & switch<3>;
+
+MACROCELL | 2 | 11 | dff_clock_modulated_clk0
+ATTRIBUTES | 8815362 | 0
+OUTPUTMC | 4 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7
+INPUTS | 3 | dffe_trig_out_clk0  | d0_25duty_clk0  | d1_75duty_clk0
+INPUTMC | 3 | 2 | 17 | 1 | 17 | 3 | 17
+EQ | 3 | 
+   trig1.D = dffe_trig_out_clk0 & d1_75duty_clk0
+	# !dffe_trig_out_clk0 & d0_25duty_clk0;
+   trig1.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 0 | 17 | d0_shreg_clk0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 4 | 2 | 17 | 1 | 12 | 1 | 17 | 1 | 15
+INPUTS | 1 | d1_shreg_clk0
+INPUTMC | 1 | 1 | 12
+EQ | 2 | 
+   d0_shreg_clk0.D = !d1_shreg_clk0;
+   d0_shreg_clk0.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 1 | 12 | d1_shreg_clk0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 4 | 2 | 17 | 0 | 17 | 1 | 17 | 1 | 15
+INPUTS | 1 | d0_shreg_clk0
+INPUTMC | 1 | 0 | 17
+EQ | 2 | 
+   d1_shreg_clk0.D = d0_shreg_clk0;
+   d1_shreg_clk0.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 1 | 17 | d0_25duty_clk0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 2 | d0_shreg_clk0  | d1_shreg_clk0
+INPUTMC | 2 | 0 | 17 | 1 | 12
+EQ | 2 | 
+   d0_25duty_clk0.D = d0_shreg_clk0 & !d1_shreg_clk0;
+   d0_25duty_clk0.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 1 | 15 | d0_75duty_clk0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 2 | d0_shreg_clk0  | d1_shreg_clk0
+INPUTMC | 2 | 0 | 17 | 1 | 12
+EQ | 2 | 
+   !d0_75duty_clk0.D = !d0_shreg_clk0 & d1_shreg_clk0;
+   d0_75duty_clk0.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 3 | 17 | d1_75duty_clk0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 1 | d0_75duty_clk0
+INPUTMC | 1 | 1 | 15
+EQ | 2 | 
+   d1_75duty_clk0.D = d0_75duty_clk0;
+   d1_75duty_clk0.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 3 | 1 | trig2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 2 | osc_clk0  | dffe_trig_out_clk0
+INPUTMC | 1 | 2 | 17
+INPUTP | 1 | 21
+EQ | 1 | 
+   trig2 = osc_clk0 & !dffe_trig_out_clk0;
+
+MACROCELL | 3 | 13 | d0_pipe_clk0$BUF0
+ATTRIBUTES | 8684290 | 0
+INPUTS | 1 | dffe_trig_out_clk0
+INPUTMC | 1 | 2 | 17
+EQ | 2 | 
+   sma_trig_monitor<3>.D = dffe_trig_out_clk0;
+   sma_trig_monitor<3>.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 3 | 9 | d0_pipe_clk0$BUF1
+ATTRIBUTES | 8684290 | 0
+INPUTS | 1 | dffe_trig_out_clk0
+INPUTMC | 1 | 2 | 17
+EQ | 2 | 
+   sma_trig_monitor<2>.D = dffe_trig_out_clk0;
+   sma_trig_monitor<2>.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 3 | 11 | d0_pipe_clk0$BUF2
+ATTRIBUTES | 8684290 | 0
+INPUTS | 1 | dffe_trig_out_clk0
+INPUTMC | 1 | 2 | 17
+EQ | 2 | 
+   sma_trig_monitor<1>.D = dffe_trig_out_clk0;
+   sma_trig_monitor<1>.CLK = osc_clk0;	// GCK
+GLOBALS | 1 | 2 | osc_clk0
+
+MACROCELL | 1 | 13 | osc_sel_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | switch<1>
+INPUTP | 1 | 44
+EQ | 1 | 
+   osc_sel = switch<1>;
+
+MACROCELL | 1 | 16 | poe_led_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_aux_det<1>
+INPUTP | 1 | 65
+EQ | 1 | 
+   poe_led<1> = !poe_aux_det<1>;
+
+MACROCELL | 1 | 14 | poe_led_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_vc_det<1>
+INPUTP | 1 | 66
+EQ | 1 | 
+   poe_led<2> = !poe_vc_det<1>;
+
+MACROCELL | 0 | 4 | poe_led_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_aux_det<2>
+INPUTP | 1 | 67
+EQ | 1 | 
+   poe_led<3> = !poe_aux_det<2>;
+
+MACROCELL | 0 | 1 | poe_led_4_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_vc_det<2>
+INPUTP | 1 | 83
+EQ | 1 | 
+   poe_led<4> = !poe_vc_det<2>;
+
+MACROCELL | 0 | 7 | poe_led_5_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_aux_det<3>
+INPUTP | 1 | 1
+EQ | 1 | 
+   poe_led<5> = !poe_aux_det<3>;
+
+MACROCELL | 0 | 5 | poe_led_6_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_vc_det<3>
+INPUTP | 1 | 84
+EQ | 1 | 
+   poe_led<6> = !poe_vc_det<3>;
+
+MACROCELL | 0 | 3 | poe_led_7_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_aux_det<4>
+INPUTP | 1 | 3
+EQ | 1 | 
+   poe_led<7> = !poe_aux_det<4>;
+
+MACROCELL | 0 | 2 | poe_led_8_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | poe_vc_det<4>
+INPUTP | 1 | 5
+EQ | 1 | 
+   poe_led<8> = !poe_vc_det<4>;
+
+MACROCELL | 1 | 4 | sma_clk_monitor_1_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 3 | osc_clk0  | switch<3>  | trig1
+INPUTMC | 1 | 2 | 11
+INPUTP | 2 | 21 | 46
+EQ | 2 | 
+   sma_clk_monitor<3> = osc_clk0 & !switch<3>
+	# trig1 & switch<3>;
+
+MACROCELL | 1 | 5 | sma_clk_monitor_1_OBUF$BUF1
+ATTRIBUTES | 264962 | 0
+INPUTS | 3 | osc_clk0  | switch<3>  | trig1
+INPUTMC | 1 | 2 | 11
+INPUTP | 2 | 21 | 46
+EQ | 2 | 
+   sma_clk_monitor<2> = osc_clk0 & !switch<3>
+	# trig1 & switch<3>;
+
+MACROCELL | 1 | 7 | sma_clk_monitor_1_OBUF$BUF2
+ATTRIBUTES | 264962 | 0
+INPUTS | 3 | osc_clk0  | switch<3>  | trig1
+INPUTMC | 1 | 2 | 11
+INPUTP | 2 | 21 | 46
+EQ | 2 | 
+   sma_clk_monitor<1> = osc_clk0 & !switch<3>
+	# trig1 & switch<3>;
+
+MACROCELL | 2 | 15 | trig_sel_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | switch<2>
+INPUTP | 1 | 43
+EQ | 1 | 
+   trig_sel = switch<2>;
+
+MACROCELL | 3 | 4 | trig_en_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   trig_en = Vcc;
+
+PIN | sma_trig | 64 | 0 | N/A | 38 | 1 | 2 | 17
+PIN | osc_clk0 | 8256 | 0 | N/A | 21 | 16 | 1 | 1 | 3 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 2 | 17 | 3 | 5 | 2 | 11 | 0 | 17 | 1 | 12 | 1 | 17 | 1 | 15 | 3 | 17 | 3 | 13 | 3 | 9 | 3 | 11
+PIN | switch<3> | 64 | 0 | N/A | 46 | 4 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7
+PIN | switch<1> | 64 | 0 | N/A | 44 | 1 | 1 | 13
+PIN | poe_aux_det<1> | 64 | 0 | N/A | 65 | 1 | 1 | 16
+PIN | poe_vc_det<1> | 64 | 0 | N/A | 66 | 1 | 1 | 14
+PIN | poe_aux_det<2> | 64 | 0 | N/A | 67 | 1 | 0 | 4
+PIN | poe_vc_det<2> | 64 | 0 | N/A | 83 | 1 | 0 | 1
+PIN | poe_aux_det<3> | 64 | 0 | N/A | 1 | 1 | 0 | 7
+PIN | poe_vc_det<3> | 64 | 0 | N/A | 84 | 1 | 0 | 5
+PIN | poe_aux_det<4> | 64 | 0 | N/A | 3 | 1 | 0 | 3
+PIN | poe_vc_det<4> | 64 | 0 | N/A | 5 | 1 | 0 | 2
+PIN | switch<2> | 64 | 0 | N/A | 43 | 1 | 2 | 15
+PIN | sma_trig_monitor<4> | 536871040 | 0 | N/A | 70
+PIN | sma_clk_monitor<4> | 536871040 | 0 | N/A | 87
+PIN | trig1 | 536871040 | 0 | N/A | 55
+PIN | trig2 | 536871040 | 0 | N/A | 62
+PIN | sma_trig_monitor<3> | 536871040 | 0 | N/A | 72
+PIN | sma_trig_monitor<2> | 536871040 | 0 | N/A | 74
+PIN | sma_trig_monitor<1> | 536871040 | 0 | N/A | 75
+PIN | osc_sel | 536871040 | 0 | N/A | 7
+PIN | poe_led<1> | 536871040 | 0 | N/A | 10
+PIN | poe_led<2> | 536871040 | 0 | N/A | 9
+PIN | poe_led<3> | 536871040 | 0 | N/A | 12
+PIN | poe_led<4> | 536871040 | 0 | N/A | 11
+PIN | poe_led<5> | 536871040 | 0 | N/A | 15
+PIN | poe_led<6> | 536871040 | 0 | N/A | 13
+PIN | poe_led<7> | 536871040 | 0 | N/A | 17
+PIN | poe_led<8> | 536871040 | 0 | N/A | 16
+PIN | sma_clk_monitor<3> | 536871040 | 0 | N/A | 88
+PIN | sma_clk_monitor<2> | 536871040 | 0 | N/A | 89
+PIN | sma_clk_monitor<1> | 536871040 | 0 | N/A | 90
+PIN | trig_sel | 536871040 | 0 | N/A | 59
+PIN | trig_en | 536871040 | 0 | N/A | 63

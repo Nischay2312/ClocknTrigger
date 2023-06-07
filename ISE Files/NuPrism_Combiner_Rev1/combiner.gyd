@@ -1,0 +1,61 @@
+Pin Freeze File:  version P.20131013
+
+9572XL64 XC9572XL-5-VQ64
+osc_clk0 S:PIN16
+switch<1> S:PIN32
+poe_aux_det<1> S:PIN45
+poe_aux_det<2> S:PIN47
+poe_aux_det<3> S:PIN1
+poe_aux_det<4> S:PIN2
+poe_vc_det<1> S:PIN46
+poe_vc_det<2> S:PIN57
+poe_vc_det<3> S:PIN58
+poe_vc_det<4> S:PIN4
+sma_trig S:PIN27
+switch<3> S:PIN33
+switch<2> S:PIN31
+sma_trig_monitor<4> S:PIN49
+sma_trig_monitor<3> S:PIN50
+sma_trig_monitor<2> S:PIN51
+sma_trig_monitor<1> S:PIN52
+trig1 S:PIN40
+osc_sel S:PIN5
+poe_led<1> S:PIN7
+poe_led<2> S:PIN6
+poe_led<3> S:PIN9
+poe_led<4> S:PIN8
+poe_led<5> S:PIN11
+poe_led<6> S:PIN10
+poe_led<7> S:PIN13
+poe_led<8> S:PIN12
+sma_clk_monitor<4> S:PIN60
+sma_clk_monitor<3> S:PIN61
+sma_clk_monitor<2> S:PIN62
+sma_clk_monitor<1> S:PIN63
+trig2 S:PIN43
+trig_en S:PIN44
+trig_sel S:PIN42
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_2 poe_led_4_OBUF poe_led_8_OBUF poe_led_7_OBUF poe_led_3_OBUF
+		 poe_led_6_OBUF
+PARTITION FB1_8 poe_led_5_OBUF
+PARTITION FB1_18 d0_shreg_clk0
+PARTITION FB2_2 sma_clk_monitor_1_OBUF
+PARTITION FB2_5 sma_clk_monitor_1_OBUF$BUF0 sma_clk_monitor_1_OBUF$BUF1
+PARTITION FB2_8 sma_clk_monitor_1_OBUF$BUF2
+PARTITION FB2_13 d1_shreg_clk0 osc_sel_OBUF$BUF0 poe_led_2_OBUF d0_75duty_clk0
+		 poe_led_1_OBUF d0_25duty_clk0
+PARTITION FB3_12 dff_clock_modulated_clk0
+PARTITION FB3_16 trig_sel_OBUF$BUF0
+PARTITION FB3_18 dffe_trig_out_clk0
+PARTITION FB4_2 trig2_OBUF
+PARTITION FB4_5 trig_en_OBUF d0_pipe_clk0
+PARTITION FB4_10 d0_pipe_clk0$BUF1
+PARTITION FB4_12 d0_pipe_clk0$BUF2
+PARTITION FB4_14 d0_pipe_clk0$BUF0
+PARTITION FB4_18 d1_75duty_clk0
+

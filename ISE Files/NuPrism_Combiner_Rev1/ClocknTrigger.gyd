@@ -1,0 +1,31 @@
+Pin Freeze File:  version P.20131013
+
+9572XL64 XC9572XL-5-VQ64
+Switches<0> S:PIN33
+Switches<1> S:PIN34
+fastclk S:PIN16
+reset S:PIN39
+trigger S:PIN27
+Clock_sel S:PIN5
+SMA_CLK_PORT S:PIN60
+SMA_TRIG_PORT S:PIN49
+Trig_en S:PIN44
+Trig_sel S:PIN42
+clk_out_DC S:PIN43
+clk_out S:PIN40
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+
+PARTITION FB2_2 SMA_CLK_PORT_OBUF
+PARTITION FB2_14 Clock_sel_OBUF
+PARTITION FB2_17 SwitchSync1/signalSync1 trigSync_MisClk
+PARTITION FB3_12 clk_out_OBUF
+PARTITION FB3_16 Trig_sel_OBUF SwitchSync0/signalSync1 trigSync_DC
+PARTITION FB4_2 clk_out_DC_OBUF
+PARTITION FB4_5 Trig_en_OBUF SMA_TRIG_PORT_OBUF
+PARTITION FB4_14 CnTDC/counter<0> CnT/slowclk CnTDC/counter<1> CnTDC/TriggSync/signalSync1
+		 CnT/TriggSync/signalSync1
+

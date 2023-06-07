@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.syr" 
+xst -intstyle ise -ifn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.xst" -ofn "/home/ise/NuPrism_Combiner_Rev1/mux_4_1.syr" 

@@ -1,0 +1,64 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_Clock_sel: FDCPE port map (Clock_sel,SwitchSync1/signalSync1,NOT fastclk,reset,'0');
+</td></tr><tr><td>
+FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',NOT CnT/slowclk);
+</td></tr><tr><td>
+FTCPE_CnT/slowclk: FTCPE port map (CnT/slowclk,'1',fastclk,reset,'0');
+</td></tr><tr><td>
+FDCPE_CnTDC/TriggSync/signalSync1: FDCPE port map (CnTDC/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',CnTDC/TriggSync/signalSync1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CnTDC/TriggSync/signalSync1_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
+</td></tr><tr><td>
+FTCPE_CnTDC/counter0: FTCPE port map (CnTDC/counter(0),'1',fastclk,reset,'0');
+</td></tr><tr><td>
+FTCPE_CnTDC/counter1: FTCPE port map (CnTDC/counter(1),CnTDC/counter(0),fastclk,reset,'0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+SMA_CLK_PORT <= ((trigSync_DC AND Trig_sel)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (trigSync_MisClk AND NOT Trig_sel));
+</td></tr><tr><td>
+</td></tr><tr><td>
+SMA_TRIG_PORT <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT trigSync_DC AND Trig_sel AND CnTDC/counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT trigSync_MisClk AND NOT Trig_sel AND CnT/slowclk)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Trig_sel AND CnTDC/counter(0) AND CnTDC/counter(1)));
+</td></tr><tr><td>
+FDCPE_SwitchSync0/signalSync1: FDCPE port map (SwitchSync0/signalSync1,Switches(0),NOT fastclk,reset,'0');
+</td></tr><tr><td>
+FDCPE_SwitchSync1/signalSync1: FDCPE port map (SwitchSync1/signalSync1,Switches(1),NOT fastclk,reset,'0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+Trig_en <= '1';
+</td></tr><tr><td>
+FDCPE_Trig_sel: FDCPE port map (Trig_sel,SwitchSync0/signalSync1,NOT fastclk,reset,'0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+clk_out <= (NOT trigSync_MisClk AND CnT/slowclk);
+</td></tr><tr><td>
+</td></tr><tr><td>
+clk_out_DC <= ((NOT trigSync_DC AND CnTDC/counter(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT trigSync_DC AND CnTDC/counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CnTDC/counter(0) AND CnTDC/counter(1)));
+</td></tr><tr><td>
+FDCPE_trigSync_DC: FDCPE port map (trigSync_DC,CnTDC/TriggSync/signalSync1,NOT fastclk,reset,'0',trigSync_DC_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trigSync_DC_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
+</td></tr><tr><td>
+FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,NOT fastclk,reset,'0',NOT CnT/slowclk);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

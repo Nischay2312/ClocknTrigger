@@ -1,0 +1,93 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 7-19-2022  4:12PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The comma ','
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  combiner.ngd
+output file: combiner_pad.csv
+Part type:   xc9572xl
+Speed grade: -5
+Package:     vq64
+
+Pinout by Pin Number:
+
+-----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
+Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
+P1,poe_aux_det<3>,I,I/O,INPUT,,,,,,,,,
+P2,poe_aux_det<4>,I,I/O/GTS2,INPUT,,,,,,,,,
+P3,VCC,,VCCINT,,,,,,,,,,
+P4,poe_vc_det<4>,I,I/O,INPUT,,,,,,,,,
+P5,osc_sel,O,I/O/GTS1,OUTPUT,,,,,,,,,
+P6,poe_led<2>,O,I/O,OUTPUT,,,,,,,,,
+P7,poe_led<1>,O,I/O,OUTPUT,,,,,,,,,
+P8,poe_led<4>,O,I/O,OUTPUT,,,,,,,,,
+P9,poe_led<3>,O,I/O,OUTPUT,,,,,,,,,
+P10,poe_led<6>,O,I/O,OUTPUT,,,,,,,,,
+P11,poe_led<5>,O,I/O,OUTPUT,,,,,,,,,
+P12,poe_led<8>,O,I/O,OUTPUT,,,,,,,,,
+P13,poe_led<7>,O,I/O,OUTPUT,,,,,,,,,
+P14,GND,,GND,,,,,,,,,,
+P15,TIE,,I/O/GCK1,,,,,,,,,,
+P16,osc_clk0,GCK/I,I/O/GCK2,,,,,,,,,,
+P17,TIE,,I/O/GCK3,,,,,,,,,,
+P18,TIE,,I/O,,,,,,,,,,
+P19,TIE,,I/O,,,,,,,,,,
+P20,TIE,,I/O,,,,,,,,,,
+P21,GND,,GND,,,,,,,,,,
+P22,TIE,,I/O,,,,,,,,,,
+P23,TIE,,I/O,,,,,,,,,,
+P24,TIE,,I/O,,,,,,,,,,
+P25,TIE,,I/O,,,,,,,,,,
+P26,VCC,,VCCIO,,,,,,,,,,
+P27,sma_trig,I,I/O,INPUT,,,,,,,,,
+P28,TDI,,TDI,,,,,,,,,,
+P29,TMS,,TMS,,,,,,,,,,
+P30,TCK,,TCK,,,,,,,,,,
+P31,switch<2>,I,I/O,INPUT,,,,,,,,,
+P32,switch<1>,I,I/O,INPUT,,,,,,,,,
+P33,switch<3>,I,I/O,INPUT,,,,,,,,,
+P34,TIE,,I/O,,,,,,,,,,
+P35,TIE,,I/O,,,,,,,,,,
+P36,TIE,,I/O,,,,,,,,,,
+P37,VCC,,VCCINT,,,,,,,,,,
+P38,TIE,,I/O,,,,,,,,,,
+P39,TIE,,I/O,,,,,,,,,,
+P40,trig1,O,I/O,OUTPUT,,,,,,,,,
+P41,GND,,GND,,,,,,,,,,
+P42,trig_sel,O,I/O,OUTPUT,,,,,,,,,
+P43,trig2,O,I/O,OUTPUT,,,,,,,,,
+P44,trig_en,O,I/O,OUTPUT,,,,,,,,,
+P45,poe_aux_det<1>,I,I/O,INPUT,,,,,,,,,
+P46,poe_vc_det<1>,I,I/O,INPUT,,,,,,,,,
+P47,poe_aux_det<2>,I,I/O,INPUT,,,,,,,,,
+P48,TIE,,I/O,,,,,,,,,,
+P49,sma_trig_monitor<4>,O,I/O,OUTPUT,,,,,,,,,
+P50,sma_trig_monitor<3>,O,I/O,OUTPUT,,,,,,,,,
+P51,sma_trig_monitor<2>,O,I/O,OUTPUT,,,,,,,,,
+P52,sma_trig_monitor<1>,O,I/O,OUTPUT,,,,,,,,,
+P53,TDO,,TDO,,,,,,,,,,
+P54,GND,,GND,,,,,,,,,,
+P55,VCC,,VCCIO,,,,,,,,,,
+P56,TIE,,I/O,,,,,,,,,,
+P57,poe_vc_det<2>,I,I/O,INPUT,,,,,,,,,
+P58,poe_vc_det<3>,I,I/O,INPUT,,,,,,,,,
+P59,TIE,,I/O,,,,,,,,,,
+P60,sma_clk_monitor<4>,O,I/O,OUTPUT,,,,,,,,,
+P61,sma_clk_monitor<3>,O,I/O,OUTPUT,,,,,,,,,
+P62,sma_clk_monitor<2>,O,I/O,OUTPUT,,,,,,,,,
+P63,sma_clk_monitor<1>,O,I/O,OUTPUT,,,,,,,,,
+P64,TIE,,I/O/GSR,,,,,,,,,,
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

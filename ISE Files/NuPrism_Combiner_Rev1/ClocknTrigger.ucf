@@ -1,0 +1,23 @@
+
+#PINLOCK_BEGIN
+#Tue Jun 14 19:53:41 2022
+NET "reset"				LOC = "S:PIN39";
+NET "trigger"			LOC = "S:PIN27"; #31
+NET "clk_out"			LOC = "S:PIN40";
+NET "clk_out_DC"		LOC = "S:PIN43";
+NET "Switches<0>"    LOC = "S:PIN33";
+NET "Switches<1>"		LOC = "S:PIN34";
+NET "Trig_sel"			LOC = "S:PIN42";
+NET "Clock_sel"		LOC = "S:PIN5";
+NET "Trig_en" 			LOC = "S:PIN44";
+NET "fastclk" 			LOC = "S:PIN16";
+NET "SMA_CLK_PORT" 	LOC = "S:PIN60";
+NET "SMA_TRIG_PORT" 	LOC = "S:PIN49";
+NET "fastclk" 			TNM_NET = fastclk;
+TIMESPEC TS_fastclk = PERIOD "fastclk" 125 MHz HIGH 50%;
+NET "clk_out" OFFSET = OUT 8 ns AFTER "fastclk";
+NET "clk_out_DC" OFFSET = OUT 8 ns AFTER "fastclk";
+NET "reset" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
+NET "trigger" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
+
+#PINLOCK_END	

@@ -1,0 +1,309 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "ClocknTrigger";
+      var device = "XC9572XL";
+      signals = new Array("Clock_sel","CnTDCTriggSyncsignalSync1_SPECSIG","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG","CnTTriggSyncsignalSync1_SPECSIG","CnTslowclk_SPECSIG","SMA_CLK_PORT","SMA_TRIG_PORT","SwitchSync0signalSync1_SPECSIG","SwitchSync1signalSync1_SPECSIG","Trig_en","Trig_sel","clk_out","clk_out_DC","trigSync_DC","trigSync_MisClk");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("D","D","T","T","D","T","","","D","D","","D","","","D","D");
+
+      
+        specSig["Switches0_SPECSIG"]=new Array("Switches<0>");
+      
+        specSig["Switches1_SPECSIG"]=new Array("Switches<1>");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["SwitchSync1signalSync1_SPECSIG"]=new Array("SwitchSync1/signalSync1");
+      
+        specSig["SwitchSync0signalSync1_SPECSIG"]=new Array("SwitchSync0/signalSync1");
+      
+        specSig["CnTDCcounter0_SPECSIG"]=new Array("CnTDC/counter<0>");
+      
+        specSig["CnTslowclk_SPECSIG"]=new Array("CnT/slowclk");
+      
+        specSig["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("CnTDC/TriggSync/signalSync1");
+      
+        specSig["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("CnT/TriggSync/signalSync1");
+      
+        specSig["CnTDCcounter1_SPECSIG"]=new Array("CnTDC/counter<1>");
+      
+            pterms["FB2_2_1"]=new Array("trigSync_DC","Trig_sel");
+          
+            pterms["FB2_2_2"]=new Array("trigSync_MisClk","/Trig_sel");
+          
+            pterms["FB2_14_1"]=new Array("SwitchSync1signalSync1_SPECSIG");
+          
+            pterms["FB2_14_2"]=new Array("reset");
+          
+            pterms["FB2_17_1"]=new Array("Switches1_SPECSIG");
+          
+            pterms["FB2_17_2"]=new Array("reset");
+          
+            pterms["FB2_18_1"]=new Array("CnTTriggSyncsignalSync1_SPECSIG");
+          
+            pterms["FB2_18_2"]=new Array("reset");
+          
+            pterms["FB2_18_3"]=new Array("/CnTslowclk_SPECSIG");
+          
+            pterms["FB3_12_1"]=new Array("/trigSync_MisClk","CnTslowclk_SPECSIG");
+          
+            pterms["FB3_16_1"]=new Array("SwitchSync0signalSync1_SPECSIG");
+          
+            pterms["FB3_16_2"]=new Array("reset");
+          
+            pterms["FB3_17_1"]=new Array("Switches0_SPECSIG");
+          
+            pterms["FB3_17_2"]=new Array("reset");
+          
+            pterms["FB3_18_1"]=new Array("CnTDCTriggSyncsignalSync1_SPECSIG");
+          
+            pterms["FB3_18_2"]=new Array("reset");
+          
+            pterms["FB3_18_3"]=new Array("/CnTDCcounter0_SPECSIG","/CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_2_1"]=new Array("/trigSync_DC","CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_2_2"]=new Array("/trigSync_DC","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_2_3"]=new Array("CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_6_1"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_6_2"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_6_3"]=new Array("/trigSync_MisClk","/Trig_sel","CnTslowclk_SPECSIG");
+          
+            pterms["FB4_6_4"]=new Array("Trig_sel","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_14_1"]=new Array("reset");
+          
+            pterms["FB4_15_1"]=new Array("reset");
+          
+            pterms["FB4_16_1"]=new Array("CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_16_2"]=new Array("reset");
+          
+            pterms["FB4_17_1"]=new Array("trigger");
+          
+            pterms["FB4_17_2"]=new Array("reset");
+          
+            pterms["FB4_17_3"]=new Array("/CnTDCcounter0_SPECSIG","/CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_18_1"]=new Array("trigger");
+          
+            pterms["FB4_18_2"]=new Array("reset");
+          
+            pterms["FB4_18_3"]=new Array("/CnTslowclk_SPECSIG");
+          
+          d2["SMA_CLK_PORT"]=new Array("FB2_2_1","FB2_2_2");
+          
+            d2imp["SMA_CLK_PORT"]=new Array("1","1");
+          
+          d2["Clock_sel"]=new Array("FB2_14_1");
+          
+            d2imp["Clock_sel"]=new Array("1");
+          clkNegs["Clock_sel"]=1;
+              gblclk["Clock_sel"]=new Array("fastclk");
+            
+              rst["Clock_sel"]=new Array("FB2_14_2");
+              
+                rstimp["Clock_sel"]=new Array("1");
+              prld["Clock_sel"]="GND";
+          d2["SwitchSync1signalSync1_SPECSIG"]=new Array("FB2_17_1");
+          
+            d2imp["SwitchSync1signalSync1_SPECSIG"]=new Array("1");
+          clkNegs["SwitchSync1signalSync1_SPECSIG"]=1;
+              gblclk["SwitchSync1signalSync1_SPECSIG"]=new Array("fastclk");
+            
+              rst["SwitchSync1signalSync1_SPECSIG"]=new Array("FB2_17_2");
+              
+                rstimp["SwitchSync1signalSync1_SPECSIG"]=new Array("1");
+              prld["SwitchSync1signalSync1_SPECSIG"]="GND";
+          d2["trigSync_MisClk"]=new Array("FB2_18_1");
+          
+            d2imp["trigSync_MisClk"]=new Array("1");
+          clkNegs["trigSync_MisClk"]=1;
+              gblclk["trigSync_MisClk"]=new Array("fastclk");
+            
+              rst["trigSync_MisClk"]=new Array("FB2_18_2");
+              
+                rstimp["trigSync_MisClk"]=new Array("1");
+              
+          ce["trigSync_MisClk"]=new Array("FB2_18_3");
+          
+            ceimp["trigSync_MisClk"]=new Array("1");
+          prld["trigSync_MisClk"]="GND";
+          d2["clk_out"]=new Array("FB3_12_1");
+          
+            d2imp["clk_out"]=new Array("1");
+          
+          d2["Trig_sel"]=new Array("FB3_16_1");
+          
+            d2imp["Trig_sel"]=new Array("1");
+          clkNegs["Trig_sel"]=1;
+              gblclk["Trig_sel"]=new Array("fastclk");
+            
+              rst["Trig_sel"]=new Array("FB3_16_2");
+              
+                rstimp["Trig_sel"]=new Array("1");
+              prld["Trig_sel"]="GND";
+          d2["SwitchSync0signalSync1_SPECSIG"]=new Array("FB3_17_1");
+          
+            d2imp["SwitchSync0signalSync1_SPECSIG"]=new Array("1");
+          clkNegs["SwitchSync0signalSync1_SPECSIG"]=1;
+              gblclk["SwitchSync0signalSync1_SPECSIG"]=new Array("fastclk");
+            
+              rst["SwitchSync0signalSync1_SPECSIG"]=new Array("FB3_17_2");
+              
+                rstimp["SwitchSync0signalSync1_SPECSIG"]=new Array("1");
+              prld["SwitchSync0signalSync1_SPECSIG"]="GND";
+          d2["trigSync_DC"]=new Array("FB3_18_1");
+          
+            d2imp["trigSync_DC"]=new Array("1");
+          clkNegs["trigSync_DC"]=1;
+              gblclk["trigSync_DC"]=new Array("fastclk");
+            
+              rst["trigSync_DC"]=new Array("FB3_18_2");
+              
+                rstimp["trigSync_DC"]=new Array("1");
+              
+          ce["trigSync_DC"]=new Array("FB3_18_3");
+          
+            ceimp["trigSync_DC"]=new Array("1");
+          prld["trigSync_DC"]="GND";
+          d2["clk_out_DC"]=new Array("FB4_2_1","FB4_2_2","FB4_2_3");
+          
+            d2imp["clk_out_DC"]=new Array("1","1","1");
+          
+          d2["Trig_en"]=new Array("VCC");
+          
+            d2imp["Trig_en"]=new Array("1");
+          
+          d2["SMA_TRIG_PORT"]=new Array("FB4_6_1","FB4_6_2","FB4_6_3","FB4_6_4");
+          
+            d2imp["SMA_TRIG_PORT"]=new Array("1","1","1","1");
+          
+          d2["CnTDCcounter0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["CnTDCcounter0_SPECSIG"]=new Array("1");
+          
+              gblclk["CnTDCcounter0_SPECSIG"]=new Array("fastclk");
+            
+              rst["CnTDCcounter0_SPECSIG"]=new Array("FB4_14_1");
+              
+                rstimp["CnTDCcounter0_SPECSIG"]=new Array("1");
+              prld["CnTDCcounter0_SPECSIG"]="GND";
+          d2["CnTslowclk_SPECSIG"]=new Array("VCC");
+          
+            d2imp["CnTslowclk_SPECSIG"]=new Array("1");
+          
+              gblclk["CnTslowclk_SPECSIG"]=new Array("fastclk");
+            
+              rst["CnTslowclk_SPECSIG"]=new Array("FB4_15_1");
+              
+                rstimp["CnTslowclk_SPECSIG"]=new Array("1");
+              prld["CnTslowclk_SPECSIG"]="GND";
+          d2["CnTDCcounter1_SPECSIG"]=new Array("FB4_16_1");
+          
+            d2imp["CnTDCcounter1_SPECSIG"]=new Array("1");
+          
+              gblclk["CnTDCcounter1_SPECSIG"]=new Array("fastclk");
+            
+              rst["CnTDCcounter1_SPECSIG"]=new Array("FB4_16_2");
+              
+                rstimp["CnTDCcounter1_SPECSIG"]=new Array("1");
+              prld["CnTDCcounter1_SPECSIG"]="GND";
+          d2["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_17_1");
+          
+            d2imp["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+          clkNegs["CnTDCTriggSyncsignalSync1_SPECSIG"]=1;
+              gblclk["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("fastclk");
+            
+              rst["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_17_2");
+              
+                rstimp["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+              
+          ce["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_17_3");
+          
+            ceimp["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+          prld["CnTDCTriggSyncsignalSync1_SPECSIG"]="GND";
+          d2["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_18_1");
+          
+            d2imp["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+          clkNegs["CnTTriggSyncsignalSync1_SPECSIG"]=1;
+              gblclk["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("fastclk");
+            
+              rst["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_18_2");
+              
+                rstimp["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+              
+          ce["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_18_3");
+          
+            ceimp["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("1");
+          prld["CnTTriggSyncsignalSync1_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

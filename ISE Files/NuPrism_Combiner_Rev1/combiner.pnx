@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC9572XL" pkg="VQ64" spg="-5"/><pin dir="input" nm="sma_trig" no="27"/><pin dir="input" nm="osc_clk0" no="16"/><pin dir="input" nm="switch&lt;3&gt;" no="33"/><pin dir="input" nm="switch&lt;1&gt;" no="32"/><pin dir="input" nm="poe_aux_det&lt;1&gt;" no="45"/><pin dir="input" nm="poe_vc_det&lt;1&gt;" no="46"/><pin dir="input" nm="poe_aux_det&lt;2&gt;" no="47"/><pin dir="input" nm="poe_vc_det&lt;2&gt;" no="57"/><pin dir="input" nm="poe_aux_det&lt;3&gt;" no="1"/><pin dir="input" nm="poe_vc_det&lt;3&gt;" no="58"/><pin dir="input" nm="poe_aux_det&lt;4&gt;" no="2"/><pin dir="input" nm="poe_vc_det&lt;4&gt;" no="4"/><pin dir="input" nm="switch&lt;2&gt;" no="31"/><pin dir="output" nm="sma_trig_monitor&lt;4&gt;" no="49" sr="fast"/><pin dir="output" nm="sma_clk_monitor&lt;4&gt;" no="60" sr="fast"/><pin dir="output" nm="trig1" no="40" sr="fast"/><pin dir="output" nm="trig2" no="43" sr="fast"/><pin dir="output" nm="sma_trig_monitor&lt;3&gt;" no="50" sr="fast"/><pin dir="output" nm="sma_trig_monitor&lt;2&gt;" no="51" sr="fast"/><pin dir="output" nm="sma_trig_monitor&lt;1&gt;" no="52" sr="fast"/><pin dir="output" nm="osc_sel" no="5" sr="fast"/><pin dir="output" nm="poe_led&lt;1&gt;" no="7" sr="fast"/><pin dir="output" nm="poe_led&lt;2&gt;" no="6" sr="fast"/><pin dir="output" nm="poe_led&lt;3&gt;" no="9" sr="fast"/><pin dir="output" nm="poe_led&lt;4&gt;" no="8" sr="fast"/><pin dir="output" nm="poe_led&lt;5&gt;" no="11" sr="fast"/><pin dir="output" nm="poe_led&lt;6&gt;" no="10" sr="fast"/><pin dir="output" nm="poe_led&lt;7&gt;" no="13" sr="fast"/><pin dir="output" nm="poe_led&lt;8&gt;" no="12" sr="fast"/><pin dir="output" nm="sma_clk_monitor&lt;3&gt;" no="61" sr="fast"/><pin dir="output" nm="sma_clk_monitor&lt;2&gt;" no="62" sr="fast"/><pin dir="output" nm="sma_clk_monitor&lt;1&gt;" no="63" sr="fast"/><pin dir="output" nm="trig_sel" no="42" sr="fast"/><pin dir="output" nm="trig_en" no="44" sr="fast"/></ibis>

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /home/ise/NuPrism_Combiner_Rev1/combiner.v -lang verilog -prj NuPrism_Combiner_Rev1 -o dffe.spl -module dffe -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500xl dffe.spl /home/ise/NuPrism_Combiner_Rev1/dffe.sym 
