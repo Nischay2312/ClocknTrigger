@@ -56,9 +56,16 @@ module ClocknTriggerDrLinn(input wire fastclk,
         else
             slowclk <= ~slowclk;
     end
-
+	 
+    //Generate the slow clock off phase
+    always @(negedge fastclk or posedge reset) begin
+        if(reset)
+            slowclk <= 1'b0;
+        else
+            slowclk_90deg <= ~slowclk_90deg;
+    end
     //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
-    mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(!slowclk), .data_out(trig_sync)); //!fastclk
+    mySync TriggSync(.clk(!slowclk_90deg), .reset(reset), .data_in(trigger), .data_out(trig_sync)); //!fastclk
     //Generate the output clock
     assign clk_out = (slowclk & !trig_sync);
 endmodule
@@ -80,7 +87,7 @@ wire clk_25DC;
 wire clk_75DC;
 reg [1:0]counter;
 //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
-mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(counter == 2'b00), .data_out(TriggerSync));
+mySync TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .data_out(TriggerSync));
 //create the counter to get 4 phases
 always @(posedge fastclk or posedge reset) begin
     if(reset) begin
@@ -119,27 +126,6 @@ always @(posedge clk or posedge reset) begin
     end else begin
         signalSync1 <= data_in;
         data_out <= signalSync1;
-    end
-end
-endmodule
-
-module mySync_en (input clk,
-               input reset,
-               input data_in,
-               input enable,
-               output reg data_out
-                );
-reg signalSync1;
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-        signalSync1 <= 1'b0;
-        data_out <= 1'b0;
-    end 
-    else begin
-        if(enable) begin
-            signalSync1 <= data_in;
-            data_out <= signalSync1;
-        end
     end
 end
 endmodule

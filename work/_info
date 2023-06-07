@@ -16,107 +16,107 @@ I]43LOW2BGK[104k8I?hgJ2
 Z0 VDg1SIo80bB@j0V0VzS_@n1
 Z1 dC:/ClocknTrigger
 w1685985949
-Z2 8C:/ClocknTrigger/ClocknTrigger.v
-Z3 FC:/ClocknTrigger/ClocknTrigger.v
+8C:/ClocknTrigger/ClocknTrigger.v
+FC:/ClocknTrigger/ClocknTrigger.v
 L0 34
-Z4 OV;L;10.5b;63
+Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
 !s108 1685985963.000000
 !s107 C:/ClocknTrigger/ClocknTrigger.v|
-Z5 !s90 -reportprogress|300|-work|work|-stats=none|C:/ClocknTrigger/ClocknTrigger.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ClocknTrigger/ClocknTrigger.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z3 o-work work
+Z4 tCvgOpt 0
 n@clcokn@trigger@d@c
 vClocknTrigger
-Z8 !s110 1686006290
+Z5 !s110 1686172542
 !i10b 1
-!s100 m6>fI:b`=2`g80Yk0SeXX1
-IQm:V3Ne<o1BX?RDW?n[E01
+!s100 >ZTU?9RM:>5S648mR]ZFk2
+IQPKmNcaJ4>Q;R^_`CF23Y2
 R0
 R1
-Z9 w1686006286
-R2
-R3
+Z6 w1686172537
+Z7 8C:\ClocknTrigger\ClocknTrigger.v
+Z8 FC:\ClocknTrigger\ClocknTrigger.v
 L0 5
-R4
+R2
 r1
 !s85 0
 31
-Z10 !s108 1686006290.000000
-Z11 !s107 C:/ClocknTrigger/ClocknTrigger.v|
-R5
+Z9 !s108 1686172542.000000
+Z10 !s107 C:\ClocknTrigger\ClocknTrigger.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:\ClocknTrigger\ClocknTrigger.v|
 !i113 1
-R6
-R7
+R3
+R4
 n@clockn@trigger
 vClocknTrigger_tb
-R8
+!s110 1686172374
 !i10b 1
-!s100 Nh8CL<d>G3:eL1@BR=]3A1
-I1BlWT32^llGhg8a0EE?k93
+!s100 G4m>aU]bkj:N3TZ1oi1:j0
+INg9234Ggl:H@0fkn7=g=A0
 R0
 R1
-w1686006265
-8C:/ClocknTrigger/combiner_y_tb.v
-FC:/ClocknTrigger/combiner_y_tb.v
+w1686172368
+8C:\ClocknTrigger\combiner_y_tb.v
+FC:\ClocknTrigger\combiner_y_tb.v
 L0 14
-R4
+R2
 r1
 !s85 0
 31
-R10
-!s107 C:/ClocknTrigger/combiner_y_tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/ClocknTrigger/combiner_y_tb.v|
+!s108 1686172374.000000
+!s107 C:\ClocknTrigger\combiner_y_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\ClocknTrigger\combiner_y_tb.v|
 !i113 1
-R6
-R7
+R3
+R4
 n@clockn@trigger_tb
 vClocknTriggerDC
-R8
+R5
 !i10b 1
-!s100 7>mkhLA>PTdKZ:GWQeV]G0
-IdDc?<5SYIaRz<e;gc:jkE0
+!s100 95>9Om;9?gCd<YT=LoQOX2
+I66Z4^SQZSNebCeNn[AM]>1
 R0
 R1
-R9
+R6
+R7
+R8
+L0 72
 R2
-R3
-L0 64
-R4
 r1
 !s85 0
 31
+R9
 R10
 R11
-R5
 !i113 1
-R6
-R7
+R3
+R4
 n@clockn@trigger@d@c
 vClocknTriggerDrLinn
-R8
+R5
 !i10b 1
-!s100 YfigW;A1OohF8ZQd0KJe]2
-IlZiAdXe;g8>Sfn^@nfG]J3
+!s100 mm^;CkLDefJL@_V^MOiFZ1
+I=Si69o_7dZ[zb3o^BN7Mh1
 R0
 R1
-R9
+R6
+R7
+R8
+L0 42
 R2
-R3
-L0 37
-R4
 r1
 !s85 0
 31
+R9
 R10
 R11
-R5
 !i113 1
-R6
-R7
+R3
+R4
 n@clockn@trigger@dr@linn
 vClockTrigger
 !s110 1685747402
@@ -129,7 +129,7 @@ w1685747394
 8C:/ClocknTrigger/combiner_y_test.v
 FC:/ClocknTrigger/combiner_y_test.v
 L0 1
-R4
+R2
 r1
 !s85 0
 31
@@ -137,28 +137,50 @@ r1
 !s107 C:/ClocknTrigger/combiner_y_test.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/ClocknTrigger/combiner_y_test.v|
 !i113 1
-R6
-R7
+R3
+R4
 n@clock@trigger
 vmySync
-R8
+R5
 !i10b 1
-!s100 cNhecZNLHgS@ZL3maXY[U3
-Ii7YieRma8e:[GWG5lG2iQ0
+!s100 h_Gj5JB8Vi0cQn>eQDmA@2
+Iim3?3eiVd2`7@F8K:jRiP3
 R0
 R1
-R9
+R6
+R7
+R8
+L0 109
 R2
-R3
-L0 99
-R4
 r1
 !s85 0
 31
+R9
 R10
 R11
-R5
 !i113 1
+R3
+R4
+nmy@sync
+vmySync_en
+R5
+!i10b 1
+!s100 N0C<KncD4g385i^VofKgc1
+I4fHBn=>fo2H:jH4LSdidC2
+R0
+R1
 R6
 R7
-nmy@sync
+R8
+L0 126
+R2
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R3
+R4
+nmy@sync_en

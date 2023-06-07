@@ -23,6 +23,8 @@ reg [1:0] Switches;
 wire Trig_sel;
 wire Clock_sel;
 wire Trig_en;
+wire SMA_CLK_PORT;
+wire SMA_TRIG_PORT;
 
 
 //instantiate the DUT
@@ -36,7 +38,9 @@ ClocknTrigger DUT(
     .Switches(Switches),
     .Trig_sel(Trig_sel),
     .Clock_sel(Clock_sel),
-    .Trig_en(Trig_en)
+    .Trig_en(Trig_en),
+    .SMA_CLK_PORT(SMA_CLK_PORT),
+    .SMA_TRIG_PORT(SMA_TRIG_PORT)
     );
 
 
@@ -70,7 +74,7 @@ initial begin
     Switches = 2'b10;
     #24;
     Switches = 2'b11;
-    #24;
+    #21;
     Switches = 2'b00;
     //assert trigger
     trigger = 1'b1;
