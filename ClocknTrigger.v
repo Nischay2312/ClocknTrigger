@@ -143,6 +143,10 @@ always @(posedge clk or posedge reset) begin
             signalSync1 <= data_in;
             data_out <= signalSync1;
         end
+        else begin
+            data_out <= data_out;
+            signalSync1 <= signalSync1;
+        end
     end
 end
 endmodule
