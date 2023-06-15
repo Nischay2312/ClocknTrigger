@@ -60,7 +60,7 @@ module ClocknTriggerDrLinn(input wire fastclk,
             slowclk <= ~slowclk;
     end
 
-    //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
+    //Generate the synchronized trigger, synchronized at negetive edge of the fast clock and enable is not of slow clock
     mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(!slowclk), .data_out(trig_sync)); //!fastclk
     //Generate the output clock
     assign clk_out = (slowclk & !trig_sync);
