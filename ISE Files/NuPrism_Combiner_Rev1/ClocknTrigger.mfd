@@ -21,9 +21,9 @@ INPUTMC | 2 | 3 | 17 | 3 | 14
 INPUTP | 1 | 54
 EQ | 4 | 
    trigSync_MisClk.D = CnT/TriggSync/signalSync1;
-   !trigSync_MisClk.CLK = fastclk;	// GCK
+   trigSync_MisClk.CLK = fastclk;	// GCK
    trigSync_MisClk.AR = reset;
-   trigSync_MisClk.CE = CnT/slowclk;
+   trigSync_MisClk.CE = !CnT/slowclk;
 GLOBALS | 1 | 2 | fastclk
 
 MACROCELL | 3 | 17 | CnT/TriggSync/signalSync1
@@ -34,9 +34,9 @@ INPUTMC | 1 | 3 | 14
 INPUTP | 2 | 38 | 54
 EQ | 4 | 
    CnT/TriggSync/signalSync1.D = trigger;
-   !CnT/TriggSync/signalSync1.CLK = fastclk;	// GCK
+   CnT/TriggSync/signalSync1.CLK = fastclk;	// GCK
    CnT/TriggSync/signalSync1.AR = reset;
-   CnT/TriggSync/signalSync1.CE = CnT/slowclk;
+   CnT/TriggSync/signalSync1.CE = !CnT/slowclk;
 GLOBALS | 1 | 2 | fastclk
 
 MACROCELL | 3 | 16 | CnTDC/TriggSync/signalSync1
@@ -235,7 +235,7 @@ INPUTS | 0
 EQ | 1 | 
    Trig_en = Vcc;
 
-PIN | fastclk | 8192 | 0 | N/A | 21 | 12 | 2 | 17 | 3 | 16 | 0 | 8 | 3 | 12 | 3 | 15 | 3 | 14 | 1 | 17 | 3 | 17 | 2 | 15 | 2 | 16 | 1 | 16 | 1 | 13
+PIN | fastclk | 8192 | 0 | N/A | 21 | 12 | 2 | 17 | 1 | 17 | 3 | 17 | 3 | 16 | 0 | 8 | 3 | 12 | 3 | 15 | 3 | 14 | 2 | 15 | 2 | 16 | 1 | 16 | 1 | 13
 PIN | reset | 64 | 0 | N/A | 54 | 12 | 2 | 17 | 1 | 17 | 3 | 17 | 3 | 16 | 2 | 15 | 0 | 8 | 3 | 12 | 3 | 15 | 3 | 14 | 2 | 16 | 1 | 16 | 1 | 13
 PIN | trigger | 64 | 0 | N/A | 38 | 2 | 3 | 17 | 3 | 16
 PIN | Switches<0> | 64 | 0 | N/A | 46 | 1 | 2 | 16

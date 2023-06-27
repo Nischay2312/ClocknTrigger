@@ -193,7 +193,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1687890496" xil_pn:in_ck="1596452899328402630" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-9040773359124513048" xil_pn:start_ts="1687890490">
+    <transform xil_pn:end_ts="1687905335" xil_pn:in_ck="1596452899328402630" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-9040773359124513048" xil_pn:start_ts="1687905329">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
@@ -212,12 +212,13 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1687888268" xil_pn:in_ck="-9166112135767270603" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1662254341220091376" xil_pn:start_ts="1687888268">
+    <transform xil_pn:end_ts="1687903639" xil_pn:in_ck="-9166112135767270603" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1662254341220091376" xil_pn:start_ts="1687903639">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1687890501" xil_pn:in_ck="-842250818806009378" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-3408397811283534289" xil_pn:start_ts="1687890496">
+    <transform xil_pn:end_ts="1687905339" xil_pn:in_ck="-842250818806009378" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-3408397811283534289" xil_pn:start_ts="1687905335">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ClocknTrigger.bld"/>
       <outfile xil_pn:name="ClocknTrigger.ngd"/>
@@ -225,7 +226,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1687890507" xil_pn:in_ck="230234296592404779" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-6003104856367325386" xil_pn:start_ts="1687890501">
+    <transform xil_pn:end_ts="1687905346" xil_pn:in_ck="230234296592404779" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-6003104856367325386" xil_pn:start_ts="1687905339">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -243,7 +244,7 @@
       <outfile xil_pn:name="ClocknTrigger_html"/>
       <outfile xil_pn:name="ClocknTrigger_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1687890566" xil_pn:in_ck="8560891798500263531" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1687890563">
+    <transform xil_pn:end_ts="1687905348" xil_pn:in_ck="8560891798500263531" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1687905346">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ClocknTrigger.jed"/>
@@ -264,11 +265,10 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1686003420" xil_pn:in_ck="2640188679119114368" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1686003420">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1687901396" xil_pn:in_ck="2640188679119114368" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1687901396">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForced"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>

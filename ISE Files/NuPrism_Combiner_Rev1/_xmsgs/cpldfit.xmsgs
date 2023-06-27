@@ -8,5 +8,11 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">ClocknTrigger.ise</arg>&apos;.
 </msg>
 
+<msg type="warning" file="Cpld" num="0" delta="new" >Clock &apos;<arg fmt="%s" index="1">fastclk</arg>&apos; is used in an OFFSET timespec, this clock should be explicitly declared as a global clock input (BUFG) in your design in order for the OFFSET timespec to be properly analyzed. This software may attempt to place this signal on a pin that can drive a BUFG if it does not already have a pin assigned, however if the LOC constraint is not specified by the user then the OFFSET timespec will not be applied. OFFSET constraints on clocks that do not drive a BUFG will be ignored. In this case a FROM:TO constraint should be used instead.
+</msg>
+
+<msg type="warning" file="Cpld" num="0" delta="new" >Clock &apos;<arg fmt="%s" index="1">fastclk</arg>&apos; is used in an OFFSET timespec, this clock should be explicitly declared as a global clock input (BUFG) in your design in order for the OFFSET timespec to be properly analyzed. This software may attempt to place this signal on a pin that can drive a BUFG if it does not already have a pin assigned, however if the LOC constraint is not specified by the user then the OFFSET timespec will not be applied. OFFSET constraints on clocks that do not drive a BUFG will be ignored. In this case a FROM:TO constraint should be used instead.
+</msg>
+
 </messages>
 

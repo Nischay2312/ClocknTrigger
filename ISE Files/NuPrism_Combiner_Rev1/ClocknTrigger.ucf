@@ -21,11 +21,14 @@ NET "SMA_TRIG_PORT<2>"  LOC =  "S:PIN51";
 NET "SMA_TRIG_PORT<3>"  LOC =  "S:PIN52";
 NET "out_62MHz_clk"	LOC = "S:PIN15";
 
-//NET "fastclk" 			TNM_NET = fastclk;
-//TIMESPEC TS_fastclk = PERIOD "fastclk" 125 MHz HIGH 50%;
-//NET "clk_out" OFFSET = OUT 8 ns AFTER "fastclk";
-//NET "clk_out_DC" OFFSET = OUT 8 ns AFTER "fastclk";
-//NET "reset" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
-//NET "trigger" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
-
+#//NET "fastclk" 			TNM_NET = fastclk;
+#//TIMESPEC TS_fastclk = PERIOD "fastclk" 125 MHz HIGH 50%;
+#//NET "clk_out" OFFSET = OUT 8 ns AFTER "fastclk";
+#//NET "clk_out_DC" OFFSET = OUT 8 ns AFTER "fastclk";
+#//NET "reset" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
+#//NET "trigger" OFFSET = IN 8 ns VALID 8 ns BEFORE "fastclk" RISING;
 #PINLOCK_END	
+#Created by Constraints Editor (xc9572xl-vq64-5) - 2023/06/27
+NET "fastclk" TNM_NET = "fastclk";
+TIMESPEC "TS_Clk125MHz" = PERIOD "fastclk" 8.00 ns HIGH 50.00%;
+OFFSET = IN 8ns BEFORE "fastclk";

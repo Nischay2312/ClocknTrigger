@@ -7,7 +7,7 @@
 </td></tr><tr><td>
 FDCPE_Clock_sel: FDCPE port map (Clock_sel,SwitchSync1/signalSync1,NOT fastclk,reset,'0');
 </td></tr><tr><td>
-FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',CnT/slowclk);
+FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,fastclk,reset,'0',NOT CnT/slowclk);
 </td></tr><tr><td>
 FTCPE_CnT/slowclk: FTCPE port map (CnT/slowclk,'1',fastclk,reset,'0');
 </td></tr><tr><td>
@@ -80,7 +80,7 @@ FTCPE_out_62MHz_clk: FTCPE port map (out_62MHz_clk,'1',fastclk,reset,'0');
 FDCPE_trigSync_DC: FDCPE port map (trigSync_DC,CnTDC/TriggSync/signalSync1,fastclk,reset,'0',trigSync_DC_CE);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trigSync_DC_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
 </td></tr><tr><td>
-FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,NOT fastclk,reset,'0',CnT/slowclk);
+FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,fastclk,reset,'0',NOT CnT/slowclk);
 </td></tr><tr><td>
 Register Legend:
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 

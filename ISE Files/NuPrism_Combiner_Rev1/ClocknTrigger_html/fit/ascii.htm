@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: ClocknTrigger                       Date:  6-27-2023, 11:57AM
+Design Name: ClocknTrigger                       Date:  6-27-2023,  3:35PM
 Device Used: XC9572XL-5-VQ64
 Fitting Status: Successful
 
@@ -54,6 +54,22 @@ End of Mapped Resource Summary
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'ClocknTrigger.ise'.
+WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
+   be explicitly declared as a global clock input (BUFG) in your design in order
+   for the OFFSET timespec to be properly analyzed. This software may attempt to
+   place this signal on a pin that can drive a BUFG if it does not already have
+   a pin assigned, however if the LOC constraint is not specified by the user
+   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
+   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
+   should be used instead.
+WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
+   be explicitly declared as a global clock input (BUFG) in your design in order
+   for the OFFSET timespec to be properly analyzed. This software may attempt to
+   place this signal on a pin that can drive a BUFG if it does not already have
+   a pin assigned, however if the LOC constraint is not specified by the user
+   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
+   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
+   should be used instead.
 *************************  Summary of Mapped Logic  ************************
 
 ** 14 Outputs **
@@ -281,7 +297,7 @@ CnT/TriggSync/signalSync1
 
 FDCPE_Clock_sel: FDCPE port map (Clock_sel,SwitchSync1/signalSync1,NOT fastclk,reset,'0');
 
-FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',CnT/slowclk);
+FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,fastclk,reset,'0',NOT CnT/slowclk);
 
 FTCPE_CnT/slowclk: FTCPE port map (CnT/slowclk,'1',fastclk,reset,'0');
 
@@ -354,7 +370,7 @@ FTCPE_out_62MHz_clk: FTCPE port map (out_62MHz_clk,'1',fastclk,reset,'0');
 FDCPE_trigSync_DC: FDCPE port map (trigSync_DC,CnTDC/TriggSync/signalSync1,fastclk,reset,'0',trigSync_DC_CE);
 trigSync_DC_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
 
-FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,NOT fastclk,reset,'0',CnT/slowclk);
+FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,fastclk,reset,'0',NOT CnT/slowclk);
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 
