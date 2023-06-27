@@ -3,14 +3,22 @@
 <script src="paths.js"></script><script src="eqns.js"></script><script>
       var design = "ClocknTrigger";
       var device = "XC9572XL";
-      signals = new Array("Clock_sel","CnTDCTriggSyncsignalSync1_SPECSIG","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG","CnTTriggSyncsignalSync1_SPECSIG","CnTslowclk_SPECSIG","SMA_CLK_PORT","SMA_TRIG_PORT","SwitchSync0signalSync1_SPECSIG","SwitchSync1signalSync1_SPECSIG","Trig_en","Trig_sel","clk_out","clk_out_DC","trigSync_DC","trigSync_MisClk");
-      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
-      sigTypes = new Array("D","D","T","T","D","T","","","D","D","","D","","","D","D");
+      signals = new Array("Clock_sel","CnTDCTriggSyncsignalSync1_SPECSIG","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG","CnTTriggSyncsignalSync1_SPECSIG","CnTslowclk_SPECSIG","SMA_CLK_PORT0_SPECSIG","SMA_CLK_PORT1_SPECSIG","SMA_CLK_PORT2_SPECSIG","SMA_CLK_PORT3_SPECSIG","SMA_TRIG_PORT0_SPECSIG","SMA_TRIG_PORT1_SPECSIG","SMA_TRIG_PORT2_SPECSIG","SMA_TRIG_PORT3_SPECSIG","SwitchSync0signalSync1_SPECSIG","SwitchSync1signalSync1_SPECSIG","Trig_en","Trig_sel","clk_out","clk_out_DC","out_62MHz_clk","trigSync_DC","trigSync_MisClk");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("D","D","T","T","D","T","","","","","","","","","D","D","","D","","","T","D","D");
 
       
         specSig["Switches0_SPECSIG"]=new Array("Switches<0>");
       
         specSig["Switches1_SPECSIG"]=new Array("Switches<1>");
+      
+        specSig["SMA_CLK_PORT0_SPECSIG"]=new Array("SMA_CLK_PORT<0>");
+      
+        specSig["SMA_CLK_PORT1_SPECSIG"]=new Array("SMA_CLK_PORT<1>");
+      
+        specSig["SMA_CLK_PORT2_SPECSIG"]=new Array("SMA_CLK_PORT<2>");
+      
+        specSig["SMA_CLK_PORT3_SPECSIG"]=new Array("SMA_CLK_PORT<3>");
       
         specSig["b_SPECSIG"]=new Array("(b)");
       
@@ -18,7 +26,13 @@
       
         specSig["SwitchSync0signalSync1_SPECSIG"]=new Array("SwitchSync0/signalSync1");
       
-        specSig["CnTDCcounter0_SPECSIG"]=new Array("CnTDC/counter<0>");
+        specSig["SMA_TRIG_PORT0_SPECSIG"]=new Array("SMA_TRIG_PORT<0>");
+      
+        specSig["SMA_TRIG_PORT2_SPECSIG"]=new Array("SMA_TRIG_PORT<2>");
+      
+        specSig["SMA_TRIG_PORT3_SPECSIG"]=new Array("SMA_TRIG_PORT<3>");
+      
+        specSig["SMA_TRIG_PORT1_SPECSIG"]=new Array("SMA_TRIG_PORT<1>");
       
         specSig["CnTslowclk_SPECSIG"]=new Array("CnT/slowclk");
       
@@ -26,11 +40,27 @@
       
         specSig["CnTTriggSyncsignalSync1_SPECSIG"]=new Array("CnT/TriggSync/signalSync1");
       
+        specSig["CnTDCcounter0_SPECSIG"]=new Array("CnTDC/counter<0>");
+      
         specSig["CnTDCcounter1_SPECSIG"]=new Array("CnTDC/counter<1>");
       
+            pterms["FB1_9_1"]=new Array("reset");
+          
             pterms["FB2_2_1"]=new Array("trigSync_DC","Trig_sel");
           
             pterms["FB2_2_2"]=new Array("trigSync_MisClk","/Trig_sel");
+          
+            pterms["FB2_5_1"]=new Array("trigSync_DC","Trig_sel");
+          
+            pterms["FB2_5_2"]=new Array("trigSync_MisClk","/Trig_sel");
+          
+            pterms["FB2_6_1"]=new Array("trigSync_DC","Trig_sel");
+          
+            pterms["FB2_6_2"]=new Array("trigSync_MisClk","/Trig_sel");
+          
+            pterms["FB2_8_1"]=new Array("trigSync_DC","Trig_sel");
+          
+            pterms["FB2_8_2"]=new Array("trigSync_MisClk","/Trig_sel");
           
             pterms["FB2_14_1"]=new Array("SwitchSync1signalSync1_SPECSIG");
           
@@ -44,7 +74,7 @@
           
             pterms["FB2_18_2"]=new Array("reset");
           
-            pterms["FB2_18_3"]=new Array("/CnTslowclk_SPECSIG");
+            pterms["FB2_18_3"]=new Array("CnTslowclk_SPECSIG");
           
             pterms["FB3_12_1"]=new Array("/trigSync_MisClk","CnTslowclk_SPECSIG");
           
@@ -76,7 +106,31 @@
           
             pterms["FB4_6_4"]=new Array("Trig_sel","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
           
-            pterms["FB4_14_1"]=new Array("reset");
+            pterms["FB4_10_1"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_10_2"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_10_3"]=new Array("/trigSync_MisClk","/Trig_sel","CnTslowclk_SPECSIG");
+          
+            pterms["FB4_10_4"]=new Array("Trig_sel","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_12_1"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_12_2"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_12_3"]=new Array("/trigSync_MisClk","/Trig_sel","CnTslowclk_SPECSIG");
+          
+            pterms["FB4_12_4"]=new Array("Trig_sel","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_13_1"]=new Array("reset");
+          
+            pterms["FB4_14_1"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter0_SPECSIG");
+          
+            pterms["FB4_14_2"]=new Array("/trigSync_DC","Trig_sel","CnTDCcounter1_SPECSIG");
+          
+            pterms["FB4_14_3"]=new Array("/trigSync_MisClk","/Trig_sel","CnTslowclk_SPECSIG");
+          
+            pterms["FB4_14_4"]=new Array("Trig_sel","CnTDCcounter0_SPECSIG","CnTDCcounter1_SPECSIG");
           
             pterms["FB4_15_1"]=new Array("reset");
           
@@ -94,11 +148,33 @@
           
             pterms["FB4_18_2"]=new Array("reset");
           
-            pterms["FB4_18_3"]=new Array("/CnTslowclk_SPECSIG");
+            pterms["FB4_18_3"]=new Array("CnTslowclk_SPECSIG");
           
-          d2["SMA_CLK_PORT"]=new Array("FB2_2_1","FB2_2_2");
+          d2["out_62MHz_clk"]=new Array("VCC");
           
-            d2imp["SMA_CLK_PORT"]=new Array("1","1");
+            d2imp["out_62MHz_clk"]=new Array("1");
+          
+              gblclk["out_62MHz_clk"]=new Array("fastclk");
+            
+              rst["out_62MHz_clk"]=new Array("FB1_9_1");
+              
+                rstimp["out_62MHz_clk"]=new Array("1");
+              prld["out_62MHz_clk"]="GND";
+          d2["SMA_CLK_PORT0_SPECSIG"]=new Array("FB2_2_1","FB2_2_2");
+          
+            d2imp["SMA_CLK_PORT0_SPECSIG"]=new Array("1","1");
+          
+          d2["SMA_CLK_PORT1_SPECSIG"]=new Array("FB2_5_1","FB2_5_2");
+          
+            d2imp["SMA_CLK_PORT1_SPECSIG"]=new Array("1","1");
+          
+          d2["SMA_CLK_PORT2_SPECSIG"]=new Array("FB2_6_1","FB2_6_2");
+          
+            d2imp["SMA_CLK_PORT2_SPECSIG"]=new Array("1","1");
+          
+          d2["SMA_CLK_PORT3_SPECSIG"]=new Array("FB2_8_1","FB2_8_2");
+          
+            d2imp["SMA_CLK_PORT3_SPECSIG"]=new Array("1","1");
           
           d2["Clock_sel"]=new Array("FB2_14_1");
           
@@ -161,7 +237,7 @@
           d2["trigSync_DC"]=new Array("FB3_18_1");
           
             d2imp["trigSync_DC"]=new Array("1");
-          clkNegs["trigSync_DC"]=1;
+          
               gblclk["trigSync_DC"]=new Array("fastclk");
             
               rst["trigSync_DC"]=new Array("FB3_18_2");
@@ -180,9 +256,17 @@
           
             d2imp["Trig_en"]=new Array("1");
           
-          d2["SMA_TRIG_PORT"]=new Array("FB4_6_1","FB4_6_2","FB4_6_3","FB4_6_4");
+          d2["SMA_TRIG_PORT0_SPECSIG"]=new Array("FB4_6_1","FB4_6_2","FB4_6_3","FB4_6_4");
           
-            d2imp["SMA_TRIG_PORT"]=new Array("1","1","1","1");
+            d2imp["SMA_TRIG_PORT0_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["SMA_TRIG_PORT2_SPECSIG"]=new Array("FB4_10_1","FB4_10_2","FB4_10_3","FB4_10_4");
+          
+            d2imp["SMA_TRIG_PORT2_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["SMA_TRIG_PORT3_SPECSIG"]=new Array("FB4_12_1","FB4_12_2","FB4_12_3","FB4_12_4");
+          
+            d2imp["SMA_TRIG_PORT3_SPECSIG"]=new Array("1","1","1","1");
           
           d2["CnTDCcounter0_SPECSIG"]=new Array("VCC");
           
@@ -190,10 +274,14 @@
           
               gblclk["CnTDCcounter0_SPECSIG"]=new Array("fastclk");
             
-              rst["CnTDCcounter0_SPECSIG"]=new Array("FB4_14_1");
+              rst["CnTDCcounter0_SPECSIG"]=new Array("FB4_13_1");
               
                 rstimp["CnTDCcounter0_SPECSIG"]=new Array("1");
               prld["CnTDCcounter0_SPECSIG"]="GND";
+          d2["SMA_TRIG_PORT1_SPECSIG"]=new Array("FB4_14_1","FB4_14_2","FB4_14_3","FB4_14_4");
+          
+            d2imp["SMA_TRIG_PORT1_SPECSIG"]=new Array("1","1","1","1");
+          
           d2["CnTslowclk_SPECSIG"]=new Array("VCC");
           
             d2imp["CnTslowclk_SPECSIG"]=new Array("1");
@@ -217,7 +305,7 @@
           d2["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_17_1");
           
             d2imp["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("1");
-          clkNegs["CnTDCTriggSyncsignalSync1_SPECSIG"]=1;
+          
               gblclk["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("fastclk");
             
               rst["CnTDCTriggSyncsignalSync1_SPECSIG"]=new Array("FB4_17_2");

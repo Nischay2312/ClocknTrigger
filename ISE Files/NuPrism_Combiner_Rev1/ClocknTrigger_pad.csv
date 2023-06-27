@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 6- 7-2023  2:28PM
+ 6-27-2023 11:57AM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -32,7 +32,7 @@ P11,TIE,,I/O,,,,,,,,,,
 P12,TIE,,I/O,,,,,,,,,,
 P13,TIE,,I/O,,,,,,,,,,
 P14,GND,,GND,,,,,,,,,,
-P15,TIE,,I/O/GCK1,,,,,,,,,,
+P15,out_62MHz_clk,O,I/O/GCK1,OUTPUT,,,,,,,,,
 P16,fastclk,GCK,I/O/GCK2,,,,,,,,,,
 P17,TIE,,I/O/GCK3,,,,,,,,,,
 P18,TIE,,I/O,,,,,,,,,,
@@ -66,10 +66,10 @@ P45,TIE,,I/O,,,,,,,,,,
 P46,TIE,,I/O,,,,,,,,,,
 P47,TIE,,I/O,,,,,,,,,,
 P48,TIE,,I/O,,,,,,,,,,
-P49,SMA_TRIG_PORT,O,I/O,OUTPUT,,,,,,,,,
-P50,TIE,,I/O,,,,,,,,,,
-P51,TIE,,I/O,,,,,,,,,,
-P52,TIE,,I/O,,,,,,,,,,
+P49,SMA_TRIG_PORT<0>,O,I/O,OUTPUT,,,,,,,,,
+P50,SMA_TRIG_PORT<1>,O,I/O,OUTPUT,,,,,,,,,
+P51,SMA_TRIG_PORT<2>,O,I/O,OUTPUT,,,,,,,,,
+P52,SMA_TRIG_PORT<3>,O,I/O,OUTPUT,,,,,,,,,
 P53,TDO,,TDO,,,,,,,,,,
 P54,GND,,GND,,,,,,,,,,
 P55,VCC,,VCCIO,,,,,,,,,,
@@ -77,10 +77,10 @@ P56,TIE,,I/O,,,,,,,,,,
 P57,TIE,,I/O,,,,,,,,,,
 P58,TIE,,I/O,,,,,,,,,,
 P59,TIE,,I/O,,,,,,,,,,
-P60,SMA_CLK_PORT,O,I/O,OUTPUT,,,,,,,,,
-P61,TIE,,I/O,,,,,,,,,,
-P62,TIE,,I/O,,,,,,,,,,
-P63,TIE,,I/O,,,,,,,,,,
+P60,SMA_CLK_PORT<0>,O,I/O,OUTPUT,,,,,,,,,
+P61,SMA_CLK_PORT<1>,O,I/O,OUTPUT,,,,,,,,,
+P62,SMA_CLK_PORT<2>,O,I/O,OUTPUT,,,,,,,,,
+P63,SMA_CLK_PORT<3>,O,I/O,OUTPUT,,,,,,,,,
 P64,TIE,,I/O/GSR,,,,,,,,,,
 
 To preserve the pinout above for future design iterations in

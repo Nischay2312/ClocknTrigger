@@ -27,7 +27,7 @@
   <TD WIDTH="65%" CLASS="cpldta_text_normal"><A HREF="Javascript:popWin('http://www.xilinx.com/literature/index.htm','800','800','test');">XC9572XL</A>, -5 (3.0)</TD>
  </TR>
  <TR>
-  <TD WIDTH="35%" CLASS="cpldta_text_normal_bold"><B>Date Created</B></TD>  <TD WIDTH="65%" CLASS="cpldta_text_normal">Mon Jun  5 15:13:46 2023
+  <TD WIDTH="35%" CLASS="cpldta_text_normal_bold"><B>Date Created</B></TD>  <TD WIDTH="65%" CLASS="cpldta_text_normal">Tue Jun 27 10:56:24 2023
 </TD>
  </TR>
  <TR>
@@ -38,6 +38,17 @@
  </TR>
 </TABLE>
 <A NAME="Summary"></a><h2 ALIGN="center" CLASS="cpldta_text_section_header">Summary</h2>
+<TABLE  WIDTH="80%" border="1" ALIGN="center">
+ <TR CLASS="cpldta_warnings_header">
+  <TH BGCOLOR="#FFFFCC" WIDTH="100%">Notes and Warnings</TH>
+ </TR>
+ <TR>
+  <TD WIDTH="100%" CLASS="cpldta_text_normal">Note: This design contains no timing constraints.</TD>
+ </TR>
+ <TR>
+  <TD WIDTH="100%" CLASS="cpldta_text_normal">Note: A default set of constraints using a delay of 0.000ns will be used for analysis.</TD>
+ </TR>
+</TABLE><BR>
 <TABLE WIDTH="80%" border="1" ALIGN="center">
  <TR CLASS="cpldta_warnings_header">
   <TH BGCOLOR="#FFFFCC" WIDTH="100%" colspan="2">Performance Summary</TH>
@@ -77,19 +88,60 @@
   <TH BGCOLOR="#FFFFCC" WIDTH="15%" CLASS="cpldta_time_header">Paths Failing</TH>
  </TR>
  <TR>
-  <TD ALIGN="left" CLASS="cpldta_constraint_name"><A HREF="#TS_fastclk">TS_fastclk</A></TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value">8.0</TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value">5.6</TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value">3</TD>
+  <TD ALIGN="left" CLASS="cpldta_constraint_name"><A HREF="#TS1000">TS1000</A></TD>
+  <TD ALIGN="center" CLASS="cpldta_time_value">0.0</TD>
+  <TD ALIGN="center" CLASS="cpldta_time_value">0.0</TD>
   <TD ALIGN="center" CLASS="cpldta_time_value">0</TD>
+  <TD ALIGN="center" CLASS="cpldta_time_value">0</TD>
+ </TR>
+ <TR>
+  <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error"><A HREF="#AUTO_TS_F2F">AUTO_TS_F2F</A></TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">0.0</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">5.6</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">11</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">11</TD>
+ </TR>
+ <TR>
+  <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error"><A HREF="#AUTO_TS_P2P">AUTO_TS_P2P</A></TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">0.0</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">6.9</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">13</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">13</TD>
+ </TR>
+ <TR>
+  <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error"><A HREF="#AUTO_TS_P2F">AUTO_TS_P2F</A></TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">0.0</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">4.8</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">6</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">6</TD>
+ </TR>
+ <TR>
+  <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error"><A HREF="#AUTO_TS_F2P">AUTO_TS_F2P</A></TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">0.0</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">5.8</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">44</TD>
+  <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error">44</TD>
  </TR>
 </TABLE>
 </BR>
 </BR>
-<A NAME="TS_fastclk">
-<h3 CLASS="cpldta_text_subsection_header">Constraint: TS_fastclk</h3>
+<A NAME="TS1000">
+<h3 CLASS="cpldta_text_subsection_header">Constraint: TS1000</h3>
  <TABLE  WIDTH="80%" border="1" ALIGN="center">
-  <CAPTION CLASS="cpldta_text_caption"><B>Description: PERIOD:fastclk:8.000nS:HIGH:4.000nS</B></CAPTION>
+  <CAPTION CLASS="cpldta_text_caption"><B>Description: PERIOD:PERIOD_fastclk:0.000 nS</B></CAPTION>
+  <TR CLASS="cpldta_delaytable_header">
+   <TH BGCOLOR="#FFFFCC" WIDTH="40%" CLASS="cpldta_constraint_header">Path</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Requirement (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Delay (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Slack (ns)</TH>
+  </TR>
+ </TABLE>
+ </BR>
+ </BR>
+<A NAME="AUTO_TS_F2F">
+<h3 CLASS="cpldta_text_subsection_header">Constraint: AUTO_TS_F2F</h3>
+ <TABLE  WIDTH="80%" border="1" ALIGN="center">
+  <CAPTION CLASS="cpldta_text_caption"><B>Description: MAXDELAY:FROM:FFS(*):TO:FFS(*):0.000 nS</B></CAPTION>
   <TR CLASS="cpldta_delaytable_header">
    <TH BGCOLOR="#FFFFCC" WIDTH="40%" CLASS="cpldta_constraint_header">Path</TH>
    <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Requirement (ns)</TH>
@@ -97,19 +149,19 @@
    <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Slack (ns)</TH>
   </TR>
   <TR>
-   <A NAME="_CnT_TriggSync_signalSync1_Q_to_CnT_trig_sync_D"></A>
-   <TD ALIGN="left" CLASS="cpldta_constraint_name" WIDTH="40%"><A HREF="javascript:TS_fastclk_CnT_TriggSync_signalSync1_Q_to_CnT_trig_sync_D();">CnT/TriggSync/signalSync1.Q to CnT/trig_sync.D</A></TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">8.000</TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">5.600</TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">2.400</TD>
+   <A NAME="_CnT_TriggSync_signalSync1_Q_to_trigSync_MisClk_D"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2F_CnT_TriggSync_signalSync1_Q_to_trigSync_MisClk_D();">CnT/TriggSync/signalSync1.Q to trigSync_MisClk.D</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.600</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.600</TD>
   </TR>
 <SCRIPT language="JavaScript">
 <!--
-function TS_fastclk_CnT_TriggSync_signalSync1_Q_to_CnT_trig_sync_D() {
+function AUTO_TS_F2F_CnT_TriggSync_signalSync1_Q_to_trigSync_MisClk_D() {
    aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
    aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
    aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
-   aWindow.document.writeln("CnT/TriggSync/signalSync1.Q to CnT/trig_sync.D")
+   aWindow.document.writeln("CnT/TriggSync/signalSync1.Q to trigSync_MisClk.D")
    aWindow.document.writeln("</H3>")
    aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
    aWindow.document.writeln("<TR>")
@@ -124,26 +176,26 @@ function TS_fastclk_CnT_TriggSync_signalSync1_Q_to_CnT_trig_sync_D() {
    aWindow.document.writeln("<TR>")
    aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tSUI</TD>")
    aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">5.200</TD>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/trig_sync.D</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigSync_MisClk.D</TD>")
    aWindow.document.writeln("</TABLE>")
    aWindow.document.close()
 }
 //-->
 </SCRIPT>
   <TR>
-   <A NAME="_CnTDC_TriggSync_signalSync1_Q_to_CnTDC_TriggerSync_D"></A>
-   <TD ALIGN="left" CLASS="cpldta_constraint_name" WIDTH="40%"><A HREF="javascript:TS_fastclk_CnTDC_TriggSync_signalSync1_Q_to_CnTDC_TriggerSync_D();">CnTDC/TriggSync/signalSync1.Q to CnTDC/TriggerSync.D</A></TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">8.000</TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">5.600</TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">2.400</TD>
+   <A NAME="_CnT_slowclk_Q_to_CnT_TriggSync_signalSync1_CE"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2F_CnT_slowclk_Q_to_CnT_TriggSync_signalSync1_CE();">CnT/slowclk.Q to CnT/TriggSync/signalSync1.CE</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.600</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.600</TD>
   </TR>
 <SCRIPT language="JavaScript">
 <!--
-function TS_fastclk_CnTDC_TriggSync_signalSync1_Q_to_CnTDC_TriggerSync_D() {
+function AUTO_TS_F2F_CnT_slowclk_Q_to_CnT_TriggSync_signalSync1_CE() {
    aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
    aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
    aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
-   aWindow.document.writeln("CnTDC/TriggSync/signalSync1.Q to CnTDC/TriggerSync.D")
+   aWindow.document.writeln("CnT/slowclk.Q to CnT/TriggSync/signalSync1.CE")
    aWindow.document.writeln("</H3>")
    aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
    aWindow.document.writeln("<TR>")
@@ -154,30 +206,30 @@ function TS_fastclk_CnTDC_TriggSync_signalSync1_Q_to_CnTDC_TriggerSync_D() {
    aWindow.document.writeln("<TR>")
    aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
    aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnTDC/TriggSync/signalSync1</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/slowclk</TD>")
    aWindow.document.writeln("<TR>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tSUI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tPTSR + tECSU</TD>")
    aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">5.200</TD>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnTDC/TriggerSync.D</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/TriggSync/signalSync1.CE</TD>")
    aWindow.document.writeln("</TABLE>")
    aWindow.document.close()
 }
 //-->
 </SCRIPT>
   <TR>
-   <A NAME="_CnTDC_counter_0__Q_to_CnTDC_counter_1__D"></A>
-   <TD ALIGN="left" CLASS="cpldta_constraint_name" WIDTH="40%"><A HREF="javascript:TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D();">CnTDC/counter<0>.Q to CnTDC/counter<1>.D</A></TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">8.000</TD>
-   <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">5.600</TD>
-  <TD ALIGN="center" CLASS="cpldta_time_value" WIDTH="10%">2.400</TD>
+   <A NAME="_CnT_slowclk_Q_to_trigSync_MisClk_CE"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2F_CnT_slowclk_Q_to_trigSync_MisClk_CE();">CnT/slowclk.Q to trigSync_MisClk.CE</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.600</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.600</TD>
   </TR>
 <SCRIPT language="JavaScript">
 <!--
-function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
+function AUTO_TS_F2F_CnT_slowclk_Q_to_trigSync_MisClk_CE() {
    aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
    aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
    aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
-   aWindow.document.writeln("CnTDC/counter<0>.Q to CnTDC/counter<1>.D")
+   aWindow.document.writeln("CnT/slowclk.Q to trigSync_MisClk.CE")
    aWindow.document.writeln("</H3>")
    aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
    aWindow.document.writeln("<TR>")
@@ -188,11 +240,11 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
    aWindow.document.writeln("<TR>")
    aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
    aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnTDC/counter<0></TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/slowclk</TD>")
    aWindow.document.writeln("<TR>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tSUI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tPTSR + tECSU</TD>")
    aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">5.200</TD>")
-   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnTDC/counter<1>.D</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigSync_MisClk.CE</TD>")
    aWindow.document.writeln("</TABLE>")
    aWindow.document.close()
 }
@@ -201,7 +253,412 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
  </TABLE>
  </BR>
  </BR>
-  <BR><B>Number of constraints not met:</B>&nbsp;0<BR>
+<A NAME="AUTO_TS_P2P">
+<h3 CLASS="cpldta_text_subsection_header">Constraint: AUTO_TS_P2P</h3>
+ <TABLE  WIDTH="80%" border="1" ALIGN="center">
+  <CAPTION CLASS="cpldta_text_caption"><B>Description: MAXDELAY:FROM:PADS(*):TO:PADS(*):0.000 nS</B></CAPTION>
+  <TR CLASS="cpldta_delaytable_header">
+   <TH BGCOLOR="#FFFFCC" WIDTH="40%" CLASS="cpldta_constraint_header">Path</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Requirement (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Delay (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Slack (ns)</TH>
+  </TR>
+  <TR>
+   <A NAME="_fastclk_to_SMA_CLK_PORT_0_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_0_();">fastclk to SMA_CLK_PORT<0></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">6.900</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-6.900</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_0_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("fastclk to SMA_CLK_PORT<0>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">fastclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tGCK</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.100</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">FCLK-IO_0</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigSync_DC</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<0></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<0></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_fastclk_to_SMA_CLK_PORT_1_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_1_();">fastclk to SMA_CLK_PORT<1></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">6.900</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-6.900</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_1_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("fastclk to SMA_CLK_PORT<1>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">fastclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tGCK</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.100</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">FCLK-IO_0</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigSync_DC</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<1></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<1></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_fastclk_to_SMA_CLK_PORT_2_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_2_();">fastclk to SMA_CLK_PORT<2></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">6.900</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-6.900</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2P_fastclk_to_SMA_CLK_PORT_2_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("fastclk to SMA_CLK_PORT<2>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">fastclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tGCK</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.100</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">FCLK-IO_0</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigSync_DC</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<2></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_CLK_PORT<2></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+ </TABLE>
+ </BR>
+ </BR>
+<A NAME="AUTO_TS_P2F">
+<h3 CLASS="cpldta_text_subsection_header">Constraint: AUTO_TS_P2F</h3>
+ <TABLE  WIDTH="80%" border="1" ALIGN="center">
+  <CAPTION CLASS="cpldta_text_caption"><B>Description: MAXDELAY:FROM:PADS(*):TO:FFS(*):0.000 nS</B></CAPTION>
+  <TR CLASS="cpldta_delaytable_header">
+   <TH BGCOLOR="#FFFFCC" WIDTH="40%" CLASS="cpldta_constraint_header">Path</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Requirement (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Delay (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Slack (ns)</TH>
+  </TR>
+  <TR>
+   <A NAME="_Switches_0__to_SwitchSync0_signalSync1_D"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2F_Switches_0__to_SwitchSync0_signalSync1_D();">Switches<0> to SwitchSync0/signalSync1.D</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">4.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-4.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2F_Switches_0__to_SwitchSync0_signalSync1_D() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("Switches<0> to SwitchSync0/signalSync1.D")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">Switches<0></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tIN</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.500</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">Switches_0_IBUF</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tLOGI + tSUI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.300</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SwitchSync0/signalSync1.D</TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_Switches_1__to_SwitchSync1_signalSync1_D"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2F_Switches_1__to_SwitchSync1_signalSync1_D();">Switches<1> to SwitchSync1/signalSync1.D</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">4.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-4.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2F_Switches_1__to_SwitchSync1_signalSync1_D() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("Switches<1> to SwitchSync1/signalSync1.D")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">Switches<1></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tIN</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.500</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">Switches_1_IBUF</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tLOGI + tSUI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.300</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SwitchSync1/signalSync1.D</TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_trigger_to_CnT_TriggSync_signalSync1_D"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_P2F_trigger_to_CnT_TriggSync_signalSync1_D();">trigger to CnT/TriggSync/signalSync1.D</A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">4.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-4.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_P2F_trigger_to_CnT_TriggSync_signalSync1_D() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("trigger to CnT/TriggSync/signalSync1.D")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">-</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigger</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tIN</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">1.500</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">trigger_IBUF</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tLOGI + tSUI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.300</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/TriggSync/signalSync1.D</TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+ </TABLE>
+ </BR>
+ </BR>
+<A NAME="AUTO_TS_F2P">
+<h3 CLASS="cpldta_text_subsection_header">Constraint: AUTO_TS_F2P</h3>
+ <TABLE  WIDTH="80%" border="1" ALIGN="center">
+  <CAPTION CLASS="cpldta_text_caption"><B>Description: MAXDELAY:FROM:FFS(*):TO:PADS(*):0.000 nS</B></CAPTION>
+  <TR CLASS="cpldta_delaytable_header">
+   <TH BGCOLOR="#FFFFCC" WIDTH="40%" CLASS="cpldta_constraint_header">Path</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Requirement (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Delay (ns)</TH>
+   <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Slack (ns)</TH>
+  </TR>
+  <TR>
+   <A NAME="_CnT_slowclk_Q_to_SMA_TRIG_PORT_0_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_0_();">CnT/slowclk.Q to SMA_TRIG_PORT<0></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_0_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("CnT/slowclk.Q to SMA_TRIG_PORT<0>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/slowclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<0></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<0></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_CnT_slowclk_Q_to_SMA_TRIG_PORT_1_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_1_();">CnT/slowclk.Q to SMA_TRIG_PORT<1></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_1_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("CnT/slowclk.Q to SMA_TRIG_PORT<1>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/slowclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<1></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<1></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+  <TR>
+   <A NAME="_CnT_slowclk_Q_to_SMA_TRIG_PORT_2_"></A>
+   <TD BGCOLOR="#FFCCCC" ALIGN="left" CLASS="cpldta_constraint_name_error" WIDTH="40%"><A HREF="javascript:AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_2_();">CnT/slowclk.Q to SMA_TRIG_PORT<2></A></TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">0.000</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">5.800</TD>
+   <TD BGCOLOR="#FFCCCC" ALIGN="center" CLASS="cpldta_time_value_error" WIDTH="10%">-5.800</TD>
+  </TR>
+<SCRIPT language="JavaScript">
+<!--
+function AUTO_TS_F2P_CnT_slowclk_Q_to_SMA_TRIG_PORT_2_() {
+   aWindow=window.open("","thewindow","toolbar=no,WIDTH=350,height=300,status=no,scrollbars=yes,resizable=yes,menubar=no")
+   aWindow.document.writeln("<link type=\"text/css\" rel=\"stylesheet\" href=\"cpldta_style.css\">")
+   aWindow.document.writeln("<H3 CLASS=\"cpldta_text_subsection_header\">Path Trace: ")
+   aWindow.document.writeln("CnT/slowclk.Q to SMA_TRIG_PORT<2>")
+   aWindow.document.writeln("</H3>")
+   aWindow.document.writeln("<TABLE  WIDTH=\"90%\" border=\"1\" ALIGN=\"center\">")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Delay Type</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"20%\" CLASS=\"cpldta_time_header\">Delay (ns)</TH>")
+   aWindow.document.writeln("<TH BGCOLOR=\"#FFFFCC\" WIDTH=\"40%\" CLASS=\"cpldta_constraint_header\">Logical Resource</TH>")
+   aWindow.document.writeln("</TR>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tCOI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">0.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">CnT/slowclk</TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tF + tLOGI + tPDI</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">3.400</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<2></TD>")
+   aWindow.document.writeln("<TR>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">tOUT</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"20%\" CLASS=\"cpldta_datasheet_time_value\">2.000</TD>")
+   aWindow.document.writeln("<TD WIDTH=\"40%\" CLASS=\"cpldta_datasheet_pathname\">SMA_TRIG_PORT<2></TD>")
+   aWindow.document.writeln("</TABLE>")
+   aWindow.document.close()
+}
+//-->
+</SCRIPT>
+ </TABLE>
+ </BR>
+ </BR>
+  <BR><B>Number of constraints not met:</B>&nbsp;4<BR>
 <HR>
 <A NAME="DataSheet"></a>
 <h2 ALIGN="center" CLASS="cpldta_text_section_header">Data Sheet Report</h2>
@@ -230,6 +687,16 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
    <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Hold to clk (edge) </TH>
   </TR>
   <TR>
+   <TD WIDTH="60%" CLASS="cpldta_datasheet_pathname">Switches<0></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.700</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">0.000</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="60%" CLASS="cpldta_datasheet_pathname">Switches<1></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.700</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">0.000</TD>
+  </TR>
+  <TR>
    <TD WIDTH="60%" CLASS="cpldta_datasheet_pathname">trigger</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.700</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">0.000</TD>
@@ -245,12 +712,56 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
    <TH BGCOLOR="#FFFFCC" WIDTH="20%" CLASS="cpldta_time_header">Clock (edge) to Pad </TH>
   </TR>
   <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_CLK_PORT<0></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_CLK_PORT<1></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_CLK_PORT<2></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_CLK_PORT<3></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_TRIG_PORT<0></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_TRIG_PORT<1></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_TRIG_PORT<2></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">SMA_TRIG_PORT<3></TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
    <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">clk_out</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
   </TR>
   <TR>
    <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">clk_out_DC</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">6.900</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">Clock_sel</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.500</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">Trig_sel</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.500</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="80%" CLASS="cpldta_datasheet_pathname">out_62MHz_clk</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">3.500</TD>
   </TR>
  </TABLE><BR>
  <BR>
@@ -265,17 +776,57 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
   </TR>
   <TR>
    <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnT/TriggSync/signalSync1.Q</TD>
-   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnT/trig_sync.D</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">trigSync_MisClk.D</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnT/slowclk.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnT/TriggSync/signalSync1.CE</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnT/slowclk.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">trigSync_MisClk.CE</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
   </TR>
   <TR>
    <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/TriggSync/signalSync1.Q</TD>
-   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/TriggerSync.D</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">trigSync_DC.D</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<0>.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/TriggSync/signalSync1.CE</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
   </TR>
   <TR>
    <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<0>.Q</TD>
    <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<1>.D</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<0>.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">trigSync_DC.CE</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<1>.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/TriggSync/signalSync1.CE</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">CnTDC/counter<1>.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">trigSync_DC.CE</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">SwitchSync0/signalSync1.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">Trig_sel.D</TD>
+   <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
+  </TR>
+  <TR>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">SwitchSync1/signalSync1.Q</TD>
+   <TD WIDTH="40%" CLASS="cpldta_datasheet_pathname">Clock_sel.D</TD>
    <TD WIDTH="20%" CLASS="cpldta_datasheet_time_value">5.600</TD>
   </TR>
  </TABLE><BR>
@@ -292,10 +843,10 @@ function TS_fastclk_CnTDC_counter_0__Q_to_CnTDC_counter_1__D() {
  <BR>
 <HR>
 <BR><SPAN CLASS="cpldta_text_normal_bold"><B>Number of paths analyzed:</B></SPAN> 
-<SPAN CLASS="cpldta_text_normal">3</SPAN>
+<SPAN CLASS="cpldta_text_normal">74</SPAN>
 <BR><SPAN CLASS="cpldta_text_normal_bold"><B>Number of Timing errors:</B></SPAN> 
-<SPAN CLASS="cpldta_text_normal">0</SPAN>
-<BR><SPAN CLASS="cpldta_text_normal_bold"><B>Analysis Completed:</B></SPAN> <SPAN CLASS="cpldta_text_normal">Mon Jun  5 15:13:46 2023
+<SPAN CLASS="cpldta_text_normal">74</SPAN>
+<BR><SPAN CLASS="cpldta_text_normal_bold"><B>Analysis Completed:</B></SPAN> <SPAN CLASS="cpldta_text_normal">Tue Jun 27 10:56:24 2023
 </SPAN>
 <HR>
 </HTML>

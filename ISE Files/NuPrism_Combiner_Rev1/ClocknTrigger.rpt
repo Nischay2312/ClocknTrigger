@@ -1,7 +1,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: ClocknTrigger                       Date:  6- 7-2023,  2:28PM
+Design Name: ClocknTrigger                       Date:  6-27-2023, 11:57AM
 Device Used: XC9572XL-5-VQ64
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-16 /72  ( 22%) 34  /360  (  9%) 24 /216 ( 11%)   11 /72  ( 15%) 12 /52  ( 23%)
+23 /72  ( 32%) 53  /360  ( 15%) 25 /216 ( 12%)   12 /72  ( 17%) 19 /52  ( 37%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1           0/18        0/54        0/90       1/13
-FB2           4/18        8/54        9/90       2/13
+FB1           1/18        1/54        1/90       2/13
+FB2           7/18        8/54       15/90       5/13
 FB3           4/18        8/54        8/90       6/14
-FB4           8/18        8/54       17/90       3/12
+FB4          11/18        8/54       29/90       6/12
              -----       -----       -----      -----    
-             16/72       24/216      34/360     12/52 
+             23/72       25/216      53/360     19/52 
 
 * - Resource is exhausted
 
@@ -34,75 +34,44 @@ Global set/reset net(s) unused.
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    4           4    |  I/O              :    10      46
-Output        :    7           7    |  GCK/IO           :     1       3
+Input         :    4           4    |  I/O              :    16      46
+Output        :   14          14    |  GCK/IO           :     2       3
 Bidirectional :    0           0    |  GTS/IO           :     1       2
 GCK           :    1           1    |  GSR/IO           :     0       1
 GTS           :    0           0    |
 GSR           :    0           0    |
                  ----        ----
-        Total     12          12
+        Total     19          19
 
 ** Power Data **
 
-There are 16 macrocells in high performance mode (MCHP).
+There are 23 macrocells in high performance mode (MCHP).
 There are 0 macrocells in low power mode (MCLP).
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'ClocknTrigger.ise'.
-WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
-   be explicitly declared as a global clock input (BUFG) in your design in order
-   for the OFFSET timespec to be properly analyzed. This software may attempt to
-   place this signal on a pin that can drive a BUFG if it does not already have
-   a pin assigned, however if the LOC constraint is not specified by the user
-   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
-   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
-   should be used instead.
-WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
-   be explicitly declared as a global clock input (BUFG) in your design in order
-   for the OFFSET timespec to be properly analyzed. This software may attempt to
-   place this signal on a pin that can drive a BUFG if it does not already have
-   a pin assigned, however if the LOC constraint is not specified by the user
-   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
-   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
-   should be used instead.
-WARNING:Cpld:822 - Timespec OFFSET =
-   IN:8.000nS:VALID:8.000nS:BEFORE:fastclk:RISING is invalid for CPLD designs.
-   This constraint will be ignored.
-WARNING:Cpld:822 - Timespec OFFSET =
-   IN:8.000nS:VALID:8.000nS:BEFORE:fastclk:RISING is invalid for CPLD designs.
-   This constraint will be ignored.
-WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
-   be explicitly declared as a global clock input (BUFG) in your design in order
-   for the OFFSET timespec to be properly analyzed. This software may attempt to
-   place this signal on a pin that can drive a BUFG if it does not already have
-   a pin assigned, however if the LOC constraint is not specified by the user
-   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
-   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
-   should be used instead.
-WARNING:Cpld - Clock 'fastclk' is used in an OFFSET timespec, this clock should
-   be explicitly declared as a global clock input (BUFG) in your design in order
-   for the OFFSET timespec to be properly analyzed. This software may attempt to
-   place this signal on a pin that can drive a BUFG if it does not already have
-   a pin assigned, however if the LOC constraint is not specified by the user
-   then the OFFSET timespec will not be applied. OFFSET constraints on clocks
-   that do not drive a BUFG will be ignored. In this case a FROM:TO constraint
-   should be used instead.
 *************************  Summary of Mapped Logic  ************************
 
-** 7 Outputs **
+** 14 Outputs **
 
 Signal                       Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
 Name                         Pts   Inps          No.  Type    Use     Mode Rate State
-SMA_CLK_PORT                 2     3     FB2_2   60   I/O     O       STD  FAST 
+out_62MHz_clk                1     1     FB1_9   15   GCK/I/O O       STD  FAST RESET
+SMA_CLK_PORT<0>              2     3     FB2_2   60   I/O     O       STD  FAST 
+SMA_CLK_PORT<1>              2     3     FB2_5   61   I/O     O       STD  FAST 
+SMA_CLK_PORT<2>              2     3     FB2_6   62   I/O     O       STD  FAST 
+SMA_CLK_PORT<3>              2     3     FB2_8   63   I/O     O       STD  FAST 
 Clock_sel                    2     2     FB2_14  5    GTS/I/O O       STD  FAST RESET
 clk_out                      1     2     FB3_12  40   I/O     O       STD  FAST 
 Trig_sel                     2     2     FB3_16  42   I/O     O       STD  FAST RESET
 clk_out_DC                   3     3     FB4_2   43   I/O     O       STD  FAST 
 Trig_en                      0     0     FB4_5   44   I/O     O       STD  FAST 
-SMA_TRIG_PORT                4     6     FB4_6   49   I/O     O       STD  FAST 
+SMA_TRIG_PORT<0>             4     6     FB4_6   49   I/O     O       STD  FAST 
+SMA_TRIG_PORT<2>             4     6     FB4_10  51   I/O     O       STD  FAST 
+SMA_TRIG_PORT<3>             4     6     FB4_12  52   I/O     O       STD  FAST 
+SMA_TRIG_PORT<1>             4     6     FB4_14  50   I/O     O       STD  FAST 
 
 ** 9 Buried Nodes **
 
@@ -112,7 +81,7 @@ SwitchSync1/signalSync1      2     2     FB2_17  STD  RESET
 trigSync_MisClk              3     3     FB2_18  STD  RESET
 SwitchSync0/signalSync1      2     2     FB3_17  STD  RESET
 trigSync_DC                  3     4     FB3_18  STD  RESET
-CnTDC/counter<0>             1     1     FB4_14  STD  RESET
+CnTDC/counter<0>             1     1     FB4_13  STD  RESET
 CnT/slowclk                  1     1     FB4_15  STD  RESET
 CnTDC/counter<1>             2     2     FB4_16  STD  RESET
 CnTDC/TriggSync/signalSync1  3     4     FB4_17  STD  RESET
@@ -144,8 +113,8 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               0/54
-Number of signals used by logic mapping into function block:  0
+Number of function block inputs used/remaining:               1/53
+Number of signals used by logic mapping into function block:  1
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_1         (b)     
@@ -156,7 +125,7 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_6   10    I/O     
 (unused)              0       0     0   5     FB1_7         (b)     
 (unused)              0       0     0   5     FB1_8   11    I/O     
-(unused)              0       0     0   5     FB1_9   15    GCK/I/O 
+out_62MHz_clk         1       0     0   4     FB1_9   15    GCK/I/O O
 (unused)              0       0     0   5     FB1_10  18    I/O     
 (unused)              0       0     0   5     FB1_11  16    GCK/I/O GCK
 (unused)              0       0     0   5     FB1_12  23    I/O     
@@ -166,19 +135,28 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_16        (b)     
 (unused)              0       0     0   5     FB1_17  20    I/O     
 (unused)              0       0     0   5     FB1_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: reset            
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+out_62MHz_clk        X....................................... 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
 *********************************** FB2  ***********************************
 Number of function block inputs used/remaining:               8/46
 Number of signals used by logic mapping into function block:  8
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
-SMA_CLK_PORT          2       0     0   3     FB2_2   60    I/O     O
+SMA_CLK_PORT<0>       2       0     0   3     FB2_2   60    I/O     O
 (unused)              0       0     0   5     FB2_3   58    I/O     
 (unused)              0       0     0   5     FB2_4   59    I/O     
-(unused)              0       0     0   5     FB2_5   61    I/O     
-(unused)              0       0     0   5     FB2_6   62    I/O     
+SMA_CLK_PORT<1>       2       0     0   3     FB2_5   61    I/O     O
+SMA_CLK_PORT<2>       2       0     0   3     FB2_6   62    I/O     O
 (unused)              0       0     0   5     FB2_7         (b)     
-(unused)              0       0     0   5     FB2_8   63    I/O     
+SMA_CLK_PORT<3>       2       0     0   3     FB2_8   63    I/O     O
 (unused)              0       0     0   5     FB2_9   64    GSR/I/O 
 (unused)              0       0     0   5     FB2_10  1     I/O     
 (unused)              0       0     0   5     FB2_11  2     GTS/I/O 
@@ -198,7 +176,10 @@ Signals Used by Logic in Function Block
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SMA_CLK_PORT         ....X.XX................................ 3
+SMA_CLK_PORT<0>      ....X.XX................................ 3
+SMA_CLK_PORT<1>      ....X.XX................................ 3
+SMA_CLK_PORT<2>      ....X.XX................................ 3
+SMA_CLK_PORT<3>      ....X.XX................................ 3
 Clock_sel            ..X..X.................................. 2
 SwitchSync1/signalSync1 
                      ...X.X.................................. 2
@@ -254,15 +235,15 @@ clk_out_DC            3       0     0   2     FB4_2   43    I/O     O
 (unused)              0       0     0   5     FB4_3   46    I/O     
 (unused)              0       0     0   5     FB4_4   47    I/O     
 Trig_en               0       0     0   5     FB4_5   44    I/O     O
-SMA_TRIG_PORT         4       0     0   1     FB4_6   49    I/O     O
+SMA_TRIG_PORT<0>      4       0     0   1     FB4_6   49    I/O     O
 (unused)              0       0     0   5     FB4_7         (b)     
 (unused)              0       0     0   5     FB4_8   45    I/O     
 (unused)              0       0     0   5     FB4_9         (b)     
-(unused)              0       0     0   5     FB4_10  51    I/O     
+SMA_TRIG_PORT<2>      4       0     0   1     FB4_10  51    I/O     O
 (unused)              0       0     0   5     FB4_11  48    I/O     
-(unused)              0       0     0   5     FB4_12  52    I/O     
-(unused)              0       0     0   5     FB4_13        (b)     
-CnTDC/counter<0>      1       0     0   4     FB4_14  50    I/O     (b)
+SMA_TRIG_PORT<3>      4       0     0   1     FB4_12  52    I/O     O
+CnTDC/counter<0>      1       0     0   4     FB4_13        (b)     (b)
+SMA_TRIG_PORT<1>      4       0     0   1     FB4_14  50    I/O     O
 CnT/slowclk           1       0     0   4     FB4_15  56    I/O     (b)
 CnTDC/counter<1>      2       0     0   3     FB4_16        (b)     (b)
 CnTDC/TriggSync/signalSync1
@@ -279,8 +260,11 @@ Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
 clk_out_DC           .XX..X.................................. 3
 Trig_en              ........................................ 0
-SMA_TRIG_PORT        XXXX.XX................................. 6
+SMA_TRIG_PORT<0>     XXXX.XX................................. 6
+SMA_TRIG_PORT<2>     XXXX.XX................................. 6
+SMA_TRIG_PORT<3>     XXXX.XX................................. 6
 CnTDC/counter<0>     ....X................................... 1
+SMA_TRIG_PORT<1>     XXXX.XX................................. 6
 CnT/slowclk          ....X................................... 1
 CnTDC/counter<1>     .X..X................................... 2
 CnTDC/TriggSync/signalSync1 
@@ -295,11 +279,11 @@ CnT/TriggSync/signalSync1
 
 FDCPE_Clock_sel: FDCPE port map (Clock_sel,SwitchSync1/signalSync1,NOT fastclk,reset,'0');
 
-FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',NOT CnT/slowclk);
+FDCPE_CnT/TriggSync/signalSync1: FDCPE port map (CnT/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',CnT/slowclk);
 
 FTCPE_CnT/slowclk: FTCPE port map (CnT/slowclk,'1',fastclk,reset,'0');
 
-FDCPE_CnTDC/TriggSync/signalSync1: FDCPE port map (CnTDC/TriggSync/signalSync1,trigger,NOT fastclk,reset,'0',CnTDC/TriggSync/signalSync1_CE);
+FDCPE_CnTDC/TriggSync/signalSync1: FDCPE port map (CnTDC/TriggSync/signalSync1,trigger,fastclk,reset,'0',CnTDC/TriggSync/signalSync1_CE);
 CnTDC/TriggSync/signalSync1_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
 
 FTCPE_CnTDC/counter0: FTCPE port map (CnTDC/counter(0),'1',fastclk,reset,'0');
@@ -307,11 +291,41 @@ FTCPE_CnTDC/counter0: FTCPE port map (CnTDC/counter(0),'1',fastclk,reset,'0');
 FTCPE_CnTDC/counter1: FTCPE port map (CnTDC/counter(1),CnTDC/counter(0),fastclk,reset,'0');
 
 
-SMA_CLK_PORT <= ((trigSync_DC AND Trig_sel)
+SMA_CLK_PORT(0) <= ((trigSync_DC AND Trig_sel)
 	OR (trigSync_MisClk AND NOT Trig_sel));
 
 
-SMA_TRIG_PORT <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
+SMA_CLK_PORT(1) <= ((trigSync_DC AND Trig_sel)
+	OR (trigSync_MisClk AND NOT Trig_sel));
+
+
+SMA_CLK_PORT(2) <= ((trigSync_DC AND Trig_sel)
+	OR (trigSync_MisClk AND NOT Trig_sel));
+
+
+SMA_CLK_PORT(3) <= ((trigSync_DC AND Trig_sel)
+	OR (trigSync_MisClk AND NOT Trig_sel));
+
+
+SMA_TRIG_PORT(0) <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
+	OR (NOT trigSync_DC AND Trig_sel AND CnTDC/counter(1))
+	OR (NOT trigSync_MisClk AND NOT Trig_sel AND CnT/slowclk)
+	OR (Trig_sel AND CnTDC/counter(0) AND CnTDC/counter(1)));
+
+
+SMA_TRIG_PORT(1) <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
+	OR (NOT trigSync_DC AND Trig_sel AND CnTDC/counter(1))
+	OR (NOT trigSync_MisClk AND NOT Trig_sel AND CnT/slowclk)
+	OR (Trig_sel AND CnTDC/counter(0) AND CnTDC/counter(1)));
+
+
+SMA_TRIG_PORT(2) <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
+	OR (NOT trigSync_DC AND Trig_sel AND CnTDC/counter(1))
+	OR (NOT trigSync_MisClk AND NOT Trig_sel AND CnT/slowclk)
+	OR (Trig_sel AND CnTDC/counter(0) AND CnTDC/counter(1)));
+
+
+SMA_TRIG_PORT(3) <= ((NOT trigSync_DC AND Trig_sel AND CnTDC/counter(0))
 	OR (NOT trigSync_DC AND Trig_sel AND CnTDC/counter(1))
 	OR (NOT trigSync_MisClk AND NOT Trig_sel AND CnT/slowclk)
 	OR (Trig_sel AND CnTDC/counter(0) AND CnTDC/counter(1)));
@@ -333,10 +347,12 @@ clk_out_DC <= ((NOT trigSync_DC AND CnTDC/counter(0))
 	OR (NOT trigSync_DC AND CnTDC/counter(1))
 	OR (CnTDC/counter(0) AND CnTDC/counter(1)));
 
-FDCPE_trigSync_DC: FDCPE port map (trigSync_DC,CnTDC/TriggSync/signalSync1,NOT fastclk,reset,'0',trigSync_DC_CE);
+FTCPE_out_62MHz_clk: FTCPE port map (out_62MHz_clk,'1',fastclk,reset,'0');
+
+FDCPE_trigSync_DC: FDCPE port map (trigSync_DC,CnTDC/TriggSync/signalSync1,fastclk,reset,'0',trigSync_DC_CE);
 trigSync_DC_CE <= (NOT CnTDC/counter(0) AND NOT CnTDC/counter(1));
 
-FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,NOT fastclk,reset,'0',NOT CnT/slowclk);
+FDCPE_trigSync_MisClk: FDCPE port map (trigSync_MisClk,CnT/TriggSync/signalSync1,NOT fastclk,reset,'0',CnT/slowclk);
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 
@@ -386,12 +402,12 @@ No. Name                           No. Name
  12 KPR                              44 Trig_en                       
  13 KPR                              45 KPR                           
  14 GND                              46 KPR                           
- 15 KPR                              47 KPR                           
+ 15 out_62MHz_clk                    47 KPR                           
  16 fastclk                          48 KPR                           
- 17 KPR                              49 SMA_TRIG_PORT                 
- 18 KPR                              50 KPR                           
- 19 KPR                              51 KPR                           
- 20 KPR                              52 KPR                           
+ 17 KPR                              49 SMA_TRIG_PORT<0>              
+ 18 KPR                              50 SMA_TRIG_PORT<1>              
+ 19 KPR                              51 SMA_TRIG_PORT<2>              
+ 20 KPR                              52 SMA_TRIG_PORT<3>              
  21 GND                              53 TDO                           
  22 KPR                              54 GND                           
  23 KPR                              55 VCC                           
@@ -399,10 +415,10 @@ No. Name                           No. Name
  25 KPR                              57 KPR                           
  26 VCC                              58 KPR                           
  27 trigger                          59 KPR                           
- 28 TDI                              60 SMA_CLK_PORT                  
- 29 TMS                              61 KPR                           
- 30 TCK                              62 KPR                           
- 31 KPR                              63 KPR                           
+ 28 TDI                              60 SMA_CLK_PORT<0>               
+ 29 TMS                              61 SMA_CLK_PORT<1>               
+ 30 TCK                              62 SMA_CLK_PORT<2>               
+ 31 KPR                              63 SMA_CLK_PORT<3>               
  32 KPR                              64 KPR                           
 
 

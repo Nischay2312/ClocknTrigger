@@ -6,34 +6,65 @@ module ClocknTrigger(input fastclk,
                      input reset,
                      input trigger,
 					 input [1:0] Switches,
-					 output Trig_sel,
-					 output Clock_sel,
-					 output Trig_en,
-                     output clk_out_DC,
-                     output clk_out,
-					 output SMA_CLK_PORT,
-					 output SMA_TRIG_PORT
+					 output wire Trig_sel,
+					 output wire Clock_sel,
+					 output wire Trig_en,
+                     output wire clk_out_DC,
+                     output wire clk_out,
+                     output wire out_62MHz_clk,
+					 output wire [3:0] SMA_CLK_PORT,
+					 output wire [3:0] SMA_TRIG_PORT
                     );
 		
 	 assign Trig_en = 1'b1;
      wire [1:0]Switch_sync;
 	 wire trigSync_DC;
 	 wire trigSync_MisClk;
+	 
+	 wire clk_62MHz;
+	 
+	 assign out_62MHz_clk = clk_62MHz;
+
+    //Generate the 62MHz clock
+    Clock_Divider_by2 clk62MHz(.fastclk(fastclk), .reset(reset), .clk_out(clk_62MHz));
 
      //Generate the synchronized switch signal, synchronized at negetive edge of the fast clock
     mySync SwitchSync0(.clk(!fastclk), .reset(reset), .data_in(Switches[0]), .data_out(Switch_sync[0]));
     mySync SwitchSync1(.clk(!fastclk), .reset(reset), .data_in(Switches[1]), .data_out(Switch_sync[1])); 
 
     //instantiate the modules
-    ClocknTriggerDC CnTDC(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC), .trig_s(trigSync_DC));
-    ClocknTriggerDrLinn CnT(.fastclk(fastclk), .reset(reset), .trigger(trigger), .clk_out(clk_out), .trig_s(trigSync_MisClk));
+    ClocknTriggerDC CnTDC(.fastclk(fastclk/*clk_62MHz*/), .reset(reset), .trigger(trigger), .clk_out(clk_out_DC), .trig_s(trigSync_DC));
+    ClocknTriggerDrLinn CnT(.fastclk(fastclk/*clk_62MHz*/), .reset(reset), .trigger(trigger), .clk_out(clk_out), .trig_s(trigSync_MisClk));
 	 
 	 assign Trig_sel = Switch_sync[0]? 1'b1: 1'b0;
 	 assign Clock_sel = Switch_sync[1]? 1'b1: 1'b0;
-	 assign SMA_TRIG_PORT = Trig_sel? clk_out_DC: clk_out;
-	 assign SMA_CLK_PORT = Trig_sel? trigSync_DC: trigSync_MisClk;
+	 assign SMA_TRIG_PORT[0] = Trig_sel? clk_out_DC: clk_out;
+     assign SMA_TRIG_PORT[1] = Trig_sel? clk_out_DC: clk_out;
+     assign SMA_TRIG_PORT[2] = Trig_sel? clk_out_DC: clk_out;
+     assign SMA_TRIG_PORT[3] = Trig_sel? clk_out_DC: clk_out;
+	 assign SMA_CLK_PORT[0] = Trig_sel? trigSync_DC: trigSync_MisClk;
+     assign SMA_CLK_PORT[1] = Trig_sel? trigSync_DC: trigSync_MisClk;
+     assign SMA_CLK_PORT[2] = Trig_sel? trigSync_DC: trigSync_MisClk;
+     assign SMA_CLK_PORT[3] = Trig_sel? trigSync_DC: trigSync_MisClk;
 endmodule
-                    
+
+
+/*
+*  This module takes in a fast clock and outputs a slow clock that is half the frequency of the fast clock.
+*  The reset is asynchronous and active high.
+*/
+module Clock_Divider_by2( input wire fastclk,
+                          input wire reset,
+                          output wire clk_out );
+    reg slowclk;
+    always @(posedge fastclk or posedge reset) begin
+        if(reset)
+            slowclk <= 1'b0;
+        else
+            slowclk <= ~slowclk;
+    end
+    assign clk_out = slowclk;
+endmodule                    
 
 /*
 *  This module takes in a fast clock and a trigger signal and outputs a clock that is modulated by the trigger signal.
@@ -60,8 +91,8 @@ module ClocknTriggerDrLinn(input wire fastclk,
             slowclk <= ~slowclk;
     end
 
-    //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
-    mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(!slowclk), .data_out(trig_sync)); //!fastclk
+    //Generate the synchronized trigger, synchronized at negetive edge of the fast clock and enable is not of slow clock
+    mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(slowclk), .data_out(trig_sync)); //!fastclk
     //Generate the output clock
     assign clk_out = (slowclk & !trig_sync);
 endmodule
@@ -83,7 +114,7 @@ wire clk_25DC;
 wire clk_75DC;
 reg [1:0]counter;
 //Generate the synchronized trigger, synchronized at negetive edge of the fast clock
-mySync_en TriggSync(.clk(!fastclk), .reset(reset), .data_in(trigger), .enable(counter == 2'b00), .data_out(TriggerSync));
+mySync_en TriggSync(.clk(fastclk), .reset(reset), .data_in(trigger), .enable(counter == 2'b00), .data_out(TriggerSync));
 //create the counter to get 4 phases
 always @(posedge fastclk or posedge reset) begin
     if(reset) begin
@@ -142,6 +173,10 @@ always @(posedge clk or posedge reset) begin
         if(enable) begin
             signalSync1 <= data_in;
             data_out <= signalSync1;
+        end
+        else begin
+            data_out <= data_out;
+            signalSync1 <= signalSync1;
         end
     end
 end

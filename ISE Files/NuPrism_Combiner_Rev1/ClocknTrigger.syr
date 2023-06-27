@@ -80,6 +80,7 @@ wysiwyg                            : NO
 =========================================================================
 Compiling verilog file "ClocknTrigger.v" in library work
 Module <ClocknTrigger> compiled
+Module <Clock_Divider_by2> compiled
 Module <ClocknTriggerDrLinn> compiled
 Module <ClocknTriggerDC> compiled
 Module <mySync> compiled
@@ -92,6 +93,8 @@ Analysis of file <"ClocknTrigger.prj"> succeeded.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for module <ClocknTrigger> in library <work>.
+
+Analyzing hierarchy for module <Clock_Divider_by2> in library <work>.
 
 Analyzing hierarchy for module <mySync> in library <work>.
 
@@ -107,6 +110,9 @@ Analyzing hierarchy for module <mySync_en> in library <work>.
 =========================================================================
 Analyzing top module <ClocknTrigger>.
 Module <ClocknTrigger> is correct for synthesis.
+ 
+Analyzing module <Clock_Divider_by2> in library <work>.
+Module <Clock_Divider_by2> is correct for synthesis.
  
 Analyzing module <mySync> in library <work>.
 Module <mySync> is correct for synthesis.
@@ -126,6 +132,14 @@ Module <ClocknTriggerDrLinn> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
+
+Synthesizing Unit <Clock_Divider_by2>.
+    Related source file is "ClocknTrigger.v".
+    Found 1-bit register for signal <slowclk>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_Divider_by2> synthesized.
+
 
 Synthesizing Unit <mySync>.
     Related source file is "ClocknTrigger.v".
@@ -147,8 +161,8 @@ Unit <mySync_en> synthesized.
 
 Synthesizing Unit <ClocknTriggerDC>.
     Related source file is "ClocknTrigger.v".
-    Found 2-bit comparator greater for signal <clk_25DC$cmp_gt0000> created at line 102.
-    Found 2-bit comparator greater for signal <clk_75DC$cmp_gt0000> created at line 103.
+    Found 2-bit comparator greater for signal <clk_25DC$cmp_gt0000> created at line 133.
+    Found 2-bit comparator greater for signal <clk_75DC$cmp_gt0000> created at line 134.
     Found 2-bit up counter for signal <counter>.
     Summary:
 	inferred   1 Counter(s).
@@ -175,8 +189,8 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  2-bit up counter                                      : 1
-# Registers                                            : 9
- 1-bit register                                        : 9
+# Registers                                            : 10
+ 1-bit register                                        : 10
 # Comparators                                          : 2
  2-bit comparator greater                              : 2
 
@@ -193,8 +207,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  2-bit up counter                                      : 1
-# Registers                                            : 9
- Flip-Flops                                            : 9
+# Registers                                            : 10
+ Flip-Flops                                            : 10
 
 =========================================================================
 
@@ -203,6 +217,8 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <ClocknTrigger> ...
+
+Optimizing unit <Clock_Divider_by2> ...
 
 Optimizing unit <mySync> ...
 
@@ -239,7 +255,7 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 12
+# IOs                              : 19
 
 Cell Usage :
 # BELS                             : 33
@@ -249,22 +265,22 @@ Cell Usage :
 #      OR2                         : 6
 #      VCC                         : 1
 #      XOR2                        : 1
-# FlipFlops/Latches                : 11
-#      FDC                         : 7
+# FlipFlops/Latches                : 12
+#      FDC                         : 8
 #      FDCE                        : 4
-# IO Buffers                       : 12
+# IO Buffers                       : 19
 #      IBUF                        : 5
-#      OBUF                        : 7
+#      OBUF                        : 14
 =========================================================================
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 0.52 secs
+Total CPU time to Xst completion: 0.62 secs
  
 --> 
 
 
-Total memory usage is 604156 kilobytes
+Total memory usage is 604352 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

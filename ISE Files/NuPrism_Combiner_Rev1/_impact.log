@@ -1,59 +1,17 @@
 iMPACT Version: 14.7
 
-iMPACT log file Started on Tue Jun 14 15:07:40 2022
+iMPACT log file Started on Tue Jun 27 09:08:18 2023
 
 Welcome to iMPACT
 iMPACT Version: 14.7
-Project: /home/ise/NuPrism_Combiner_Rev1//auto_project.ipf created.
 // *** BATCH CMD : setMode -bs
-GUI --- Auto connect to cable...
-// *** BATCH CMD : setCable -port auto
-INFO:iMPACT - Digilent Plugin: Plugin Version: 2.5.2
-INFO:iMPACT - Digilent Plugin: no JTAG device was found.
-AutoDetecting cable. Please wait.
-*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
-PROGRESS_START - Starting Operation.
-Connecting to cable (Usb Port - USB21).
-Checking cable driver.
-File version of /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
-File version of /usr/share/xusbdfwu.hex = 1030.
- Using libusb.
- Kernel release = 2.6.32-358.el6.x86_64.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport0).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport1).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport2).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport3).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-PROGRESS_END - End Operation.
-Elapsed time =      0 sec.
-Cable autodetection failed.
-WARNING:iMPACT:923 - Can not find cable, check cable setup !// *** BATCH CMD : addDevice -p 1 -file"/home/ise/NuPrism_Combiner_Rev1/combiner.jed"
-'1': Loading file '/home/ise/NuPrism_Combiner_Rev1/combiner.jed' ...
+// *** BATCH CMD : addDevice -p 1 -file"/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed"
+'1': Loading file '/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed' ...
 done.
 INFO:iMPACT:1777 - 
    Reading /opt/Xilinx/14.7/ISE_DS/ISE/xc9500xl/data/xc9572xl.bsd...
 INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
 ----------------------------------------------------------------------
-// *** BATCH CMD : addDevice -p 2 -file"/home/ise/NuPrism_Combiner_Rev1/combiner.jed"
-'2': Loading file '/home/ise/NuPrism_Combiner_Rev1/combiner.jed' ...
-done.
-INFO:iMPACT:501 - '2': Added Device xc9572xl successfully.
-----------------------------------------------------------------------
-// *** BATCH CMD : assignFile -p 2 -file"/home/ise/NuPrism_Combiner_Rev1/combiner.jed"
-'2': Loading file '/home/ise/NuPrism_Combiner_Rev1/combiner.jed' ...
-done.
-----------------------------------------------------------------------
-INFO:iMPACT:501 - '2': Added Device xc9572xl successfully.
-----------------------------------------------------------------------
-// *** BATCH CMD : setMode -bs
 GUI --- Auto connect to cable...
 // *** BATCH CMD : setCable -port auto
 INFO:iMPACT - Digilent Plugin: Plugin Version: 2.5.2
@@ -67,42 +25,110 @@ File version of /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
 File version of /usr/share/xusbdfwu.hex = 1030.
  Using libusb.
  Kernel release = 2.6.32-358.el6.x86_64.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport0).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport1).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport2).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
-Connecting to cable (Parallel Port - parport3).
- WinDriver v10.31 Jungo (c) 1997 - 2011 Build Date: May 24 2011 x86_64 64bit18:13:19.
-Cable connection failed.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed 20000020.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2300.
+File version of /opt/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading /opt/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
 PROGRESS_END - End Operation.
-Elapsed time =      0 sec.
-Cable autodetection failed.
-WARNING:iMPACT:923 - Can not find cable, check cable setup !Project: '/home/ise/NuPrism_Combiner_Rev1//auto_project.ipf' created.
-// *** BATCH CMD : setMode -bs
-// *** BATCH CMD : setMode -ss
-// *** BATCH CMD : setMode -sm
-// *** BATCH CMD : setMode -hw140
-// *** BATCH CMD : setMode -spi
-// *** BATCH CMD : setMode -acecf
-// *** BATCH CMD : setMode -acempm
-// *** BATCH CMD : setMode -pff
-// *** BATCH CMD : setMode -bs
-// *** BATCH CMD : saveProjectFile -file"/home/ise/NuPrism_Combiner_Rev1//auto_project.ipf"
-// *** BATCH CMD : setMode -bs
-// *** BATCH CMD : deleteDevice -position 1
+Elapsed time =      1 sec.
+Type = 0x0005.
+ESN option: 00001631DBC501.
+INFO:iMPACT - Current time: 6/27/23 9:08 AM
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+// *** BATCH CMD : assignFile -p 1 -file"/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed"
+'1': Loading file '/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
 ----------------------------------------------------------------------
-// *** BATCH CMD : deleteDevice -position 1
-// *** BATCH CMD : setMode -bs
-// *** BATCH CMD : setMode -ss
-// *** BATCH CMD : setMode -sm
-// *** BATCH CMD : setMode -hw140
-// *** BATCH CMD : setMode -spi
-// *** BATCH CMD : setMode -acecf
-// *** BATCH CMD : setMode -acempm
-// *** BATCH CMD : setMode -pff
+INFO:iMPACT - Current time: 6/27/23 9:59 AM
+Updating config file /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
+// *** BATCH CMD : assignFile -p 1 -file"/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed"
+'1': Loading file '/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 6/27/23 10:31 AM
+Updating config file /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+// *** BATCH CMD : assignFile -p 1 -file"/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed"
+'1': Loading file '/home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc9572xl successfully.
+----------------------------------------------------------------------
+INFO:iMPACT - Current time: 6/27/23 10:35 AM
+Updating config file /home/ise/NuPrism_Combiner_Rev1/ClocknTrigger.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
