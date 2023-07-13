@@ -30,36 +30,58 @@ r1
 Z3 o-work work
 Z4 tCvgOpt 0
 n@clcokn@trigger@d@c
-vClocknTrigger
-Z5 !s110 1686605904
+vClock_Divider_by2
+Z5 !s110 1687904416
 !i10b 1
-!s100 @AefYQjSVBe:`]_R>VPkz3
-IPddkWJi?4KXgLZLS57T880
+!s100 N^J8Oh1M=g1a[c2W08:000
+I?_ALF5OcCL9a`bRd[:W1M1
 R0
 R1
-Z6 w1686605888
+Z6 w1687904409
 Z7 8C:\ClocknTrigger\ClocknTrigger.v
 Z8 FC:\ClocknTrigger\ClocknTrigger.v
-L0 5
+L0 56
 R2
 r1
 !s85 0
 31
-Z9 !s108 1686605904.000000
+Z9 !s108 1687904416.000000
 Z10 !s107 C:\ClocknTrigger\ClocknTrigger.v|
 Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:\ClocknTrigger\ClocknTrigger.v|
 !i113 1
 R3
 R4
-n@clockn@trigger
-vClocknTrigger_tb
-!s110 1686172374
+n@clock_@divider_by2
+vClocknTrigger
+R5
 !i10b 1
-!s100 G4m>aU]bkj:N3TZ1oi1:j0
-INg9234Ggl:H@0fkn7=g=A0
+!s100 QLWS=745_8X]2gARL3hJK2
+Ich3EaQ^jfz57O_dIF=JPL3
 R0
 R1
-w1686172368
+R6
+R7
+R8
+L0 5
+R2
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R3
+R4
+n@clockn@trigger
+vClocknTrigger_tb
+!s110 1687898567
+!i10b 1
+!s100 ?ZfGBnagn<lhD?>WP9h3a2
+I42h8:N2oG7FOI^T1`RICP2
+R0
+R1
+w1687898546
 8C:\ClocknTrigger\combiner_y_tb.v
 FC:\ClocknTrigger\combiner_y_tb.v
 L0 14
@@ -67,7 +89,7 @@ R2
 r1
 !s85 0
 31
-!s108 1686172374.000000
+!s108 1687898567.000000
 !s107 C:\ClocknTrigger\combiner_y_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:\ClocknTrigger\combiner_y_tb.v|
 !i113 1
@@ -77,14 +99,14 @@ n@clockn@trigger_tb
 vClocknTriggerDC
 R5
 !i10b 1
-!s100 <5WNi0OCZNHo@2;0iBWSA0
-IfVKifRjo5VI@2HbF4_k1e1
+!s100 kAQgZ48FezJ3>3TA3cNdf3
+I<l@QlXY@PYB^3<U<VcHiU2
 R0
 R1
 R6
 R7
 R8
-L0 75
+L0 106
 R2
 r1
 !s85 0
@@ -99,14 +121,14 @@ n@clockn@trigger@d@c
 vClocknTriggerDrLinn
 R5
 !i10b 1
-!s100 b1XcHMSf9XWD9@6XWBaVI2
-Ikg8Jn02_:;::OY=TkVLJz1
+!s100 lWVSNRa_K1U8EJSH;m=ab0
+Iigd_[mmIjc:7ULi?Cd3F61
 R0
 R1
 R6
 R7
 R8
-L0 43
+L0 74
 R2
 r1
 !s85 0
@@ -143,14 +165,14 @@ n@clock@trigger
 vmySync
 R5
 !i10b 1
-!s100 bJf2DEKTlSHGM=E?=leV71
-IGNEz0b<OnRMkOgL?j86a^2
+!s100 8FYzlgm9iA6ccYfSfBPZ?0
+IQ=gPV5jM7MUFBhVIQbJX83
 R0
 R1
 R6
 R7
 R8
-L0 112
+L0 143
 R2
 r1
 !s85 0
@@ -165,14 +187,14 @@ nmy@sync
 vmySync_en
 R5
 !i10b 1
-!s100 ;_VBe3VPXd^jnb0klmVg70
-IQmB8UQ4RBz6E4^D]0YAR]3
+!s100 ]7i8KQlaDazWeBmX@VYL<3
+IYn8ilS=jnVk7138W0@Jfz2
 R0
 R1
 R6
 R7
 R8
-L0 129
+L0 160
 R2
 r1
 !s85 0

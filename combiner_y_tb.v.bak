@@ -50,9 +50,9 @@ ClocknTrigger DUT(
 //clock generator
 
 always begin
-    fastclk = 1'b1;
-    #4;
     fastclk = 1'b0;
+    #4;
+    fastclk = 1'b1;
     #4;
 end
 
